@@ -1,0 +1,699 @@
+
+:root {
+    --cor0: #eac5eb;
+    --cor1: #e183dc;
+    --cor2: #dc3ddc;
+    --cor3: #a82f9e;
+    --cor4: #5c1a51;
+    --cor5: #3d061d;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: "Arial Black", cursive;
+    --fonte-android: "Android", cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+   /*  box-sizing: border-box; */
+   text-decoration: none;
+}
+
+h1{
+
+}
+
+h2{
+    font-family: var(--fonte-destaque);
+    color: var(--cor3);
+    text-shadow: 3px 3px 3px black;
+    font-size: 2em;
+    text-align: center;
+}
+
+h3{
+    color: var(--cor2);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.575);
+
+
+}
+
+h4{
+
+}
+
+h5{
+    color: var(--cor4);
+    text-shadow: 3px 3px 3px solid black;
+}
+
+picture img {
+    max-width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Evita espaços extras abaixo da imagem */
+  }
+
+.album img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    display: block; /* Remove possíveis espaçamentos causados por inline elements */
+}
+
+.lista{
+    padding-top: 20px;
+}
+
+.coluna li a {
+    color: white;
+
+}
+
+.textoalbum {
+    color: var(--cor3);
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.466);
+
+}   
+
+
+.video-container {
+    position: relative;
+    width: 100%; /* Ajusta ao tamanho da tela */
+    max-width: 900px; /* Define uma largura máxima */
+    margin: 0 auto; /* Centraliza o vídeo */
+    
+}
+
+/***************CONFIGURAÇÃO DA CAIXA DE EXPLICAÇÃO*************/
+
+
+span.infoboxshow {
+    display: inline;
+    position: relative; /* Define o contêiner como relativo */
+    color: var(--cor3);
+    font-weight: bolder;
+    
+}
+
+    span.infoboxhiden {
+    display: none; /* Esconde o parágrafo inicialmente */
+    position: absolute; /* Posiciona o parágrafo de forma absoluta */
+    top: 0; /* Ajusta a posição do parágrafo */
+    left: 0;
+    color: white;
+    background-color: rgb(235, 12, 186);
+    padding: 7px;
+    border-radius: 10px;
+    width: 300px;
+    margin-left: -50px;
+    font-weight: normal;
+    text-align: start;
+    z-index: 100; /* Garante que o parágrafo apareça acima de outros elementos */
+}
+
+/****************************CONFIG CARROCEL*************************/
+
+
+div#mascara_carrocel{
+    background-color: black;
+    overflow: hidden;
+    width: 100%; 
+}
+
+.swiper-container {
+    width: 340px; /* Ajuste a largura conforme necessário */
+    margin: 0 auto;
+    position: relative;
+    
+    
+}
+
+div.carrocel_bg {
+    background-color: black;
+    width: 100vwpx;
+    height: auto;
+    padding: 30px;
+ 
+   
+}
+
+/* configurando os botões do carrocel*/
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px; /* Posiciona a paginação na parte inferior do carrossel */
+    left: 50%; /* Centraliza a paginação horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para que o centro da paginação coincida com o centro do carrossel */
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px; /* Largura dos botões */
+    height: 30px; /* Altura dos botões */
+    background-color: #fff; /* Cor de fundo dos botões */
+    border-radius: 50%; /* Arredonda os cantos dos botões */
+    color: #000; /* Cor do texto dos botões */
+    font-size: 30px; /* Tamanho da fonte dos botões */
+    text-align: center; /* Centraliza o texto nos botões */
+    cursor: pointer; /* Muda o cursor para mão ao passar o mouse sobre os botões */
+  }
+  
+  .swiper-button-prev {
+    left: calc(100%); /* Posiciona o botão à esquerda do carrossel, com uma margem de 10px e 50% da largura do carrossel */
+  }
+  
+  .swiper-button-next {
+    right: calc(100%); /* Posiciona o botão à direita do carrossel, com uma margem de 10px e 50% da largura do carrossel */
+  }
+
+/* fim de configurar os botões */
+
+div.swiper-wrapper {
+    display: flex;
+    flex-direction: row; 
+}
+
+.swiper-slide {
+    background: #000000; /* Apenas para visualização */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* inicio da config transição */
+.swiper-slide a img {
+display: inline;
+width: auto;
+height: 300px;
+transition: transform 0.3s ease-in-out;
+padding: 10px;
+}
+
+/* configuraçõao do link do carrocel */
+.swiper-slide a {
+    display: block; /* Faz o link ocupar todo o espaço do slide */
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  .swiper-slide img {
+    display: block; /* Garante que a imagem também se comporte como bloco dentro do link */
+    width: 100%; /* Faz a imagem ocupar a largura do link */
+    height: auto; /* Mantém a proporção */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem deformar (pode variar dependendo do seu layout) */
+  }
+
+  /*fim configuraçõao do link do carrocel*/
+
+/* configura quando esta em foco */
+.swiper-slide-scaled img {
+transform: scale(1.3); /* irá aumentar o tamanho da imagem ativa */
+opacity: 1; /* Garante que a imagem ativa tenha opacidade total de 100% */
+
+
+    }
+/* configura quando NÃO esta em foco */
+.swiper-slide:not(.swiper-slide-scaled) img {
+opacity: 0.30; /* Diminui a opacidade para 60% */
+transform 0.3s ease-in-out;
+transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave para a opacidade */
+
+}
+
+
+.swiper-slide-scaled {
+ z-index: 10; /* Define um z-index GARANTE QUE A IMAGEM FIQUE POR CIMA DAS OUTRAS*/
+}
+
+/* fin da config transição */
+.swiper-pagination {
+    position: absolute;
+   
+
+ }
+
+
+
+
+
+
+
+/*************** FIM DA CONFIGURAÇÃO DA CAIXA DE EXPLICAÇÃO*************/
+
+
+video {
+    width: 100%; /* Faz com que o vídeo acompanhe a largura da tela */
+    height: auto; /* Mantém a proporção do vídeo */
+    max-width: 900px; /* Limita a largura máxima do vídeo, se necessário */
+
+  
+}
+/**********************CONFIG BOTÃO DO SOM************************************/
+.sound-button {
+    position: absolute;
+    top: 10px; /* Posiciona o botão no canto do vídeo */
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 10;
+    outline: none;
+}
+
+.sound-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo mais escuro ao passar o mouse */
+}
+
+/**********************FIM CONFIG BOTÃO DO SOM************************************/
+
+img#substitute-image {
+    display: none;
+     width: 100%;  /* A imagem também será responsiva */
+    height: auto; /* Mantém a proporção da imagem */
+
+    
+
+   /* width: 100vw; /* Garante que ocupe toda a largura da tela */ 
+   background-size: cover;
+   background-position: center;
+   z-index: -1;
+}
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../midia/bg_babymonster_logo50.png');
+    background-size: 100px 100px;
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header > h1 {
+    border: 1px dotted black;
+    text-shadow: 2px 2px 0px black;
+
+    flex: 0 0 200px;
+    
+
+}
+
+/*********************** configuração do HOME ***********************/
+
+article {
+    background-color: rgba(255, 255, 255, 0.250);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.534);
+    }
+
+div#artigo{
+    padding: 10px;
+    }
+
+div#artigo > p{
+    line-height: 1.5;
+    
+    
+    
+    
+}
+div#artigo > h2 {
+    
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.418);
+}
+
+section.normal{
+    background-color: rgb(124, 12, 124);
+    color: white;
+    padding: 10px;
+    font-weight: bolder;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.534);
+}
+
+
+picture.poster {
+    width: 300px; /* Defina a largura desejada */
+    height: 200px; /* Defina a altura desejada */
+  }
+
+ picture.poster img {
+     width: 100%;
+     height: auto;
+     object-fit: cover; /* Ou contain, fill, etc. */
+     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.550);
+     border-radius: 10px;
+  }
+
+a.fonte {
+    display: block;
+    text-align: right;
+    color: #a82f9e;
+    
+}
+
+audio {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+/**********************CONFIG MENU************************************/
+
+
+div#menu {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    
+}
+
+div#menu  > nav {
+    border: 1px dotted black;
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+
+div#menu > nav a {
+    background-color: rgb(231, 37, 183);
+    color: white;
+    padding: 10px;
+    width: auto; /* Mantém o ajuste da largura */
+   /*  margin: 5px; */
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+
+
+}
+
+
+
+/* Ajuste para telas menores (até 600px) */
+@media (max-width: 600px) {
+
+    div#menu  > nav {
+        border: 1px dotted black;
+    
+        display: flex;
+        justify-content: space-around;
+
+    
+    }
+
+
+    div#menu  > nav a {
+       width: auto; /* Mantém o ajuste da largura */
+       
+        padding: 5px 10px 5px 10px; /* Reduz o espaçamento */
+       /*  margin-left: 1px; */
+        font-size: 0.8em; /* Reduz o tamanho da fonte */
+
+        /* text-align: center; */
+
+        
+    }
+}
+
+
+div#menu  > nav a:hover {
+    background-color: white;
+    color: rgb(180, 17, 180);
+   /*  font-weight: bolder; */
+    transition: 0.5s;
+    
+}
+
+/* PARA QUANDO O SCRIPT DO MENU FOR ATIVADO */
+
+#fixo {
+    background-color: black;
+    width: 100%; /* Garante que a largura seja responsiva */
+    /* max-width: 800px; */ /* Define o limite máximo */
+   /*  text-align: center;  */
+   z-index: 10;
+
+}
+
+#fixo nav {
+    display: flex; /* Organiza os links horizontalmente */
+    justify-content: space-around; /* Espaçamento uniforme entre os links */
+}
+
+#fixo a {
+    width: auto; /* Ajusta a largura automaticamente */
+    max-width: 150px; /* Limita os links responsivamente */
+    text-align: center; /* Centraliza o texto */
+}
+
+
+/**********************FIM CONFIG MENU************************************/
+div#centro{
+    display: flex;
+    justify-content: center;
+
+}
+
+div#artigo{
+    background-color: rgba(255, 255, 255, 0.466);
+    border-radius: 10px;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.397);
+}
+
+main {
+    background-color: rgba(221, 143, 217, 0.774);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.397);
+    max-width: 800px;
+    display: flex; /* Adiciona flexbox ao main */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center;
+    justify-content: space-around; /* Alinha os itens no início */
+    gap: 10px; /* Adiciona espaçamento entre os itens */
+}
+
+main.homemain {
+    background-color: rgba(221, 143, 217, 0.682);
+}
+
+
+
+/**********************CONFIG LISTA************************************/
+/* confi sub item */
+ul > li > ul {
+    display: none; /* Oculta os subitens inicialmente */
+}
+
+ul > li > ul.show {
+    display: block; /* Mostra os subitens quando a classe "show" é adicionada */
+    
+}
+
+.youtube-icon {
+    height: 1em; /* Define a altura igual ao tamanho da fonte */
+    width: auto; /* Mantém a proporção da imagem */
+    margin-right: 5px; /* Espaçamento entre a imagem e o texto */
+    vertical-align: middle; /* Alinha a imagem com o texto */
+}
+
+
+
+/* fim confi sub item */
+
+.listas {
+    display: flex; /* Torna o container flexível */
+    gap: 20px; /* Espaçamento entre as colunas */
+}
+
+.coluna {
+    list-style: none; /* Remove os marcadores padrão */
+    padding: 0; /* Remove o espaçamento interno */
+    width: 100%; /* Divide o espaço igualmente entre as colunas */
+}
+
+
+.coluna li {
+    margin: 5px 0; /* Adiciona espaçamento vertical entre os itens */
+    background-color: rgb(231, 37, 183); /* Cor de fundo para destacar */
+    color: rgb(230, 220, 220); /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada */
+    text-align: left; /* Centraliza o texto */
+    text-shadow: 2px 2px 2px black;
+   
+}
+
+.coluna li > ul > li {
+    background-color: var(--cor3);
+
+}
+
+.coluna li > ul > li:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+
+}
+
+
+.coluna > li:hover {
+    background-color: white;
+    color: #dc3ddc;
+    transition: 0.5s;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
+li  a {
+    text-decoration: none;
+}
+
+footer, footer a {
+    text-align: center;
+    color: #dc3ddc;
+    text-shadow: 1px 1px 3px black;
+}
+
+/****************************** CONFIGURAÇÃO DO PERFIL********************************/
+
+div.grupo p{
+    margin: 5px;
+/*     text-shadow: 0px 0px 3px rgb(0, 0, 0); */
+    font-weight: bolder;
+   /*  color: var(--cor2); */
+   color: white;
+    
+}
+
+div > h2{
+    margin: 5px;
+    font-size: 3em;
+/*     text-shadow: 0px 0px 3px rgb(0, 0, 0); */
+    font-weight: bolder;
+   /*  color: var(--cor2); */
+   color: var(--cor3);
+    
+}
+
+
+p.brasil{
+    color: green;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.541);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 5px;
+    
+}
+
+ a.insta {
+    display: block;
+    color: #a82f9e;
+    /* width: 100%; */
+    text-align: right;
+   
+    font-weight: bolder;
+}
+
+
+section#perfil{
+   
+
+}
+
+div.ahyeon { background-image: url('../midia/BABYMONSTERS_PERFIL_BG_AHYEON3.jpg');}
+div.asa { background-image: url('../midia/BABYMONSTERS_PERFIL_BG_ASA.png');}
+div.chiquita { background-image: url('../midia/BABYMONSTERS_PERFIL_BG_CHIQUITA.png');}
+div.pharita { background-image: url('../midia/BABYMONSTERS_PERFIL_BG_PHARITA.png');}
+div.rami { background-image: url('../midia/BABYMONSTERS_PERFIL_BG_RAMI.png');}
+div.rora { background-image: url('../midia/BABYMONSTERS_PERFIL_BG_RORA.png');}
+div.ruka { background-image: url('../midia/BABYMONSTERS_PERFIL_BG_RUKA.png');}
+
+
+
+
+
+div.perfil {
+    width: 375px;
+    height: 600px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto;
+    background-attachment: scroll;
+    position: relative; /* Adicionado */
+    /* margin: 10px; */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.452);
+    z-index: 1;
+    
+}
+
+div#ahyeon a{color: #a82f9e;}
+div#ahyeon a:hover{color: var(--cor1)}
+
+div#ahyeon, div#asa, div#chiquita, div#pharita, div#rami, div#rora, div#ruka{
+    background-color: rgba(0, 0, 0, 0.459);
+    position: absolute; /* Adicionado */
+    border-radius: 10px;
+    bottom: 10px; /* Alinha a parte inferior com a parte inferior do pai (perfil) */
+    left: 50%; /* Move o início da div para o centro horizontal do pai */
+    transform: translateX(-50%); /* Desloca a div metade de sua própria largura para a esquerda, centralizando-a */
+    width: 95%; /* Ajuste a largura conforme necessário */
+    /* Outros estilos como background-color, padding, etc. */
+    text-align: left;
+    transform: translateX(-50%);
+    z-index: 1;
+
+}
+
+
+/**********************FIM CONFIG LISTA************************************/
+
+/* @media screen and (max-width: 580px) {
+    header, header > nav {
+        flex-flow: column nowrap;
+    }
+
+    header > h1 {
+        flex-basis: 50px
+    }
+
+    header > nav > a {
+        width: 60vw;
+    }
+
+} */

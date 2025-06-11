@@ -1,0 +1,1240 @@
+
+:root {
+    --cor0: #9c749c;
+    --cor1: #be22be;
+    --cor2: #9b056e;
+    --cor3: #960b2e;
+    --cor4: #490644;
+    --cor5: #0e0d0d;
+    --cor6: #eb8ecf;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-strong: Anton, Boldonse, Rowdies, Alfa Slab One, Archivo Black,;
+    --fonte-mega-strong: Rubik Mono One, Bungee, Rammetto One, Holtwood One SC, Bowl One SC Bowlby One, Sigmar, Erica One, Seymour One;
+    --fonte-manuscrito: Pinyon Script, Herr Von Muellerhoff, Monsieur La Doulaise, Tilt Warp;
+    --fonte-hand-made: Rochester,  Playwrite Chile Guides, Playwrite España Guides, Playwrite Italia Tradizionale Guides, Plawrite Cuba, Stalemate, Playwrite Brasil;
+    --fonte-destaque: "Bebas Neue", cursive;
+    --fonte-android: "Android", cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+   /*  box-sizing: border-box; */
+   text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor3);
+    font-weight: bolder;
+}
+
+h1{
+
+}
+
+h2{
+    font-family: var(--fonte-padrao);
+    color: var(--cor2);
+  /*   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.644); */
+    font-size: 2em;
+    text-align: center;
+}
+
+h3{
+    color: var(--cor2);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.575);
+    font-weight: bolder;
+    
+    
+
+
+}
+
+h4{
+    color: var(--cor1);
+    text-align: center;
+   /*  text-shadow: 3px 3px 6px black; */
+    font-weight: bolder;
+   /*  -webkit-text-stroke: 2px black; /* Largura e cor do traçado */ 
+
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black,
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black;
+}
+
+
+h5{
+    color: var(--cor4);
+    text-shadow: 3px 3px 3px solid black;
+}
+
+.entrevistaPAI {
+    display: flex; /* Organiza os filhos em linha (por padrão) */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    /* Outros estilos do pai */
+  }
+  
+  .entrevista {
+    /* Remova position: absolute; */
+   /*  margin-right: 20px; */ /* Espaço entre a imagem e o texto */
+    /* Outros estilos da div da imagem */
+  }
+  
+  .entrevista img {
+    background-color: white;
+   /*  padding: 5px; */
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    /* max-width: 600px; */ /* Defina uma largura máxima para a imagem */
+    width: 100%; /* Garante que a imagem não ultrapasse a largura do pai */
+  }
+
+.album img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    display: block; /* Remove possíveis espaçamentos causados por inline elements */
+}
+
+.lista{
+    padding-top: 20px;
+}
+
+.coluna li a {
+    color: white;
+
+}
+
+.textoalbum {
+    font-size: 1.5em;
+    color: var(--cor0);
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.466);
+
+}   
+
+/* CONFIGURAÇÃO VIDEO CABEÇALHO */
+
+.video-container {
+    position: relative;
+    width: 100%; /* Ajusta ao tamanho da tela */
+    max-width: 900px; /* Define uma largura máxima */
+    margin: 0 auto; /* Centraliza o vídeo */
+    
+}
+
+
+
+
+
+/***************CONFIGURAÇÃO DA CAIXA DE EXPLICAÇÃO*************/
+
+
+span.infoboxshow {
+    display: inline;
+    position: relative; /* Define o contêiner como relativo */
+    color: var(--cor3);
+    font-weight: bolder;
+    z-index: 100;
+    
+}
+
+    span.infoboxhiden {
+    display: none; /* Esconde o parágrafo inicialmente */
+    position: fixed; /* Posiciona o parágrafo de forma absoluta */
+    top: 0; /* Ajusta a posição do parágrafo */
+    left: 0;
+    color: white;
+    background-color: var(--cor2);
+    padding: 7px;
+    border-radius: 10px;
+    width: 300px;
+    margin-left: -50px;
+    margin-top: -86px;
+    font-weight: normal;
+    text-align: start;
+    z-index:  99999; /* Garante que o parágrafo apareça acima de outros elementos */
+
+
+}
+
+div#ahyeon span a{color: rgb(26, 26, 238)}
+
+
+/*************** FIM DA CONFIGURAÇÃO DA CAIXA DE EXPLICAÇÃO*************/
+
+
+/****************************CONFIG GRUPO*************************/
+
+#babymonster {background-image: url(../midia/babymonster_poster.jpg);}
+#aespa {background-image: url(../midia/aespagroup2.jpg);}
+#TWICE {background-image: url(../midia/twice_POSTER.jpg);}
+#BLACK_PINK {background-image: url(../midia/blackpink_POSTER.jpg);filter: grayscale(100%);}
+#ATEEZ {background-image: url(../midia/ateez_POSTER.jpg);filter: grayscale(100%);}
+#stray_kids {background-image: url(../midia/straykids_POSTER.jpg);filter: grayscale(100%);}
+#BTS {background-image: url(../midia/bts_POSTER.jpg);filter: grayscale(100%);}
+#KISS_OF_LIFE {background-image: url(../midia/kissoflife_poster.jpg);filter: grayscale(100%);}
+
+
+
+
+
+.grupo {
+    display: flex;
+    
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: black;
+    border-radius: 20px;
+    width: 100%;
+    height: 20vh; /* Ou aspect-ratio: 800 / 350; */
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.grupo h2 {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    text-align: center;
+    width: 90%;
+    max-width: 700px;
+    font-size: 1.8em;
+    text-shadow: 2px 2px 5px rgba(247, 241, 241, 0.7);
+    z-index: 10;
+}
+
+.grupo h3 {
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(233, 3, 3);
+    font-weight: bolder;
+    text-align: center;
+    width: 90%;
+    max-width: 700px;
+    font-size: 1.8em;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.966);
+    z-index: 10;
+}
+
+.esquerda,
+.meio,
+.direita {
+    height: 5vh;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
+
+    /* Adiciona transições para as divs */
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.esquerda:hover,
+.meio:hover,
+.direita:hover {
+    transform: translateY(-5px) scale(1.02); /* Sobe um pouco e aumenta ligeiramente a div */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo um pouco mais escuro */
+    border-color: rgba(255, 255, 255, 0.6); /* Borda mais visível */
+    cursor: pointer; /* Indica que é clicável */
+}
+
+.esquerda:active,
+.meio:active,
+.direita:active {
+    transform: translateY(0) scale(0.98); /* Volta à posição original e encolhe um pouco */
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo ainda mais escuro */
+    transition: transform 0.1s ease, background-color 0.1s ease, border-color 0.1s ease;
+}
+
+.esquerda {
+    border-bottom-left-radius: 20px;
+}
+
+.direita {
+    border-bottom-right-radius: 20px;
+}
+
+/* Estilos para os links dentro das divs - apenas cor e sem sublinhado */
+.esquerda a,
+.meio a,
+.direita a {
+    color: white;
+    text-decoration: none;
+    /* Transição para a cor do texto no hover/active (se desejar) */
+    transition: color 0.3s ease;
+    padding: 10px 0; /* Mantenha o padding para dar espaço ao texto */
+    display: block; /* Garante que o padding funcione corretamente */
+    width: 100%; /* Faz o link ocupar toda a largura da div pai */
+    text-align: center; /* Centraliza o texto dentro do link */
+}
+
+/* Opcional: Mudar a cor do texto do link quando a div pai estiver em hover */
+.esquerda:hover a,
+.meio:hover a,
+.direita:hover a {
+    color: #4095db; /* Muda a cor do texto do link no hover da div */
+}
+
+/* Opcional: Mudar a cor do texto do link quando a div pai estiver em active */
+.esquerda:active a,
+.meio:active a,
+.direita:active a {
+    color: #FFC107; /* Muda a cor do texto do link no active da div */
+}
+/****************************CONFIG GRUPO*************************/
+
+
+/****************************CONFIG CARROCEL*************************/
+
+h2#titulocarrocel {
+    /* background-color: antiquewhite; */
+    color: var(--cor6);
+    /* text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.644); */
+}
+
+
+div#mascara_carrocel{
+    background-color: black;
+    overflow: hidden;
+    width: 100%; 
+    padding: 10px 0 10px 0;
+}
+
+.swiper-container {
+    width: 340px; /* Ajuste a largura conforme necessário */
+    margin: 0 auto;
+    position: relative;
+    
+    
+}
+
+div.carrocel_bg {
+    background-color: black;
+    width: 100vwpx;
+    height: auto;
+    padding: 30px;
+ 
+   
+}
+
+/* configurando os botões do carrocel*/
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px; /* Posiciona a paginação na parte inferior do carrossel */
+    left: 50%; /* Centraliza a paginação horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para que o centro da paginação coincida com o centro do carrossel */
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px; /* Largura dos botões */
+    height: 60px; /* Altura dos botões */
+    background-color: #ffffff8a; /* Cor de fundo dos botões */
+    border-radius: 50%; /* Arredonda os cantos dos botões */
+    color: #000; /* Cor do texto dos botões */
+    font-size: 30px; /* Tamanho da fonte dos botões */
+    text-align: center; /* Centraliza o texto nos botões */
+    cursor: pointer; /* Muda o cursor para mão ao passar o mouse sobre os botões */
+  }
+  
+  .swiper-button-prev {
+    right: calc(100%); /* Posiciona o botão à esquerda do carrossel, com uma margem de 10px e 50% da largura do carrossel */
+  }
+  
+  .swiper-button-next {
+    left: calc(100%); /* Posiciona o botão à direita do carrossel, com uma margem de 10px e 50% da largura do carrossel */
+  }
+
+/* fim de configurar os botões */
+
+div.swiper-wrapper {
+    display: flex;
+    flex-direction: row; 
+}
+
+.swiper-slide {
+    background: #000000; /* Apenas para visualização */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* inicio da config transição */
+.swiper-slide a img {
+display: inline;
+width: auto;
+height: 300px;
+
+transition: transform 0.9s ease-in-out;
+padding: 10px;
+}
+
+/* configuraçõao do link do carrocel */
+.swiper-slide a {
+    display: block; /* Faz o link ocupar todo o espaço do slide */
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  .swiper-slide img {
+    display: block; /* Garante que a imagem também se comporte como bloco dentro do link */
+    width: 100%; /* Faz a imagem ocupar a largura do link */
+    height: auto; /* Mantém a proporção */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem deformar (pode variar dependendo do seu layout) */
+  }
+
+  /*fim configuraçõao do link do carrocel*/
+
+/* configura quando esta em foco */
+.swiper-slide-scaled img {
+transform: scale(1.3); /* irá aumentar o tamanho da imagem ativa */
+opacity: 1; /* Garante que a imagem ativa tenha opacidade total de 100% */
+
+
+}
+/* configura quando NÃO esta em foco */
+.swiper-slide:not(.swiper-slide-scaled) img {
+opacity: 0.30; /* Diminui a opacidade para 60% */
+transform: 0.9s ease-in-out;
+transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave para a opacidade */
+
+
+}
+
+
+.swiper-slide-scaled {
+ z-index: 10; /* Define um z-index GARANTE QUE A IMAGEM FIQUE POR CIMA DAS OUTRAS*/
+ transform: 0.9s ease-in;
+}
+
+/* fin da config transição */
+.swiper-pagination {
+    position: absolute;
+   
+
+ }
+
+/****************************FIM DA CONFIG CARROCEL*************************/
+
+
+
+
+/****************************CONFIG ANIVERSARIO*************************/
+
+/* ... seu CSS anterior ... */
+
+
+  /* ... seu CSS posterior ... */
+
+
+
+  section#SECniver {
+    display: none;
+    background-image: url(../midia/ANIVERSÁRIO_BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black; /* Importante manter o background-color: black */
+    width: 100%;
+    height: 670px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; /* Importante para posicionar o vídeo absolutamente dentro */
+}
+
+#fogosVideo {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: screen;
+    pointer-events: none; /* Para não impedir cliques nos links abaixo */
+}
+
+div#felizniver {
+    display: none;
+
+}
+
+div#felizniver img{
+    display: block;
+  /*   z-index: 1000; */
+   
+
+
+}
+
+div#felizniver h4 {
+    padding-top: 10px;
+    font-size: 2em;
+
+}
+
+div#DIVniver {
+    display: flex;
+    flex-flow: column;
+    height: 100%;              /* Deixe a altura se ajustar ao conteúdo */
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0px;      /* Espaço no fundo para não colar a última img */
+}
+
+div#DIVniver a {
+    display: block; /* Faz o link ocupar a largura total */
+    text-align: right; /* Alinha o conteúdo (a imagem) à direita */
+    z-index: 2;
+}
+
+div#DIVniver img {
+    display: none;
+    width: 80%;                /* Ocupa 80% da largura da div, se ajusta em telas menores */
+    max-width: 600px;          /* Mas nunca passa de 300px */
+    padding: 5px 0px 5px 5px;
+   /*  z-index: 200; */
+   /*  box-shadow: 5px 5px 15px rgba(22, 22, 22, 0.5); */
+}
+
+
+/* Aumenta espaço apenas na última imagem */
+
+
+
+div#DIVniver img:last-child {
+    
+    margin-bottom: 0;
+}
+
+
+
+/****************************FIM DA CONFIG ANIVERSARIO*************************/
+
+/************************************VEIJAO TAMBEM***************************/
+
+div.centrospan {
+    display: flex;
+
+}
+
+div.centrospan h2 {
+   color: white;
+   font-size: 2em;
+   text-shadow: rgb(255, 255, 255);
+
+}
+
+div#vejatbm{
+    background-color: rgb(218, 136, 190);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px black ;
+
+}
+
+div#vejatbm img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px black ;
+
+}
+
+.imagem-container {
+    position: relative; /* Contêiner para o posicionamento absoluto */
+    width: 100%; /* Opcional: ajuste a largura conforme necessário */
+   
+    margin: 0 auto; /* Opcional: centralizar o contêiner */
+  }
+  
+  .imagem-container img {
+    position: absolute; /* Permite sobrepor as imagens */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    /* A opacidade inicial será controlada para cada imagem */
+  }
+  
+  .imagem-container .imagem-estatica {
+    opacity: 1; /* Sempre visível */
+    z-index: 1; /* Garante que esteja abaixo da imagem animada inicialmente */
+  }
+  
+  .imagem-container .imagem-animada {
+    opacity: 0; /* Inicialmente invisível */
+    z-index: 2; /* Fica por cima da imagem estática */
+    transition: opacity 10s ease-in-out; /* Transição suave de opacidade em 10 segundos */
+    animation: cicloOpacidade 20s infinite; /* Animação para controlar os tempos de visibilidade */
+  }
+  
+  @keyframes cicloOpacidade {
+    0% {
+      opacity: 0; /* Começa invisível */
+    }
+    40% {
+      opacity: 0; /* Fica totalmente visível após 10 segundos (devido à transição) */
+    }
+    50% {
+        opacity: 1; /* Começa a desaparecer nos próximos 10 segundos (devido à transição no reinício do ciclo) */
+      }
+    90% {
+        opacity: 1; /* Começa a desaparecer nos próximos 10 segundos (devido à transição no reinício do ciclo) */
+    }
+
+  }
+
+  /* animação do texto */
+
+  .imagem-container {
+    position: relative; /* Garante que elementos filhos usem essa referência */
+    width: 100%; 
+    margin: 0 auto; 
+}
+
+.texto-animado-container {
+    position: absolute; /* Sobrepondo à imagem */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* Superior à imagem animada */
+    text-align: center;
+    width: 100%; /* Para garantir que os textos não fiquem cortados */
+}
+
+.texto-animado {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    animation: fadeInOut 4s infinite;
+}
+  
+
+/*******************************FIM DA VEIJAO TAMBEM*************************/
+video {
+    width: 100%; /* Faz com que o vídeo acompanhe a largura da tela */
+    height: auto; /* Mantém a proporção do vídeo */
+    max-width: 900px; /* Limita a largura máxima do vídeo, se necessário */
+
+  
+}
+/**********************CONFIG BOTÃO DO SOM************************************/
+.sound-button {
+    position: absolute;
+    top: 10px; /* Posiciona o botão no canto do vídeo */
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 10;
+    outline: none;
+}
+
+.sound-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo mais escuro ao passar o mouse */
+}
+
+/**********************FIM CONFIG BOTÃO DO SOM************************************/
+
+img#substitute-image {
+    display: none;
+     width: 100%;  /* A imagem também será responsiva */
+    height: auto; /* Mantém a proporção da imagem */
+
+    
+
+   /* width: 100vw; /* Garante que ocupe toda a largura da tela */ 
+   background-size: cover;
+   background-position: center;
+   z-index: -1;
+}
+
+
+/**************************************CONFIGURAÇÃO DO CLIQUE MÁGICO**********************/
+
+.clique-magico-gif {
+    /* Outros estilos */
+    max-width: 100vw; /* Garante que a largura não exceda a largura da viewport */
+    max-height: 100vh; /* Garante que a altura não exceda a altura da viewport */
+}
+
+/**************************************FIM DA CONFIGURAÇÃO DO CLIQUE MÁGICO**********************/
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../midia/bg_KPOP.jpg');
+    background-size: 100px 100px;
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+
+
+    overflow-x: hidden; /* Esconde o que ultrapassa a largura da tela */
+    /* Se você ainda precisar de rolagem vertical: */
+    overflow-y: auto;
+
+}
+
+
+header {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header > h1 {
+    border: 1px dotted black;
+    text-shadow: 2px 2px 0px black;
+
+    flex: 0 0 200px;
+    
+
+}
+
+
+/* Estilos para o cabeçalho principal */
+.main-header {
+    height: 100px;
+    width: auto;
+    background-color: black;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    overflow: hidden; /* Garante que nada transborde do header, caso o texto fique muito grande */
+}
+
+/* Estilos para o texto K-POP Brasil */
+.main-header h1 {
+    color: white; /* Cor padrão para K-POP */
+    font-size: 3em; /* Ajuste o tamanho da fonte se necessário */
+    opacity: 0.1; /* Opacidade inicial para a animação */
+    animation: fadeLoop 6s infinite alternate; /* Aplica a animação */
+    white-space: nowrap; /* Impede que o texto "K-POP Brasil" quebre em várias linhas */
+}
+
+/* Cores das letras da palavra "Brasil" */
+.main-header h1 .letra-B {
+    color: #009246; /* Azul escuro, próximo ao da bandeira */
+}
+
+.main-header h1 .letra-r {
+    color: #FFCD00; /* Amarelo da bandeira */
+}
+
+.main-header h1 .letra-a {
+    color: #315cb3 /* Verde da bandeira */
+}
+
+.main-header h1 .letra-s {
+    color: #FFFFFF; /* Branco */
+}
+
+.main-header h1 .letra-i {
+    color: #009246; /* Azul novamente para repetir a sequência */
+}
+
+.main-header h1 .letra-l {
+    color: #FFCD00; /* Amarelo novamente para repetir a sequência */
+}
+
+/* Definição da animação fade-in/fade-out */
+@keyframes fadeLoop {
+    0% {
+        opacity: 0.1; /* Começa totalmente invisível */
+    }
+    50% {
+        opacity: 1; /* Atinge opacidade total no meio */
+    }
+    100% {
+        opacity: 0.1; /* Volta para 10% de opacidade no final */
+    }
+}
+/*********************** configuração do HOME ***********************/
+
+article {
+    background-color: rgba(255, 255, 255, 0.61);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.534);
+    }
+
+
+
+div#artigo{
+    padding: 10px;
+    }
+
+div#artigo > p{
+    line-height: 1.5;
+    
+    
+    
+    
+}
+div#artigo > h2 {
+    
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.418);
+}
+
+section.normal{
+    background-color: rgb(124, 12, 124);
+    color: white;
+    padding: 10px;
+    font-weight: bolder;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.534);
+}
+
+
+picture.poster {
+    width: 300px; /* Defina a largura desejada */
+    height: 200px; /* Defina a altura desejada */
+  }
+
+ picture.poster img {
+     width: 100%;
+     height: auto;
+     object-fit: cover; /* Ou contain, fill, etc. */
+     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.550);
+     border-radius: 10px;
+  }
+
+a.fonte {
+    display: block;
+    text-align: right;
+    color: #a82f9e;
+    
+}
+
+audio {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+/**********************CONFIG MENU************************************/
+
+
+div#menu {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    
+}
+
+div#menu  > nav {
+    border: 1px dotted black;
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+
+div#menu > nav a {
+    background-color:var(--cor2);
+    color: white;
+    padding: 10px;
+    /* width: auto; */ /* Mantém o ajuste da largura */
+   /*  margin: 5px; */
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 70px;
+
+
+}
+
+
+
+/* Ajuste para telas menores (até 600px) */
+@media (max-width: 600px) {
+
+    div#menu  > nav {
+        border: 1px dotted black;
+    
+        display: flex;
+        justify-content: space-around;
+
+        
+    
+    }
+
+
+    div#menu  > nav a {
+      /*  width: auto;  *//* Mantém o ajuste da largura */
+       min-width: 40px;
+        padding: 5px 10px 5px 10px; /* Reduz o espaçamento */
+       /*  margin-left: 1px; */
+        font-size: 0.8em; /* Reduz o tamanho da fonte */
+     
+        /* text-align: center; */
+
+        
+    }
+
+
+
+
+    body{
+        
+        background-attachment: fixed;
+
+
+        overflow-x: hidden; /* Esconde o que ultrapassa a largura da tela */
+        /* Se você ainda precisar de rolagem vertical: */
+        overflow-y: auto;
+
+    }    
+
+
+}
+
+
+
+
+div#menu  > nav a:hover {
+    background-color: white;
+    color: rgb(180, 17, 180);
+   /*  font-weight: bolder; */
+    transition: 0.5s;
+    
+}
+
+/* PARA QUANDO O SCRIPT DO MENU FOR ATIVADO */
+
+#fixo {
+    background-color: black;
+    width: 100%; /* Garante que a largura seja responsiva */
+    /* max-width: 800px; */ /* Define o limite máximo */
+   /*  text-align: center;  */
+   z-index: 10;
+
+}
+
+#fixo nav {
+    display: flex; /* Organiza os links horizontalmente */
+    justify-content: space-around; /* Espaçamento uniforme entre os links */
+}
+
+#fixo a {
+    width: auto; /* Ajusta a largura automaticamente */
+    max-width: 150px; /* Limita os links responsivamente */
+    text-align: center; /* Centraliza o texto */
+}
+
+
+/**********************FIM CONFIG MENU************************************/
+div#centro{
+    display: flex;
+    justify-content: center;
+
+}
+
+div#artigo{
+    background-color: rgba(255, 255, 255, 0.596);
+    border-radius: 10px;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.397);
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0.774);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.397);
+    max-width: 800px;
+    display: flex; /* Adiciona flexbox ao main */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center;
+    justify-content: space-around; /* Alinha os itens no início */
+    gap: 10px; /* Adiciona espaçamento entre os itens */
+}
+
+/* main.homemain {
+    background-color: rgba(142, 21, 212, 0.37);
+} */
+
+
+
+/**********************CONFIG LISTA************************************/
+/* confi sub item */
+ul > li > ul {
+    display: none; /* Oculta os subitens inicialmente */
+}
+
+ul > li > ul.show {
+    display: block; /* Mostra os subitens quando a classe "show" é adicionada */
+    
+}
+
+.youtube-icon {
+    height: 1em; /* Define a altura igual ao tamanho da fonte */
+    width: auto; /* Mantém a proporção da imagem */
+    margin-right: 5px; /* Espaçamento entre a imagem e o texto */
+    vertical-align: middle; /* Alinha a imagem com o texto */
+}
+
+
+
+/* fim confi sub item */
+
+.listas {
+    display: flex; /* Torna o container flexível */
+    gap: 20px; /* Espaçamento entre as colunas */
+}
+
+.coluna {
+    list-style: none; /* Remove os marcadores padrão */
+    padding: 0; /* Remove o espaçamento interno */
+    width: 100%; /* Divide o espaço igualmente entre as colunas */
+}
+
+
+.coluna li {
+    margin: 5px 0; /* Adiciona espaçamento vertical entre os itens */
+    background-color: var(--cor2); /* Cor de fundo para destacar */
+    color: white; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada */
+    text-align: left; /* Centraliza o texto */
+    text-shadow: 2px 2px 2px black;
+   
+}
+
+.coluna li > ul > li {
+    background-color: var(--cor3);
+
+}
+
+.coluna li > ul > li:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+
+}
+
+
+.coluna > li:hover {
+    background-color: white;
+    color: var(--cor2);
+    transition: 0.5s;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
+li  a {
+    text-decoration: none;
+}
+
+
+img#letra {
+    width: 25px;
+    height: 25px;
+}
+
+/*********************************FIM DA CONFIGURAÇÃO DA LISTA  */ 
+
+footer, footer a {
+    text-align: center;
+    color: var(--cor2);
+    text-shadow: 1px 1px 3px black;
+}
+
+/****************************** CONFIGURAÇÃO DO PERFIL********************************/
+
+
+div.perfil {
+    width: 375px;
+    height: 600px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto;
+    background-attachment: scroll;
+    position: relative; /* Adicionado */
+    /* margin: 10px; */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.452);
+   /*  z-index: 10; */
+    
+}
+
+
+div.grupo {
+    
+    position: absolute; /* Adiciona posicionamento absoluto */
+    bottom: 5px;      /* Define a distância de 10px da parte inferior */
+    left: 5px;        /* Opcional: alinha à esquerda com a margem */
+    right: 5px;       /* Opcional: alinha à direita com a margem */
+
+    margin: 5px;
+    padding: 8px;
+    border-radius: 10px;
+    background: #00000085;
+
+    font-weight: normal;
+    color: white;
+  
+  }
+  
+
+div > h2{
+    margin: 5px;
+    font-size: 3em;
+/*     text-shadow: 0px 0px 3px rgb(0, 0, 0); */
+    font-weight: bolder;
+   /*  color: var(--cor2); */
+   color: var(--cor3);
+    
+}
+
+
+p.brasil{
+    color: green;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.541);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 5px;
+    
+}
+
+ a.insta {
+    display: block;
+    color: #a82f9e;
+    /* width: 100%; */
+    text-align: right;
+   
+    font-weight: bolder;
+}
+
+
+section#perfil div{
+    display: block;
+    /* z-index: 10; */
+   
+
+}
+
+.nayeon {
+    background-image: url('../midia/twice_PERFIL_BG_Nayeon.jpg');
+}
+
+.jeongyeon {
+    background-image: url('../midia/twice_PERFIL_BG_Jeongyeon.jpg');
+}
+
+.momo {
+    background-image: url('../midia/twice_PERFIL_BG_Momo.jpg');
+}
+
+.sana {
+    background-image: url('../midia/twice_PERFIL_BG_Sana.jpg');
+}
+
+.jihyo {
+    background-image: url('../midia/twice_PERFIL_BG_Jihyo.jpg');
+}
+
+.mina {
+    background-image: url('../midia/twice_PERFIL_BG_Mina.jpg');
+}
+
+.dahyun {
+    background-image: url('../midia/twice_PERFIL_BG_Dahyun.jpg');
+}
+
+.chaeyoung {
+    background-image: url('../midia/twice_PERFIL_BG_Chaeyoung.jpg');
+}
+
+.tzuyu {
+    background-image: url('../midia/twice_PERFIL_BG_Tzuyu.jpg');
+}
+
+
+
+
+
+
+div#ahyeon a{color: #a82f9e;}
+div#ahyeon a:hover{color: var(--cor1)}
+
+div#ahyeon, div#asa, div#chiquita, div#pharita, div#rami, div#rora, div#ruka{
+    background-color: rgba(0, 0, 0, 0.459);
+    position: absolute; /* Adicionado */
+    border-radius: 10px;
+    bottom: 10px; /* Alinha a parte inferior com a parte inferior do pai (perfil) */
+    left: 50%; /* Move o início da div para o centro horizontal do pai */
+    transform: translateX(-50%); /* Desloca a div metade de sua própria largura para a esquerda, centralizando-a */
+    width: 95%; /* Ajuste a largura conforme necessário */
+    /* Outros estilos como background-color, padding, etc. */
+    text-align: left;
+   /*  transform: translateX(-50%); */
+    /* z-index: 5; */
+
+}
+
+
+/**********************FIM CONFIG LISTA************************************/
+
+/* @media screen and (max-width: 580px) {
+    header, header > nav {
+        flex-flow: column nowrap;
+    }
+
+    header > h1 {
+        flex-basis: 50px
+    }
+
+    header > nav > a {
+        width: 60vw;
+    }
+
+} */
