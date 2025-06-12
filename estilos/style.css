@@ -2,7 +2,7 @@
 :root {
     --cor0: #9c749c;
     --cor1: #be22be;
-    --cor2: #9b056e;
+    --cor2: #124d07;
     --cor3: #960b2e;
     --cor4: #490644;
     --cor5: #0e0d0d;
@@ -827,14 +827,16 @@ div#artigo > h2 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.418);
 }
 
-section.normal{
-    background-color: rgb(124, 12, 124);
+section.PERGUNTA{
+    background-color: rgb(4, 92, 37);
     color: white;
     padding: 10px;
     font-weight: bolder;
     border-radius: 10px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.534);
 }
+
+.RESPOSTA
 
 
 picture.poster {
@@ -1129,7 +1131,7 @@ div > h2{
 /*     text-shadow: 0px 0px 3px rgb(0, 0, 0); */
     font-weight: bolder;
    /*  color: var(--cor2); */
-   color: var(--cor3);
+   color: rgb(7, 80, 7);
     
 }
 
