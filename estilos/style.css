@@ -185,6 +185,7 @@ div#ahyeon span a{color: rgb(26, 26, 238)}
 #stray_kids {background-image: url(../midia/straykids_POSTER.jpg);filter: grayscale(100%);}
 #BTS {background-image: url(../midia/bts_POSTER.jpg);filter: grayscale(100%);}
 #KISS_OF_LIFE {background-image: url(../midia/kissoflife_poster.jpg);filter: grayscale(100%);}
+#NewJeans {background-image: url(../midia/newjeans_POSTER.jpg);filter: grayscale(100%);}
 
 
 
@@ -795,48 +796,95 @@ header > h1 {
 }
 /*********************** configuração do HOME ***********************/
 
+/* config do artigo  */
 article {
     background-color: rgba(255, 255, 255, 0.904);
     padding: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.534);
-    }
+}
 
-
-
-div#artigo{
+div#artigo {
     padding: 10px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.397);
+    /* Adicione 'position: relative;' aqui se você quiser posicionar o botão de forma absoluta em relação ao #artigo */
+    /* position: relative; */
 }
 
-
-div#artigo > p{
+div#artigo > p {
     line-height: 1.5;
-    
-    
-    
-    
 }
+
 div#artigo > h2 {
-    
     text-align: center;
     color: black;
     font-weight: bolder;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.418);
 }
 
-section.PERGUNTA{
+section.PERGUNTA {
     background-color: rgb(4, 92, 37);
     color: white;
     padding: 10px;
     font-weight: bolder;
     border-radius: 10px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.534);
+    margin-top: 5px; /* Adicione um pequeno espaçamento superior para separar das seções anteriores */
 }
 
-.RESPOSTA
+section.RESPOSTA {
+    /* Adicione estilos para suas respostas se ainda não tiver */
+    padding: 0px;
+    margin-bottom: 0px; /* Adiciona espaçamento inferior para separar das perguntas/respostas */
+}
+
+/* --- Novos estilos para expandir/recolher --- */
+
+/* Estilo para a div que contém o conteúdo que será ocultado */
+#conteudoOculto {
+    max-height: 0; /* Começa com altura zero para ocultar */
+    overflow: hidden; /* Esconde o conteúdo que transborda */
+    transition: max-height 0.7s ease-in-out; /* Transição mais suave e com um tempo um pouco maior */
+    padding-bottom: 0; /* Remove padding inferior inicial para que o botão fique justo */
+}
+
+/* Estilo para a div que está expandida */
+#conteudoOculto.expandido {
+    max-height: 2000px; /* Um valor grande o suficiente para mostrar todo o conteúdo */
+    /* Você pode ajustar este valor se o conteúdo for muito maior. Use um valor que seja certamente maior que o conteúdo total. */
+    padding-bottom: 0px; /* Adiciona um padding inferior quando expandido para dar respiro */
+}
+
+/* Estilo para o botão de expandir/recolher */
+#botaoExpandir {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Um pouco mais de padding para o botão */
+    cursor: pointer; /* Indica que é clicável */
+    width: 100%; /* Ocupa toda a largura da div pai */
+    border-radius: 0 0 10px 10px; /* Arredonda apenas as bordas inferiores para combinar com a div#artigo */
+    font-weight: bold; /* Deixa o texto do botão mais visível */
+    margin-top: 0px; /* Pequeno espaçamento acima do botão */
+    /*
+    Se você quiser que o botão fique 'colado' na parte de baixo da div #artigo,
+    mesmo que o conteúdo oculto seja menor que o espaço disponível,
+    você pode usar 'position: absolute' e 'bottom: 0', mas para isso,
+    o #artigo precisa ter 'position: relative;' (como sugeri lá em cima).
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    */
+}
+
+#botaoExpandir p {
+    margin: 0; /* Remove a margem padrão do parágrafo dentro do botão */
+    line-height: 1; /* Garante que o texto fique bem centralizado verticalmente */
+}
+
+/* fim do artigo */
 
 
 picture.poster {
@@ -863,6 +911,7 @@ audio {
     margin-top: 10px;
     width: 100%;
   }
+
 
 /**********************CONFIG MENU************************************/
 
