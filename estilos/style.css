@@ -796,7 +796,7 @@ header > h1 {
 }
 /*********************** configuração do HOME ***********************/
 
-/* config do artigo  */
+/********************************************** config do artigo  *****************************/
 article {
     background-color: rgba(255, 255, 255, 0.904);
     padding: 10px;
@@ -804,20 +804,19 @@ article {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.534);
 }
 
-div#artigo {
+div#artigo, div#artigo-glossario { /* Aplicado a ambos os artigos */
     padding: 10px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.397);
-    /* Adicione 'position: relative;' aqui se você quiser posicionar o botão de forma absoluta em relação ao #artigo */
-    /* position: relative; */
+    margin-bottom: 20px; /* Adiciona espaço entre os dois artigos */
 }
 
-div#artigo > p {
+div#artigo > p, div#artigo-glossario > p {
     line-height: 1.5;
 }
 
-div#artigo > h2 {
+div#artigo > h2, div#artigo-glossario > h2 {
     text-align: center;
     color: black;
     font-weight: bolder;
@@ -834,16 +833,30 @@ section.PERGUNTA {
     margin-top: 5px; /* Adicione um pequeno espaçamento superior para separar das seções anteriores */
 }
 
+section.entquete {
+    background-color: rgb(7, 108, 167);
+    color: white;
+    padding: 10px;
+    font-weight: bolder;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.534);
+    margin-top: 5px; /* Adicione um pequeno espaçamento superior para separar das seções anteriores */
+}
+
+
 section.RESPOSTA {
-    /* Adicione estilos para suas respostas se ainda não tiver */
     padding: 0px;
     margin-bottom: 0px; /* Adiciona espaçamento inferior para separar das perguntas/respostas */
 }
 
+
+.h2azul {
+    color: #315cb3;
+}
 /* --- Novos estilos para expandir/recolher --- */
 
 /* Estilo para a div que contém o conteúdo que será ocultado */
-#conteudoOculto {
+.conteudoOculto {
     max-height: 0; /* Começa com altura zero para ocultar */
     overflow: hidden; /* Esconde o conteúdo que transborda */
     transition: max-height 0.7s ease-in-out; /* Transição mais suave e com um tempo um pouco maior */
@@ -851,40 +864,78 @@ section.RESPOSTA {
 }
 
 /* Estilo para a div que está expandida */
-#conteudoOculto.expandido {
+.conteudoOculto.expandido {
     max-height: 2000px; /* Um valor grande o suficiente para mostrar todo o conteúdo */
-    /* Você pode ajustar este valor se o conteúdo for muito maior. Use um valor que seja certamente maior que o conteúdo total. */
     padding-bottom: 0px; /* Adiciona um padding inferior quando expandido para dar respiro */
 }
 
-/* Estilo para o botão de expandir/recolher */
-#botaoExpandir {
+/* Estilo para os botões de expandir/recolher */
+#botaoExpandirFAQ, #botaoExpandirGlossario { /* Aplica o estilo a ambos os botões */
     background-color: black;
     color: white;
     text-align: center;
-    padding: 10px 0; /* Um pouco mais de padding para o botão */
-    cursor: pointer; /* Indica que é clicável */
-    width: 100%; /* Ocupa toda a largura da div pai */
-    border-radius: 0 0 10px 10px; /* Arredonda apenas as bordas inferiores para combinar com a div#artigo */
-    font-weight: bold; /* Deixa o texto do botão mais visível */
-    margin-top: 0px; /* Pequeno espaçamento acima do botão */
-    /*
-    Se você quiser que o botão fique 'colado' na parte de baixo da div #artigo,
-    mesmo que o conteúdo oculto seja menor que o espaço disponível,
-    você pode usar 'position: absolute' e 'bottom: 0', mas para isso,
-    o #artigo precisa ter 'position: relative;' (como sugeri lá em cima).
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    */
+    padding: 10px 0;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    font-weight: bold;
+    margin-top: 0px;
 }
 
-#botaoExpandir p {
-    margin: 0; /* Remove a margem padrão do parágrafo dentro do botão */
-    line-height: 1; /* Garante que o texto fique bem centralizado verticalmente */
+#botaoExpandirFAQ p, #botaoExpandirGlossario p {
+    margin: 0;
+    line-height: 1;
 }
 
-/* fim do artigo */
+/* Estilos para o Glossário (itens individuais) */
+.glossary-item {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.glossary-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.glossary-header h3 {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.toggle-icon {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+}
+
+.glossary-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 10px; /* Adiciona padding lateral mesmo quando oculto */
+    background-color: #fdfdfd;
+}
+
+.glossary-item.active .glossary-content {
+    max-height: 100px; /* Um valor que permita ver o conteúdo. Ajuste se o texto for maior. */
+    padding: 10px; /* Adiciona padding quando expandido */
+}
+
+.glossary-content p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/*************************** fim do artigo ***************************/
 
 
 picture.poster {
