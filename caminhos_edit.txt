@@ -16,7 +16,7 @@ PROGRAMA3path:
 
 
 arquivos3path:
-F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\album.html
+
 
 PROGRAMA4path:
 
