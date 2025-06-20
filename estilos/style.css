@@ -951,7 +951,7 @@ section.RESPOSTA {
 
 /* Estilo para a div que está expandida */
 .conteudoOculto.expandido {
-    max-height: 2000px; /* Um valor grande o suficiente para mostrar todo o conteúdo */
+    max-height: 100%; /* Um valor grande o suficiente para mostrar todo o conteúdo */
     padding-bottom: 0px; /* Adiciona um padding inferior quando expandido para dar respiro */
 }
 
