@@ -216,7 +216,7 @@ div#ahyeon span a{color: rgb(26, 26, 238)}
     width: 100%;
     height: 20vh; /* Ou aspect-ratio: 800 / 350; */
     max-width: 800px;
-    margin: 0 auto;
+    margin-bottom: 10px;
     position: relative;
     /* align-items: flex-end; */ /* Se quiser alinhar os itens ao final do eixo cruzado (horizontalmente neste caso) */
     /* justify-content: space-around; */ /* Para distribuir espaço entre os itens no eixo principal (verticalmente neste caso) */
