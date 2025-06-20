@@ -7,6 +7,10 @@
     --cor4: #490644;
     --cor5: #0e0d0d;
     --cor6: #eb8ecf;
+    --cor7: #13e90c;
+    --cor8: #f1d900;
+    --cor9: rgb(7, 108, 167);
+    --cor10: black;
 
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
     --fonte-strong: Anton, Boldonse, Rowdies, Alfa Slab One, Archivo Black,;
@@ -60,7 +64,7 @@ h4{
     font-weight: bolder;
    /*  -webkit-text-stroke: 2px black; /* Largura e cor do traçado */ 
 
-    text-shadow:
+/*     text-shadow:
     -1px -1px 0 black,
     1px -1px 0 black,
     -1px 1px 0 black,
@@ -68,7 +72,7 @@ h4{
     -2px -2px 0 black,
     2px -2px 0 black,
     -2px 2px 0 black,
-    2px 2px 0 black;
+    2px 2px 0 black; */
 }
 
 
@@ -199,9 +203,11 @@ div#ahyeon span a{color: rgb(26, 26, 238)}
 
 
 
-.grupo {
+
+
+.grupo1 {
     display: flex;
-    
+    flex-direction: column; /* Adicionado para alinhar os itens verticalmente */
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -209,6 +215,33 @@ div#ahyeon span a{color: rgb(26, 26, 238)}
     border-radius: 20px;
     width: 100%;
     height: 20vh; /* Ou aspect-ratio: 800 / 350; */
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    /* align-items: flex-end; */ /* Se quiser alinhar os itens ao final do eixo cruzado (horizontalmente neste caso) */
+    /* justify-content: space-around; */ /* Para distribuir espaço entre os itens no eixo principal (verticalmente neste caso) */
+}
+
+.grupo1 h2 {
+    color: #000;
+    height: vw;
+}
+
+.grupo1 h3 {
+    
+    height: 15vw;
+}
+
+.grupo {
+    display: flex;
+    
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    /* background-color: black; */
+    border-radius: 20px;
+    width: 100%;
+    height: 5vh; /* Ou aspect-ratio: 800 / 350; */
     max-width: 800px;
     margin: 0 auto;
     position: relative;
@@ -322,10 +355,11 @@ div#ahyeon span a{color: rgb(26, 26, 238)}
 
 /****************************CONFIG CARROCEL*************************/
 
-h2#titulocarrocel {
-    /* background-color: antiquewhite; */
-    color: var(--cor6);
+h3#titulocarrocel {
+    height: auto;
+    color: var(--cor1);
     /* text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.644); */
+    margin: 0px 5px 10px 5px;
 }
 
 
@@ -333,8 +367,52 @@ div#mascara_carrocel{
     background-color: black;
     overflow: hidden;
     width: 100%; 
-    padding: 10px 0 10px 0;
+    padding: 5px 0 5px 0;
 }
+
+
+
+/* link da lista do youtube container-float */
+
+  .container-float {
+   /*  overflow: auto; /* Garante que o container se ajuste ao conteúdo flutuante */ */
+    background-color: var(--Tcor5);
+    padding: 5px;
+    height: 20vw;
+    border-radius: 10px;
+    margin: 5px;
+    display: flex; /* Transforma a div externa em um contêiner flexível 
+     flex-direction: column; /* Organiza os itens filhos em uma coluna 
+/*     justify-content: space-between; /* Distribui o espaço para empurrar o primeiro */
+align-items: end;
+
+  }
+
+  .container-float a {
+  
+
+  }
+
+  .youtube-icon-float {
+    float: left;
+    margin-right: 5px; /* Espaçamento entre a imagem e o texto */
+    margin-top: 5px;
+    width: 40px;  /* Define a largura do ícone para 32 pixels */
+    height: 30px; /* Define a altura do ícone para 32 pixels */
+  }
+
+  /* Estilos para o seu link e texto existentes */
+  .linkh3 {
+    font-size: 0.8em; /* Exemplo de estilo */
+   color: var(--cor9);
+    text-decoration: none; /* Exemplo de estilo */
+    display: inline; /* Garante que o h4 se comporte como parte do texto */
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.61);
+  }
+
+
+/* fim link da lista do youtube container-float*/
+
 
 .swiper-container {
     width: 340px; /* Ajuste a largura conforme necessário */
@@ -1215,22 +1293,8 @@ div.perfil {
 }
 
 
-div.grupo {
-    
-    position: absolute; /* Adiciona posicionamento absoluto */
-    bottom: 5px;      /* Define a distância de 10px da parte inferior */
-    left: 5px;        /* Opcional: alinha à esquerda com a margem */
-    right: 5px;       /* Opcional: alinha à direita com a margem */
 
-    margin: 5px;
-    padding: 8px;
-    border-radius: 10px;
-    background: #00000085;
-
-    font-weight: normal;
-    color: white;
   
-  }
   
 
 div > h2{
