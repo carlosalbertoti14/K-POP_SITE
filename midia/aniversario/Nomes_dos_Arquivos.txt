@@ -1,3 +1,5 @@
+
+esses são as imagens que estão em midia\aniversario\;
 aespa_GISELLE30NIVER.png
 aespa_KARINA11NIVER.png
 aespa_NINGNING23NIVER.png
@@ -22,7 +24,6 @@ BLACKPINK_niver_Jennie16janjan.png
 BLACKPINK_niver_Jisoo3jan.png
 BLACKPINK_niver_Lisa27Mar.png
 BLACKPINK_niver_Rose11fev.png
-listar_arquivos.bat
 Nomes_dos_Arquivos.txt
 TWICE_Chaeyoung23ABR.png
 TWICE_JEONGYEON1NOV.png
