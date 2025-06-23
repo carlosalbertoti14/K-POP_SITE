@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (textoBotaoFAQ) textoBotaoFAQ.textContent = 'clique para expandir';
             } else {
                 conteudoOcultoFAQ.classList.add('expandido');
-                if (textoBotaoFAQ) textoBotaoFAQ.textContent = 'clique para recolher';
+                if (textoBotaoFAQ) textoBotaoFAQ.textContent = '🔝 clique para recolher 🔝';
             }
         });
     }
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (textoBotaoGlossario) textoBotaoGlossario.textContent = 'clique para expandir';
             } else {
                 conteudoOcultoGlossario.classList.add('expandido');
-                if (textoBotaoGlossario) textoBotaoGlossario.textContent = 'clique para recolher';
+                if (textoBotaoGlossario) textoBotaoGlossario.textContent = '🔝 clique para recolher 🔝';
             }
         });
     }
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 noticiasOculto.classList.add('expandido');
                 currentMaxHeight = 1000; // Define a altura inicial para 1000px
                 noticiasOculto.style.maxHeight = currentMaxHeight + 'px';
-                if (textoBotaoNOTICIAS) textoBotaoNOTICIAS.textContent = 'clique para recolher';
+                if (textoBotaoNOTICIAS) textoBotaoNOTICIAS.textContent = '🔝 clique para recolher 🔝';
                 if (botaoMaisNOTICIAS) botaoMaisNOTICIAS.style.display = 'block'; // Mostra o botão "Mais Notícias"
             }
             // Chama a função para carregar notícias se ainda não tiverem sido carregadas
