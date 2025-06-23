@@ -200,6 +200,12 @@ div#ahyeon span a{color: rgb(26, 26, 238)}
 #Girls-Generation {background-image: url(../midia/Girls-Generation_POSTER.jpg);filter: grayscale(100%);}
 #TXT {background-image: url(../midia/TXT_POSTER.jpg);filter: grayscale(100%);}
 #EXO-K {background-image: url(../midia/EXO-K_POSTER.jpg);filter: grayscale(100%);}
+#Kep1er {background-image: url(../midia/Kep1er_POSTER.jpg);filter: grayscale(100%);}
+#NMIXX {background-image: url(../midia/NMIXX_POSTER.jpg);filter: grayscale(100%);}
+#TREASURE {background-image: url(../midia/TREASURE_POSTER.jpg);filter: grayscale(100%);}
+#ZEROBASEONE {background-image: url(../midia/ZEROBASEONE_POSTER.jpg);filter: grayscale(100%);}
+#RIIZE {background-image: url(../midia/RIIZE_POSTER.jpg);filter: grayscale(100%);}
+#ENHYPEN {background-image: url(../midia/ENHYPEN_POSTER.jpg);filter: grayscale(100%);}
 
 
 
@@ -555,7 +561,7 @@ transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave para a o
 
   section#SECniver {
     display: none;
-    background-image: url(../midia/ANIVERSÁRIO_BG.jpg);
+    background-image: url(../midia/aniversario/ANIVERSÁRIO_BG.png);
     background-position: center;
     background-repeat: no-repeat;
     background-color: black; /* Importante manter o background-color: black */
@@ -564,6 +570,7 @@ transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave para a o
     max-width: 800px;
     margin: 0 auto;
     position: relative; /* Importante para posicionar o vídeo absolutamente dentro */
+    margin-bottom: 10px;
 }
 
 #fogosVideo {
@@ -582,6 +589,11 @@ div#felizniver {
     display: none;
 
 }
+
+div#felizniver h4 {
+    color: white;
+}
+
 
 div#felizniver img{
     display: block;
