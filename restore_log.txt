@@ -1,0 +1,146 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy para Windows                              
+-------------------------------------------------------------------------------
+
+  Iniciado: terÁa-feira, 24 de junho de 2025 22:40:17
+   Origem : F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\
+     Destino : F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\
+
+    Arquivos: *.*
+	    
+Arquivos Exc: .gitattributes
+	    LICENSE
+	    README.md
+	    
+ DiretÛrios Exc: .git
+	    
+  OpÁıes: *.* /S /E /DCOPY:DA /COPY:DAT /IS /IT /XO /MT:8 /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	  *Arquivo EXTRA		   63321	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\index - Copia.html
+	  *Arquivo EXTRA		   14275	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\nota.docx
+	  *Arquivo EXTRA		       0	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\restore_log.txt
+	  Novo Arquivo		  107912	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\album.html100%  
+	         Igual		    1835	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\BACKUP.bat100%  
+	         Igual		     172	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\desktop.ini100%  
+	         Igual		    2802	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\EDITAR.bat100%  
+	  Novo Arquivo		    6188	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\Novo(a) Planilha do Microsoft Excel.xlsx100%  
+	  Novo Arquivo		   10687	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\PERFIL.html100%  
+	         Igual		     688	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\RESTORE.bat100%  
+	  *Arquivo EXTRA		   10672	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\script\expandir_artigo.js
+	  *Arquivo EXTRA		    3364	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\script\expandir_HOTNEWS - Copia.js
+	  *Arquivo EXTRA		    4929	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\script\noticias_google.js
+	  *Arquivo EXTRA		       0	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\script\saiba_mais_individual.js
+	*Dir EXTRA        -1	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\album\
+	*Dir EXTRA        -1	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\aniversario\
+	*Dir EXTRA        -1	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\NEWS\
+	  *Arquivo EXTRA		  204591	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\aespagroup2.jpg
+	  *Arquivo EXTRA		  201300	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\ateez_POSTER.jpg
+	  *Arquivo EXTRA		  115280	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\bg_KPOP.jpg
+	  *Arquivo EXTRA		  201850	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\BIGBANG_POSTER.jpg
+	  *Arquivo EXTRA		  180159	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\blackpink_POSTER.jpg
+	  *Arquivo EXTRA		  238213	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\bts_POSTER.jpg
+	  *Arquivo EXTRA		  179093	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\ENHYPEN_POSTER.jpg
+	  *Arquivo EXTRA		  178654	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\EXO-K_POSTER.jpg
+	  *Arquivo EXTRA		    5567	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\favicon_KPOP.png
+	  *Arquivo EXTRA		  184333	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\G-IDLE_POSTER.jpg
+	  *Arquivo EXTRA		  177855	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\Girls-Generation_POSTER.jpg
+	  *Arquivo EXTRA		  157870	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\ILLIT_POSTER.jpg
+	  *Arquivo EXTRA		  287244	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\IVE_POSTER.jpg
+	  *Arquivo EXTRA		  220434	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\katseye_POSTER.jpg
+	  *Arquivo EXTRA		  179700	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\Kep1er_POSTER.jpg
+	  *Arquivo EXTRA		  184719	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\kissoflife_poster.jpg
+	  *Arquivo EXTRA		  220339	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\LE-SSERAFIM_POSTER.jpg
+	  *Arquivo EXTRA		  266100	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\newjeans_POSTER.jpg
+	  *Arquivo EXTRA		  201844	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\NMIXX_POSTER.jpg
+	  *Arquivo EXTRA		  195791	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\RIIZE_POSTER.jpg
+	  *Arquivo EXTRA		  235720	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\seventeen_POSTER.jpg
+	  *Arquivo EXTRA		  207486	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\straykids_POSTER.jpg
+	  *Arquivo EXTRA		  176208	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\TREASURE_POSTER.jpg
+	  *Arquivo EXTRA		  172364	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\TXT_POSTER.jpg
+	  *Arquivo EXTRA		  263162	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\K-POP_SITE\midia\ZEROBASEONE_POSTER.jpg
+	         Igual		   53733	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\sons\ARRASTAR.mp3100%  
+	         Igual		   47881	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\sons\CLIQUE.mp3100%  
+	  Novo Arquivo		    2840	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\script\babymonster - BACKUP.js100%  
+	  Novo Arquivo		       0	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\script\babymonster.js100%  
+	  Mais Recente		    3006	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\script\barra_de_menus.js100%  
+	         Igual		    2420	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\script\caixa_explicacao.js100%  
+	  Mais Recente		    1447	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\script\calc_idade.js100%  
+	  Novo Arquivo		   15542	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\script\mouse_magico - Copia.js100%  
+	  Mais Recente		   15399	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\script\mouse_magico.js100%  
+	         Igual		   15175	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\script\NOTA.txt100%  
+	  Mais Recente		    2061	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\script\video_cabecalho.js100%  
+	  Novo Arquivo		   53962	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\62591.webp100%  
+	  Novo Arquivo		  134036	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\ANIVERSµRIO_BG.jpg100%  
+	  Novo Arquivo		  262536	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\babymonsterGROUP.jpg100%  
+	         Igual		  231837	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\babymonster_poster.jpg100%  
+	  Novo Arquivo		   1.2 m	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink-album-asifitsyourlast.jpg100%  
+	  Novo Arquivo		   87361	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink-album-bornpink.jpg100%  
+	  Novo Arquivo		   1.6 m	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink-album-howyoulikethat.jpg100%  
+	  Novo Arquivo		   1.2 m	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink-album-icecream.jpg100%  
+	  Novo Arquivo		   1.4 m	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink-album-killthislove.jpg100%  
+	  Novo Arquivo		  113847	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink-album-pinkvenom.jpg100%  
+	  Novo Arquivo		   74843	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink-album-squareone.jpg100%  
+	  Novo Arquivo		   86367	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink-album-squaretwo_3.jpg100%  
+	  Novo Arquivo		   1.1 m	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink-album-squareup.jpg100%  
+	  Novo Arquivo		  948639	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink-album-thealbum.jpg100%  
+	  Novo Arquivo		  103457	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\BLACKPINK_ALBUM_LIST.rtf100%  
+	  Novo Arquivo		   34762	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink_head_1.jpg100%  
+	  Novo Arquivo		   32245	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink_head_2.jpg100%  
+	  Novo Arquivo		   50410	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink_head_3.jpg100%  
+	  Novo Arquivo		   27927	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink_HTML_BG.jpg100%  
+	  Novo Arquivo		   34368	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink_HTML_BG_Transp.png100%  
+	  Novo Arquivo		   41508	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\Blackpink_logo.svg.png100%  
+	  Novo Arquivo		  119469	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink_PERFIL_BG_Jennie.jpg100%  
+	  Novo Arquivo		  149947	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink_PERFIL_BG_Jisoo.jpg100%  
+	  Novo Arquivo		  115982	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink_PERFIL_BG_Lisa.jpg100%  
+	  Novo Arquivo		  177860	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink_PERFIL_BG_RosÇ.jpg100%  
+	  Novo Arquivo		  348197	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink_poster.jpeg100%  
+	  Novo Arquivo		  405655	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\blackpink_poster2.avif100%  
+	  Novo Arquivo		   41143	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\BOLO.png100%  
+	  Novo Arquivo		  232465	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\carrocel_As If It's Your Last.jpg100%  
+	  Novo Arquivo		  216873	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\carrocel_Boombayah.jpg100%  
+	  Novo Arquivo		  257888	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\carrocel_DDU-DU DDU-DU.jpg100%  
+	  Novo Arquivo		  216075	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\carrocel_How You Like That.jpg100%  
+	  Novo Arquivo		  262808	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\carrocel_Kill This Love.jpg100%  
+	  Novo Arquivo		  207291	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\carrocel_scientist.jpg100%  
+	  Novo Arquivo		  128193	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\clique_magico.gif100%  
+	  Novo Arquivo		  147623	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\clique_magico2.gif100%  
+	  Novo Arquivo		  136508	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\coroa.jpg100%  
+	  Novo Arquivo		  232742	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\coroa.png100%  
+	  Novo Arquivo		   20608	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\favicon_bm.png100%  
+	         Igual		  519872	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\fogos.webm100%  
+	         Igual		     203	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\listar_arquivos.bat100%  
+	  Novo Arquivo		    9933	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\LISTA_LOGO_ORIGINAL.png100%  
+	  Novo Arquivo		  119483	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\MINI-ALBUM_14M Strategy.jpg100%  
+	  Novo Arquivo		   27843	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\niver_Jennie16janjan.png100%  
+	  Novo Arquivo		   27808	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\niver_Jisoo3jan.png100%  
+	  Novo Arquivo		   26865	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\niver_Lisa27Mar.png100%  
+	  Novo Arquivo		   26577	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\niver_Rose11fev.png100%  
+	  Novo Arquivo		   89306	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\ROLLING_STONE_logo.jpg100%  
+	  Novo Arquivo		  555377	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\SOLO-album-JENNIE_RUBY.jpg100%  
+	  Novo Arquivo		  611991	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\SOLO-album-JISOO_AMORTAGE.jpg100%  
+	  Novo Arquivo		  548663	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\SOLO-album-JISOO_ME.jpg100%  
+	  Novo Arquivo		  440923	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\SOLO-album-LISA_ALTEREGO.jpg100%  
+	  Novo Arquivo		  756264	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\SOLO-album-LISA_LALISA.jpg100%  
+	  Novo Arquivo		  983533	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\SOLO-album-ROSê_ROSê.jpg100%  
+	  Novo Arquivo		  132441	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\Teen_Vogue_logo.png100%  
+	  Novo Arquivo		   43378	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\YG_FAMILY_logo.svg.png100%  
+	         Igual		    1784	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\YOUTUBE_LOGO_ORIGINAL.png100%  
+	  Novo Arquivo		  105557	F:\Users\Caio89-W11\Documents\Caio89\SITES\SITES_CRIADOS\K-POP\MAKER_ALL\BACKUPS\BLACK_PINK\midia\YOUTUBE_LOGO_ROUND.png100%  
+
+------------------------------------------------------------------------------
+
+               Total   Copiada  IgnoradaIncompatibilidade     FALHA    Extras
+DiretÛrios:         6         5         6         0         0         3
+ Arquivos:        89        76        13         0         0        32
+    Bytes:   17.48 m   17.17 m   317.0 k         0         0    4.70 m
+N.∫ de Vezes:   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+Velocidade:           206.991.114 Bytes/s.
+Velocidade:             11844,127 MegaBytes/min.
+   Finalizado em: terÁa-feira, 24 de junho de 2025 22:40:17
+

@@ -1,3 +1,5 @@
+// js/expandir_artigo.js
+
 document.addEventListener('DOMContentLoaded', function() {
     // --- Script para a seção FAQ ---
     const conteudoOcultoFAQ = document.getElementById('FAQ');
@@ -109,29 +111,4 @@ document.addEventListener('DOMContentLoaded', function() {
             // Ex: if (noticiasOculto.scrollHeight <= currentMaxHeight) { botaoMaisNOTICIAS.style.display = 'none'; }
         });
     }
-
-    // --- Script para o botão Expandir/Recolher HOTNEWS ---
-    const botaoExpandirHOTNEWS = document.getElementById('botaoExpandirHOTNEWS');
-    const hotnewsOculto = document.getElementById('HOTNEWS_oculto');
-    const hotnewsContainer = document.getElementById('HOTNEWS');
-    const textoBotaoExpandirHOTNEWS = botaoExpandirHOTNEWS ? botaoExpandirHOTNEWS.querySelector('p') : null;
-
-    if (botaoExpandirHOTNEWS && hotnewsOculto && hotnewsContainer) {
-        botaoExpandirHOTNEWS.addEventListener('click', function() {
-            if (hotnewsOculto.style.display === 'block') {
-                // Se está expandido, recolhe
-                hotnewsOculto.style.display = 'none';
-                hotnewsContainer.style.height = '270px'; // Volta para a altura original
-                if (textoBotaoExpandirHOTNEWS) textoBotaoExpandirHOTNEWS.textContent = 'clique para expandir';
-            } else {
-                // Se está recolhido, expande
-                hotnewsOculto.style.display = 'block';
-                hotnewsContainer.style.height = 'auto'; // Ajusta a altura automaticamente
-                if (textoBotaoExpandirHOTNEWS) textoBotaoExpandirHOTNEWS.textContent = '🔝 clique para recolher 🔝';
-            }
-        });
-    }
-
-    // O script para os botões "Saiba Mais" (saibamais_X) foi removido aqui
-    // conforme sua solicitação para desfazer essa interação.
 });

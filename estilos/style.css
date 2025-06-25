@@ -296,9 +296,144 @@ h5{
     }
 
 
+
+
+
 }
 
-/*********************FIN DO NOTICIAS  */
+
+
+/*********************FIN DO NOTICIAS*************************/
+
+
+/********************* ARTIGO HOTNEWS*************************/
+
+#HOTNEWS {
+    height: 270px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    
+}
+
+#HOTNEWS_box {
+margin-bottom: 10px;
+}
+
+#HOTNEWS > h3 {
+    color: red;
+}
+
+#HOTNEWS_box {
+
+}
+
+#HOTNEWS_content_1 {
+     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../midia/NEWS/NEWS_BTS_EXERCITO.jpg);
+}
+#HOTNEWS_content_2 {
+     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../midia/NEWS/NEWS__Ubermensch-GDRAGON.jpg);
+}
+#HOTNEWS_content_3 {
+     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../midia/NEWS/NEWS_STRAYKIDS.jpg);
+}
+
+
+#HOTNEWS_oculto{
+    display: none;
+
+}
+
+#hotnews_destaque{
+   margin: 10px;
+}
+
+
+#HOTNEWS_content1{
+   
+}
+
+#conteudoOculto-HOTNEWS_1{display: none;}
+#conteudoOculto-HOTNEWS_2{display: none;}
+#conteudoOculto-HOTNEWS_3{display: none;}
+
+
+
+#LERartigo1 {
+
+}
+
+.HOTNEWS_content{
+ display: flex;
+ flex-direction: column;
+
+background-color: rgb(0, 0, 0); /* Cor de fundo de fallback */
+background-position: top; /* Centraliza a imagem no centro da div */
+background-size:  100%;
+border-radius: 10px 10px 0px 0px ;
+background-repeat: no-repeat; /* Evita que a imagem se repita */
+
+}
+
+
+.HOTNEWS_content{
+
+}
+
+.HOTNEWS_section{
+    margin-bottom: 10px;
+}
+
+.HOTNEWS_section_head > h3{
+
+    color: white;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.HOTNEWS_section_body {
+    padding:  50px 5px 50px 5px ;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+
+}
+
+.conteudoOculto-HOTNEWS{
+   background-color: black;
+    color: white;
+    /* font-weight: bolder; */
+    text-align: justify;
+    padding: 10px;
+
+
+
+}
+
+.botao_mais{
+
+}
+
+@media (max-width: 600px) {
+    #HOTNEWS {
+    margin-bottom: 10px;
+    height: 280px;
+    overflow: hidden;
+    
+}
+
+.botao_mais{
+    margin-bottom: 0px;
+
+}
+
+
+}
+
+/********************* FIM DO ARTIGO HOTNEWS*************************/
+
+
+
 
 /***************CONFIGURAÇÃO DA CAIXA DE EXPLICAÇÃO*************/
 
