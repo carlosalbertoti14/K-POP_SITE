@@ -1,0 +1,238 @@
+LISTE PARA MIM, SEM NENHUM MARCADOR DE BOLINHA. O ANIVERSARIO DE TODOS OS MEMBROS DO GRUPO K-POP ILLIT:
+USE ESSE FORMATO: EX.: TWICE_JEONGYEON01NOV
+
+
+ESSA É MINHA PAGINA E QUERO IMPLEMENTAR, poderia ajustar as informações do js com as da mídia para mim.
+
+aniversariante.js
+document.addEventListener("DOMContentLoaded", function () {
+    const imagens = document.querySelectorAll('#DIVniver img');
+    const mesAtual = new Date().getMonth() + 1;
+    const hoje = new Date();
+    const diaAtual = hoje.getDate();
+    const diamesHoje = `${diaAtual}/${mesAtual}`;
+    let encontrouAniversariante = false;
+    let encontrouAniversarianteDoDia = false;
+
+    const nivernome = [
+        { nome: "NAYEON", url: "url('midia/twice_PERFIL_BG_Nayeon.jpg')" },
+        { nome: "JEONGYEON", url: "url('midia/twice_PERFIL_BG_Jeongyeon.jpg')" },
+        { nome: "MOMO", url: "url('midia/twice_PERFIL_BG_Momo.jpg')" },
+        { nome: "SANA", url: "url('midia/twice_PERFIL_BG_Sana.jpg')" },
+        { nome: "JIHYO", url: "url('midia/twice_PERFIL_BG_Jihyo.jpg')" },
+        { nome: "MINA", url: "url('midia/twice_PERFIL_BG_Mina.jpg')" },
+        { nome: "DAHYUN", url: "url('midia/twice_PERFIL_BG_Dahyun.jpg')" },
+        { nome: "CHAEYOUNG", url: "url('midia/twice_PERFIL_BG_Chaeyoung.jpg')" },
+        { nome: "TZUYU", url: "url('midia/twice_PERFIL_BG_Tzuyu.jpg')" }
+    ];
+
+    const secNiver = document.getElementById("SECniver");
+    const divNiver = document.getElementById("DIVniver");
+    const mensagemAniversarioDiv = document.getElementById("felizniver");
+    const fogosVideo = document.getElementById("fogosVideo");
+
+    imagens.forEach(img => {
+        const alt = img.alt.trim(); // Ex: "NAYEON 22/9"
+        const partes = alt.split(" ");
+        if (partes.length === 2) {
+            const nomeAniversariante = partes[0];
+            const dataAniversario = partes[1];
+
+            if (dataAniversario === diamesHoje) {
+                const aniversarianteDoDia = nivernome.find(item => item.nome.toLowerCase() === nomeAniversariante.toLowerCase());
+                if (aniversarianteDoDia && secNiver && divNiver) {
+                    secNiver.style.backgroundImage = aniversarianteDoDia.url;
+                    if (mensagemAniversarioDiv) {
+                        mensagemAniversarioDiv.innerHTML = `<h4 id="felizniver"> Feliz aniversário, ${nomeAniversariante}! Hoje é o seu dia mais FELIZ!!!</h4>`;
+                        mensagemAniversarioDiv.style.display = "block";
+                    }
+                    if (fogosVideo) {
+                        fogosVideo.style.display = "block"; // Mostra o vídeo de fogos
+                    }
+                    img.style.display = "block";
+                    encontrouAniversarianteDoDia = true;
+                }
+            }
+        }
+    });
+
+    // Exibe os aniversariantes do mês se não houver um aniversariante do dia
+    imagens.forEach(img => {
+        const alt = img.alt.trim();
+        const partes = alt.split(" ");
+        if (partes.length === 2) {
+            const mesAniversario = parseInt(partes[1].split("/")[1]);
+            if (mesAniversario === mesAtual && !encontrouAniversarianteDoDia) {
+                img.style.display = "inline-block";
+                encontrouAniversariante = true;
+            } else if (!encontrouAniversarianteDoDia) {
+                img.style.display = "none";
+            }
+        } else {
+            if (!encontrouAniversarianteDoDia) {
+                img.style.display = "none";
+            }
+        }
+    });
+
+    if (encontrouAniversariante || encontrouAniversarianteDoDia) {
+        secNiver.style.display = "block";
+    }
+});
+
+
+html
+...restante do código...
+
+ <section id="SECniver" style="display:none; background-size: cover; background-position: center;">
+
+    <video id="fogosVideo" src="midia/fogos.webm" autoplay loop muted style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1;"></video>
+
+    <div id="felizniver" style="display:none;">
+        <h4></h4>
+        <picture></picture>
+    </div>
+
+     <div id="DIVniver">
+        <a href="PERFIL.html#perfil-JIHYO"><img id="NIVER5" src="midia/JIHYO1FEV.png" alt="Jihyo 1/2"></a>
+        <a href="PERFIL.html#perfil-MINA"><img id="NIVER6" src="midia/MINA24MAR.png" alt="Mina 24/3"></a>
+        <a href="PERFIL.html#perfil-CHAEYOUNG"><img id="NIVER7" src="midia/Chaeyoung23ABR.png" alt="Chaeyoung 23/4"></a>
+        <a href="PERFIL.html#perfil-TZUYU"><img id="NIVER8" src="midia/TZUYU14JUN.png" alt="Tzuyu 14/6"></a>
+        <a href="PERFIL.html#perfil-NAYEON"><img id="NIVER1" src="midia/NAYEON22SET.png" alt="Nayeon 22/9"></a>
+        <a href="PERFIL.html#perfil-JEONGYEON"><img id="NIVER2" src="midia/JEONGYEON1NOV.png" alt="Jeongyeon 1/11"></a>
+        <a href="PERFIL.html#perfil-MOMO"><img id="NIVER3" src="midia/MOMO9NOV.png" alt="Momo 9/11"></a>
+        <a href="PERFIL.html#perfil-SANA"><img id="NIVER4" src="midia/SANA29DEZ.png" alt="Sana 29/12"></a>
+    </div>
+  </section>
+...restante do código...
+
+
+/****************************CONFIG ANIVERSARIO*************************/
+
+
+
+/* ... seu CSS anterior ... */
+
+
+  /* ... seu CSS posterior ... */
+
+
+
+  section#SECniver {
+    display: none;
+    background-image: url(../midia/aniversario/ANIVERSÁRIO_BG.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black; /* Importante manter o background-color: black */
+    width: 100%;
+    height: 670px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; /* Importante para posicionar o vídeo absolutamente dentro */
+}
+
+#fogosVideo {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: screen;
+    pointer-events: none; /* Para não impedir cliques nos links abaixo */
+}
+
+div#felizniver {
+    display: none;
+
+}
+
+div#felizniver img{
+    display: block;
+  /*   z-index: 1000; */
+   
+
+
+}
+
+div#felizniver h4 {
+    padding-top: 10px;
+    font-size: 2em;
+
+}
+
+div#DIVniver {
+    display: flex;
+    flex-flow: column;
+    height: 100%;              /* Deixe a altura se ajustar ao conteúdo */
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0px;      /* Espaço no fundo para não colar a última img */
+}
+
+div#DIVniver a {
+    display: block; /* Faz o link ocupar a largura total */
+    text-align: right; /* Alinha o conteúdo (a imagem) à direita */
+    z-index: 2;
+}
+
+div#DIVniver img {
+    display: none;
+    width: 80%;                /* Ocupa 80% da largura da div, se ajusta em telas menores */
+    max-width: 600px;          /* Mas nunca passa de 300px */
+    padding: 5px 0px 5px 5px;
+   /*  z-index: 200; */
+   /*  box-shadow: 5px 5px 15px rgba(22, 22, 22, 0.5); */
+}
+
+
+/* Aumenta espaço apenas na última imagem */
+
+
+
+div#DIVniver img:last-child {
+    
+    margin-bottom: 0;
+}
+
+
+
+/****************************FIM DA CONFIG ANIVERSARIO*************************/
+
+
+esses são as imagens que estão em midia\aniversario\;
+aespa_GISELLE30NIVER.png
+aespa_KARINA11NIVER.png
+aespa_NINGNING23NIVER.png
+aespa_WINTER1NIVER.png
+ANIVERSµRIO_BG.png
+ATEEZ_niver_Hongjoong07novembro.png
+ATEEZ_niver_Jongho12outubro.png
+ATEEZ_niver_Mingi09agosto.png
+ATEEZ_niver_San10julho.png
+ATEEZ_niver_Seonghwa03abril.png
+ATEEZ_niver_Wooyoung26novembro.png
+ATEEZ_niver_Yeosang15junho.png
+ATEEZ_niver_Yunho23marco.png
+BABYMONSTER_AHYEON11ABRIL.png
+BABYMONSTER_ASA17ABRIL.png
+BABYMONSTER_CHIQUITA17FEVEREIRO.png
+BABYMONSTER_LUKA20MARCO.png
+BABYMONSTER_PHARITA26AGOSTO.png
+BABYMONSTER_RAMI17OUTUBRO.png
+BABYMONSTER_RORA14AGOSTO.png
+BLACKPINK_niver_Jennie16janjan.png
+BLACKPINK_niver_Jisoo3jan.png
+BLACKPINK_niver_Lisa27Mar.png
+BLACKPINK_niver_Rose11fev.png
+Nomes_dos_Arquivos.txt
+TWICE_Chaeyoung23ABR.png
+TWICE_JEONGYEON1NOV.png
+TWICE_JIHYO1FEV.png
+TWICE_MINA24MAR.png
+TWICE_MOMO9NOV.png
+TWICE_NAYEON22SET.png
+TWICE_SANA29DEZ.png
+TWICE_TZUYU14JUN.png

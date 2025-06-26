@@ -4,30 +4,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const noticiasOculto = document.getElementById('noticias_oculto');
     const botaoExpandirNOTICIAS = document.getElementById('botaoExpandirNOTICIAS');
 
-    // Variável global para controlar se as notícias já foram carregadas
-    // Isso evita que o script tente carregar novamente após o primeiro carregamento
     window.noticiasJaCarregadas = false;
+    let tentativasCarregamento = 0;
+    const maxTentativas = 3; // Tentar até 3 vezes
+    const tempoEntreTentativas = 3000; // Esperar 3 segundos entre as tentativas
 
-    // Função para buscar e exibir as notícias de K-pop
     function carregarNoticiasKpop() {
-        // Se as notícias já foram carregadas, saia da função
         if (window.noticiasJaCarregadas) {
             console.log("Notícias de K-pop já carregadas.");
             return;
         }
 
-        // --- SOLUÇÃO CORS: Usando um proxy público ---
-        // Você pode testar 'https://corsproxy.io/?' ou 'https://api.allorigins.win/raw?url='
-        const proxyUrl = 'https://corsproxy.io/?';
+        // Você pode tentar alternar entre proxies se tiver mais de um
+        const proxyUrls = ['https://corsproxy.io/?', 'https://api.allorigins.win/raw?url='];
+        const currentProxy = proxyUrls[tentativasCarregamento % proxyUrls.length]; // Alterna entre os proxies a cada tentativa
+
         const targetUrl = 'https://news.google.com/rss/search?q=k-pop&hl=pt-BR&gl=BR&ceid=BR:pt-BR';
-        const rssUrl = proxyUrl + encodeURIComponent(targetUrl);
-        // ---------------------------------------------
+        const rssUrl = currentProxy + encodeURIComponent(targetUrl); // Usando o proxy atual da lista
 
-        // Mensagem de carregamento inicial
         if (noticiasBox) {
-            noticiasBox.innerHTML = '<p>Carregando notícias de K-pop...</p>';
+            if (tentativasCarregamento === 0) {
+                 noticiasBox.innerHTML = '<p>Carregando notícias de K-pop...</p>';
+            } else {
+                 noticiasBox.innerHTML = `<p>Ocorreu um erro ao carregar as notícias de K-pop. Tentando novamente... (${tentativasCarregamento}/${maxTentativas})</p>`;
+            }
         }
-
 
         fetch(rssUrl)
             .then(response => {
@@ -47,15 +48,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (items.length === 0) {
                     noticiasBox.innerHTML = '<p>Nenhuma notícia de K-pop encontrada no momento.</p>';
                     noticiasOculto.innerHTML = '';
-                    if (botaoExpandirNOTICIAS) botaoExpandirNOTICIAS.style.display = 'none'; // Esconde o botão
+                    if (botaoExpandirNOTICIAS) botaoExpandirNOTICIAS.style.display = 'none';
                     return;
                 }
 
-                // Limpa os contêineres antes de adicionar novas notícias
                 noticiasBox.innerHTML = '';
                 noticiasOculto.innerHTML = '';
 
-                // Adiciona a primeira notícia na caixa principal
                 const firstItem = items[0];
                 noticiasBox.innerHTML += `
                     <div class="noticia-item principal">
@@ -65,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `;
 
-                // Adiciona as demais notícias na caixa oculta
                 for (let i = 1; i < items.length; i++) {
                     const item = items[i];
                     noticiasOculto.innerHTML += `
@@ -76,19 +74,24 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     `;
                 }
-                window.noticiasJaCarregadas = true; // Marca que as notícias foram carregadas com sucesso
+                window.noticiasJaCarregadas = true;
+                tentativasCarregamento = 0; // Reseta as tentativas em caso de sucesso
             })
             .catch(error => {
                 console.error('Erro ao buscar notícias de K-pop:', error);
-                if (noticiasBox) {
-                    noticiasBox.innerHTML = '<p>Ocorreu um erro ao carregar as notícias de K-pop. Tente novamente mais tarde.</p>';
+                tentativasCarregamento++;
+                if (tentativasCarregamento < maxTentativas) {
+                    console.log(`Tentando novamente em ${tempoEntreTentativas / 1000} segundos... Tentativa ${tentativasCarregamento}/${maxTentativas}`);
+                    setTimeout(carregarNoticiasKpop, tempoEntreTentativas);
+                } else {
+                    if (noticiasBox) {
+                        noticiasBox.innerHTML = '<p>Não foi possível carregar as notícias de K-pop após várias tentativas. Por favor, tente recarregar a página ou volte mais tarde.</p>';
+                    }
+                    if (noticiasOculto) noticiasOculto.innerHTML = '';
+                    if (botaoExpandirNOTICIAS) botaoExpandirNOTICIAS.style.display = 'none';
                 }
-                if (noticiasOculto) noticiasOculto.innerHTML = '';
-                if (botaoExpandirNOTICIAS) botaoExpandirNOTICIAS.style.display = 'none'; // Esconde o botão em caso de erro
             });
     }
 
-    // Chama a função para carregar as notícias assim que o DOM estiver pronto
-    // Isso garante que a primeira notícia seja exibida sem precisar clicar em nada
     carregarNoticiasKpop();
 });

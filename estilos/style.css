@@ -409,13 +409,10 @@ background-repeat: no-repeat; /* Evita que a imagem se repita */
     text-align: justify;
     padding: 10px;
 
-
-
 }
 
-.botao_mais{
 
-}
+
 
 @media (max-width: 600px) {
     #HOTNEWS {

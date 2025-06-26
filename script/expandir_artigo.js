@@ -1,3 +1,5 @@
+/* script/expandir_artigo.js */
+
 document.addEventListener('DOMContentLoaded', function() {
     // --- Script para a seção FAQ ---
     const conteudoOcultoFAQ = document.getElementById('FAQ');
