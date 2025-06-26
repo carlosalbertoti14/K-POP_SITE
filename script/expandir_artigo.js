@@ -6,12 +6,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (botaoExpandirFAQ && conteudoOcultoFAQ) {
         botaoExpandirFAQ.addEventListener('click', function() {
+            // Lógica para expandir/recolher a seção FAQ
             if (conteudoOcultoFAQ.classList.contains('expandido')) {
                 conteudoOcultoFAQ.classList.remove('expandido');
                 if (textoBotaoFAQ) textoBotaoFAQ.textContent = 'clique para expandir';
             } else {
                 conteudoOcultoFAQ.classList.add('expandido');
                 if (textoBotaoFAQ) textoBotaoFAQ.textContent = '🔝 clique para recolher 🔝';
+            }
+
+            // NOVO: FORÇA o fechamento de todos os conteúdos HOTNEWS e da seção principal HOTNEWS
+            // Itere sobre todos os IDs de 1 a 6 para garantir que todos os sub-itens estejam fechados
+            for (let i = 1; i <= 6; i++) {
+                const hotnewsContent = document.getElementById(`conteudoOculto-HOTNEWS_${i}`);
+                if (hotnewsContent) {
+                    hotnewsContent.style.display = 'none';
+                }
+            }
+
+            // Garante que a seção principal HOTNEWS_oculto esteja recolhida
+            const hotnewsOculto = document.getElementById('HOTNEWS_oculto');
+            const hotnewsContainer = document.getElementById('HOTNEWS');
+            const botaoExpandirHOTNEWS = document.getElementById('botaoExpandirHOTNEWS');
+            const textoBotaoExpandirHOTNEWS = botaoExpandirHOTNEWS ? botaoExpandirHOTNEWS.querySelector('p') : null;
+
+            if (hotnewsOculto && hotnewsContainer) {
+                hotnewsOculto.style.display = 'none'; // Define explicitamente como none
+                hotnewsContainer.style.height = '270px'; // Volta para a altura original
+                // Reseta o texto do botão de expandir HOTNEWS para o estado inicial
+                if (textoBotaoExpandirHOTNEWS) {
+                    textoBotaoExpandirHOTNEWS.textContent = 'clique para expandir';
+                }
             }
         });
     }
@@ -58,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const botaoExpandirNOTICIAS = document.getElementById('botaoExpandirNOTICIAS');
     const textoBotaoNOTICIAS = botaoExpandirNOTICIAS ? botaoExpandirNOTICIAS.querySelector('p') : null;
 
-    // NOVO: Botão "Mais Notícias"
+    // Botão "Mais Notícias"
     const botaoMaisNOTICIAS = document.getElementById('maisNOTICIAS');
     let currentMaxHeight = 0; // Para controlar a altura atual
 
@@ -81,14 +106,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (botaoMaisNOTICIAS) botaoMaisNOTICIAS.style.display = 'block'; // Mostra o botão "Mais Notícias"
             }
             // Chama a função para carregar notícias se ainda não tiverem sido carregadas
-            // É importante que 'carregarNoticiasKpop' seja global ou acessível aqui
             if (typeof carregarNoticiasKpop === 'function' && !window.noticiasJaCarregadas) {
                 carregarNoticiasKpop();
             }
         });
     }
 
-    // NOVO: Lógica para o botão "Mais Notícias"
+    // Lógica para o botão "Mais Notícias"
     if (botaoMaisNOTICIAS && noticiasOculto) {
         // Inicialmente esconda o botão "Mais Notícias" se a seção não estiver expandida
         botaoMaisNOTICIAS.style.display = 'none';
@@ -102,11 +126,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // Incrementa a altura em 1000px
             currentMaxHeight += 1000;
             noticiasOculto.style.maxHeight = currentMaxHeight + 'px';
-
-            // Opcional: Você pode adicionar uma lógica aqui para verificar se
-            // todas as notícias já foram mostradas e, se sim, esconder o botão "Mais Notícias".
-            // Para isso, você precisaria saber a altura total do conteúdo de noticiasOculto.
-            // Ex: if (noticiasOculto.scrollHeight <= currentMaxHeight) { botaoMaisNOTICIAS.style.display = 'none'; }
         });
     }
 
@@ -123,6 +142,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 hotnewsOculto.style.display = 'none';
                 hotnewsContainer.style.height = '270px'; // Volta para a altura original
                 if (textoBotaoExpandirHOTNEWS) textoBotaoExpandirHOTNEWS.textContent = 'clique para expandir';
+
+                // Também fecha os conteúdos individuais HOTNEWS_X ao recolher a seção principal
+                for (let i = 1; i <= 6; i++) {
+                    const hotnewsContent = document.getElementById(`conteudoOculto-HOTNEWS_${i}`);
+                    if (hotnewsContent) {
+                        hotnewsContent.style.display = 'none';
+                    }
+                }
+
             } else {
                 // Se está recolhido, expande
                 hotnewsOculto.style.display = 'block';
@@ -131,7 +159,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    // O script para os botões "Saiba Mais" (saibamais_X) foi removido aqui
-    // conforme sua solicitação para desfazer essa interação.
 });

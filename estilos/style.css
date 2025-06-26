@@ -3,7 +3,7 @@
     --cor0: #9c749c;
     --cor1: #be22be;
     --cor2: #124d07;
-    --cor3: #960b2e;
+    --cor3: #ff0000;
     --cor4: #490644;
     --cor5: #0e0d0d;
     --cor6: #eb8ecf;
@@ -48,7 +48,7 @@ h2{
 
 h3{
     font-family: var(--fonte-padrao);
-    color: var(--cor2);
+    color: var(--cor3);
     text-align: center;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.575);
     /* font-weight: bolder; */
@@ -355,6 +355,9 @@ margin-bottom: 10px;
 #conteudoOculto-HOTNEWS_1{display: none;}
 #conteudoOculto-HOTNEWS_2{display: none;}
 #conteudoOculto-HOTNEWS_3{display: none;}
+#conteudoOculto-HOTNEWS_4{display: none;}
+#conteudoOculto-HOTNEWS_5{display: none;}
+#conteudoOculto-HOTNEWS_6{display: none;}
 
 
 
@@ -479,26 +482,27 @@ div#ahyeon span a{color: rgb(26, 26, 238)}
 #TWICE {background-image: url(../midia/twice_POSTER.jpg);}
 #BLACK_PINK {background-image: url(../midia/blackpink_POSTER.jpg);}
 #ATEEZ {background-image: url(../midia/ateez_POSTER.jpg);}
-#stray_kids {background-image: url(../midia/straykids_POSTER.jpg);filter: grayscale(100%);}
-#BTS {background-image: url(../midia/bts_POSTER.jpg);filter: grayscale(100%);}
-#KISS_OF_LIFE {background-image: url(../midia/kissoflife_poster.jpg);filter: grayscale(100%);}
-#NewJeans {background-image: url(../midia/newjeans_POSTER.jpg);filter: grayscale(100%);}
-#G-IDLE {background-image: url(../midia/G-IDLE_POSTER.jpg);filter: grayscale(100%);}
-#ILLIT {background-image: url(../midia/ILLIT_POSTER.jpg);filter: grayscale(100%);}
-#IVE {background-image: url(../midia/IVE_POSTER.jpg);filter: grayscale(100%);}
-#KATSEYE {background-image: url(../midia/katseye_POSTER.jpg);filter: grayscale(100%);}
-#LE-SSERAFIM {background-image: url(../midia/LE-SSERAFIM_POSTER.jpg);filter: grayscale(100%);}
-#SEVENTEEN {background-image: url(../midia/seventeen_POSTER.jpg);filter: grayscale(100%);}
-#BIGBANG {background-image: url(../midia/BIGBANG_POSTER.jpg);filter: grayscale(100%);}
-#Girls-Generation {background-image: url(../midia/Girls-Generation_POSTER.jpg);filter: grayscale(100%);}
-#TXT {background-image: url(../midia/TXT_POSTER.jpg);filter: grayscale(100%);}
-#EXO-K {background-image: url(../midia/EXO-K_POSTER.jpg);filter: grayscale(100%);}
-#Kep1er {background-image: url(../midia/Kep1er_POSTER.jpg);filter: grayscale(100%);}
-#NMIXX {background-image: url(../midia/NMIXX_POSTER.jpg);filter: grayscale(100%);}
-#TREASURE {background-image: url(../midia/TREASURE_POSTER.jpg);filter: grayscale(100%);}
-#ZEROBASEONE {background-image: url(../midia/ZEROBASEONE_POSTER.jpg);filter: grayscale(100%);}
-#RIIZE {background-image: url(../midia/RIIZE_POSTER.jpg);filter: grayscale(100%);}
-#ENHYPEN {background-image: url(../midia/ENHYPEN_POSTER.jpg);filter: grayscale(100%);}
+#stray_kids {background-image: url(../midia/straykids_POSTER.jpg);}
+#BTS {background-image: url(../midia/bts_POSTER.jpg);}
+#KISS_OF_LIFE {background-image: url(../midia/kissoflife_poster.jpg);}
+#NewJeans {background-image: url(../midia/newjeans_POSTER.jpg);}
+#G-IDLE {background-image: url(../midia/G-IDLE_POSTER.jpg);}
+#ILLIT {background-image: url(../midia/ILLIT_POSTER.jpg);}
+#IVE {background-image: url(../midia/IVE_POSTER.jpg);}
+#KATSEYE {background-image: url(../midia/katseye_POSTER.jpg);}
+#LE-SSERAFIM {background-image: url(../midia/LE-SSERAFIM_POSTER.jpg);}
+#SEVENTEEN {background-image: url(../midia/seventeen_POSTER.jpg);}
+#BIGBANG {background-image: url(../midia/BIGBANG_POSTER.jpg);}
+#Girls-Generation {background-image: url(../midia/Girls-Generation_POSTER.jpg);}
+#TXT {background-image: url(../midia/TXT_POSTER.jpg);}
+#EXO-K {background-image: url(../midia/EXO-K_POSTER.jpg);}
+#Kep1er {background-image: url(../midia/Kep1er_POSTER.jpg);}
+#NMIXX {background-image: url(../midia/NMIXX_POSTER.jpg);}
+#TREASURE {background-image: url(../midia/TREASURE_POSTER.jpg);}
+#ZEROBASEONE {background-image: url(../midia/ZEROBASEONE_POSTER.jpg);}
+#RIIZE {background-image: url(../midia/RIIZE_POSTER.jpg);}
+#ENHYPEN {background-image: url(../midia/ENHYPEN_POSTER.jpg);}
+#NTX {background-image: url(../midia/NTX_POSTER.jpg);}
 
 
 
@@ -888,7 +892,7 @@ transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave para a o
     background-repeat: no-repeat;
     background-color: black; /* Importante manter o background-color: black */
     width: 100%;
-    height: 670px;
+    height: auto;
     max-width: 800px;
     margin: 0 auto;
     position: relative; /* Importante para posicionar o vídeo absolutamente dentro */
@@ -951,7 +955,7 @@ div#DIVniver img {
     display: none;
     width: 80%;                /* Ocupa 80% da largura da div, se ajusta em telas menores */
     max-width: 600px;          /* Mas nunca passa de 300px */
-    padding: 5px 0px 5px 5px;
+/*     padding: 5px 0px 5px 5px; */
    /*  z-index: 200; */
    /*  box-shadow: 5px 5px 15px rgba(22, 22, 22, 0.5); */
 }

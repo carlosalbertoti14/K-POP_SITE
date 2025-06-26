@@ -12,16 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Verifica se o elemento existe para evitar erros no console
         if (contentElement) {
-            // Regra principal: Mudar para 'block' (ou alternar se for o caso)
-            // Aqui, vamos garantir que sempre mude para 'block' ao clicar.
-            // Se você quiser que o clique no mesmo botão esconda o conteúdo,
-            // descomente a parte 'else' e altere a condição.
+            // Lógica para alternar a visibilidade
             if (contentElement.style.display === 'none' || contentElement.style.display === '') {
                 contentElement.style.display = 'block';
+            } else {
+                contentElement.style.display = 'none'; // Esta linha faz o conteúdo fechar
             }
-            // else {
-            //     contentElement.style.display = 'none'; // Descomente esta linha se quiser que o botão também esconda o conteúdo
-            // }
 
             // Lógica específica para o botão 'saibamais_1'
             if (buttonId === 'saibamais_1') {
@@ -36,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             } else {
                 // Para os outros botões (saibamais_2, saibamais_3), garanta que #HOTNEWS tenha height: auto
-                // (Isso já foi pedido anteriormente, então mantemos aqui caso não esteja sendo feito por outro lugar)
                 const hotnewsContainer = document.getElementById('HOTNEWS');
                 if (hotnewsContainer) {
                     hotnewsContainer.style.height = 'auto';
