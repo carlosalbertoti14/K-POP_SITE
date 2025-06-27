@@ -9,7 +9,7 @@
     --cor6: #eb8ecf;
     --cor7: #13e90c;
     --cor8: #f1d900;
-    --cor9: rgb(7, 108, 167);
+    --cor9: rgb(25, 140, 207);
     --cor10: black;
 
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
@@ -155,9 +155,9 @@ h5{
 
 #noticias h2 { /* Se você adicionar um título ao artigo */
     text-align: center;
-    color: #000000;
+    color: #ffffff;
     padding: 5px;
-    background-color: #f1d900;
+    background-color: var(--cor9);
     margin-bottom: 10px;
     border-radius: 10px;
     font-size: 1.8em;
@@ -1460,7 +1460,7 @@ section.RESPOSTA {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
 }
 
 .glossary-header h3 {
