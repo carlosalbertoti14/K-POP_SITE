@@ -268,6 +268,7 @@ h5{
 }
 
 
+
 /* --- ESTILOS PARA O BOTÃO EXPANDIR/RECOLHER --- */
 
 /* --- RESPONSIVIDADE BÁSICA --- */
@@ -309,10 +310,22 @@ h5{
 /********************* ARTIGO HOTNEWS*************************/
 
 #HOTNEWS {
-    height: 270px;
+    height: auto;
     margin-bottom: 10px;
     overflow: hidden;
     
+}
+
+#HOTNEWS_oculto {
+    /* Estas propriedades já devem estar na sua classe .conteudoOculto */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out;
+}
+
+#HOTNEWS_oculto.expandido {
+    /* O max-height será definido pelo JavaScript para a expansão gradual */
+    /* Não precisa colocar um valor fixo aqui, o JS vai controlar */
 }
 
 #HOTNEWS_box {
@@ -328,19 +341,111 @@ margin-bottom: 10px;
 }
 
 #HOTNEWS_content_1 {
-     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../midia/NEWS/NEWS_BTS_EXERCITO.jpg);
+  background-image: url(../midia/NEWS/NEWS_BTS_EXERCITO.jpg);
 }
 #HOTNEWS_content_2 {
-     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../midia/NEWS/NEWS__Ubermensch-GDRAGON.jpg);
+  background-image: url(../midia/NEWS/NEWS__Ubermensch-GDRAGON.jpg);
 }
 #HOTNEWS_content_3 {
+  background-image: url(../midia/NEWS/NEWS_STRAYKIDS.jpg);
+}
+#HOTNEWS_content_4 {
+  background-image: url(../midia/NEWS/NEWS_NTX_BOTAFOGO1.jpg);
+}
+/* ... e adicione as outras que você tiver ... */
+ /*
+#HOTNEWS_content_5 {
      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../midia/NEWS/NEWS_STRAYKIDS.jpg);
 }
+#HOTNEWS_content_6 {
+     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../midia/NEWS/NEWS_STRAYKIDS.jpg);
+} */
 
 
-#HOTNEWS_oculto{
-    display: none;
+/* style.css */
 
+/* ... (para o java apagar titulos) ... */
+
+.HOTNEWS_transparent_content {
+  opacity: 0 !important; /* Deixa o conteúdo completamente transparente */
+}
+
+.HOTNEWS_normal_background {
+  background-image: var(--original-bg-image); /* Usará uma variável CSS para o background original */
+
+}
+
+/* java escurecer */
+
+/* ... (seu código CSS existente) ... */
+
+.HOTNEWS_content { /* Garanta que esta regra geral exista ou aplique as propriedades a cada #HOTNEWS_content_X */
+  position: relative; /* Essencial para posicionar o ::before */
+  overflow: hidden; /* Garante que o pseudo-elemento não vaze */
+}
+
+.HOTNEWS_content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com 50% de transparência */
+  transition: opacity 0.3s ease-in-out; /* Transição suave */
+  z-index: 1; /* Garante que fique acima da imagem de fundo */
+}
+
+/* Classe para tornar o conteúdo do cabeçalho e corpo invisíveis */
+.HOTNEWS_transparent_content {
+  opacity: 0 !important;
+  transition: opacity 0.3s ease-in-out; /* Adicionar transição aqui também */
+}
+
+/* Classe para remover a sobreposição preta */
+.HOTNEWS_content.no-overlay::before {
+  opacity: 0; /* Torna a sobreposição invisível */
+  pointer-events: none; /* Garante que não bloqueie cliques se houver elementos por baixo */
+}
+
+/* Garante que o texto e outros elementos fiquem acima do pseudo-elemento */
+.HOTNEWS_section_head,
+.HOTNEWS_section_body {
+  position: relative;
+  z-index: 2; /* Acima do ::before */
+}
+
+/* java saiba mais suave */
+
+
+.conteudoOculto-HOTNEWS {
+  max-height: 0; /* Começa com altura 0 (escondido) */
+  overflow: hidden; /* Garante que o conteúdo que extrapola não seja visível */
+  transition: max-height 0.7s ease-out; /* Transição para max-height */
+}
+
+.conteudoOculto-HOTNEWS.expandir {
+  max-height: 600px; /* Ou um valor maior que a altura máxima esperada do seu conteúdo */
+  /* Ajuste este valor se sua notícia for muito longa para que ela apareça por completo */
+}
+
+/* Opcional: Adicionar transição para a opacidade do conteúdo para suavizar o desaparecimento do texto */
+.HOTNEWS_transparent_content {
+  opacity: 0 !important;
+  transition: opacity 0.3s ease-in-out; /* Já adicionado no último código, mas reforcei aqui */
+}
+
+/* Opcional: Adicionar transição para a sobreposição de fundo */
+.HOTNEWS_content.no-overlay::before {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Já adicionado no último código, mas reforcei aqui */
+}
+
+/* ... ( fim para o java) ... */
+
+.fonte {
+  text-align: right; /* Alinha o conteúdo (o link) à direita */
+  margin-top: 10px; /* Adiciona um pouco de espaço acima do link, se desejar */
 }
 
 #hotnews_destaque{
@@ -417,7 +522,7 @@ background-repeat: no-repeat; /* Evita que a imagem se repita */
 @media (max-width: 600px) {
     #HOTNEWS {
     margin-bottom: 10px;
-    height: 280px;
+    height: auto;
     overflow: hidden;
     
 }
@@ -1280,6 +1385,8 @@ section.RESPOSTA {
 }
 /* --- Novos estilos para expandir/recolher --- */
 
+/* --- Novos estilos para expandir/recolher --- */
+
 /* Estilo para a div que contém o conteúdo que será ocultado */
 .conteudoOculto {
     max-height: 0; /* Começa com altura zero para ocultar */
@@ -1290,7 +1397,7 @@ section.RESPOSTA {
 
 /* Estilo para a div que está expandida */
 .conteudoOculto.expandido {
-    max-height: 100%; /* Um valor grande o suficiente para mostrar todo o conteúdo */
+    /* O max-height será controlado via JavaScript para a expansão gradual */
     padding-bottom: 0px; /* Adiciona um padding inferior quando expandido para dar respiro */
 }
 
@@ -1306,6 +1413,22 @@ section.RESPOSTA {
     font-weight: bold;
     margin-top: 0px;
 }
+
+.botao_mais { /* Aplica o estilo a ambos os botões */
+    background-color: rgb(226, 186, 5);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+
+
+
 .botao_mais { /* Aplica o estilo a ambos os botões */
     background-color: rgb(226, 186, 5);
     color: rgb(0, 0, 0);

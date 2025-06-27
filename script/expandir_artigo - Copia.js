@@ -1,66 +1,85 @@
 /* script/expandir_artigo.js */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // --- Script para a seção FAQ ---
-    const conteudoOcultoFAQ = document.getElementById('FAQ');
-    const botaoExpandirFAQ = document.getElementById('botaoExpandirFAQ');
-    const textoBotaoFAQ = botaoExpandirFAQ ? botaoExpandirFAQ.querySelector('p') : null;
+    // Função genérica para lidar com a expansão/recolhimento gradual e rolagem
+    function setupExpandCollapse(contentId, buttonExpandId, buttonMoreId, initialHeight = 1000) {
+        const conteudoOculto = document.getElementById(contentId);
+        const botaoExpandir = document.getElementById(buttonExpandId);
+        const textoBotao = botaoExpandir ? botaoExpandir.querySelector('p') : null;
+        const botaoMais = document.getElementById(buttonMoreId);
 
-    if (botaoExpandirFAQ && conteudoOcultoFAQ) {
-        botaoExpandirFAQ.addEventListener('click', function() {
-            // Lógica para expandir/recolher a seção FAQ
-            if (conteudoOcultoFAQ.classList.contains('expandido')) {
-                conteudoOcultoFAQ.classList.remove('expandido');
-                if (textoBotaoFAQ) textoBotaoFAQ.textContent = 'clique para expandir';
-            } else {
-                conteudoOcultoFAQ.classList.add('expandido');
-                if (textoBotaoFAQ) textoBotaoFAQ.textContent = '🔝 clique para recolher 🔝';
+        // Determina o elemento para onde a tela deve rolar ao recolher.
+        // Tenta encontrar o 'article' pai, se não, a 'div' pai com ID, senão, o próprio 'conteudoOculto'.
+        const elementToScrollTo = conteudoOculto ? conteudoOculto.closest('article') || conteudoOculto.closest('div[id]') || conteudoOculto : null;
+
+        let currentMaxHeight = 0; // Para controlar a altura atual da expansão
+
+        if (conteudoOculto && botaoExpandir) {
+            // Inicialmente, oculta o botão "Mais"
+            if (botaoMais) {
+                botaoMais.style.display = 'none';
             }
 
-            // NOVO: FORÇA o fechamento de todos os conteúdos HOTNEWS e da seção principal HOTNEWS
-            // Itere sobre todos os IDs de 1 a 6 para garantir que todos os sub-itens estejam fechados
-            for (let i = 1; i <= 6; i++) {
-                const hotnewsContent = document.getElementById(`conteudoOculto-HOTNEWS_${i}`);
-                if (hotnewsContent) {
-                    hotnewsContent.style.display = 'none';
+            // Lógica para o botão principal "clique para expandir/recolher"
+            botaoExpandir.addEventListener('click', function() {
+                if (conteudoOculto.classList.contains('expandido')) {
+                    // Se já está expandido, recolhe tudo
+                    conteudoOculto.classList.remove('expandido');
+                    conteudoOculto.style.maxHeight = '0px'; // Reseta a altura para recolher
+                    currentMaxHeight = 0; // Reseta o contador
+                    if (textoBotao) textoBotao.textContent = 'clique para expandir';
+                    if (botaoMais) botaoMais.style.display = 'none'; // Esconde o botão "Mais" ao recolher
+
+                    // Rolagem suave ao recolher
+                    if (elementToScrollTo) {
+                        elementToScrollTo.scrollIntoView({
+                            behavior: 'smooth', // Rolagem suave
+                            block: 'start'       // Alinha o topo do elemento com o topo da janela
+                        });
+                    }
+
+                } else {
+                    // Se está recolhido, expande para o estado inicial
+                    conteudoOculto.classList.add('expandido');
+                    currentMaxHeight = initialHeight; // Define a altura inicial
+                    conteudoOculto.style.maxHeight = currentMaxHeight + 'px';
+                    if (textoBotao) textoBotao.textContent = '🔝 clique para recolher 🔝';
+                    if (botaoMais) botaoMais.style.display = 'block'; // Mostra o botão "Mais"
                 }
-            }
 
-            // Garante que a seção principal HOTNEWS_oculto esteja recolhida
-            const hotnewsOculto = document.getElementById('HOTNEWS_oculto');
-            const hotnewsContainer = document.getElementById('HOTNEWS');
-            const botaoExpandirHOTNEWS = document.getElementById('botaoExpandirHOTNEWS');
-            const textoBotaoExpandirHOTNEWS = botaoExpandirHOTNEWS ? botaoExpandirHOTNEWS.querySelector('p') : null;
-
-            if (hotnewsOculto && hotnewsContainer) {
-                hotnewsOculto.style.display = 'none'; // Define explicitamente como none
-                hotnewsContainer.style.height = '270px'; // Volta para a altura original
-                // Reseta o texto do botão de expandir HOTNEWS para o estado inicial
-                if (textoBotaoExpandirHOTNEWS) {
-                    textoBotaoExpandirHOTNEWS.textContent = 'clique para expandir';
+                // Lógica específica para a seção de notícias (carregar notícias)
+                // Isso só será executado se o ID for 'noticias_oculto'
+                if (contentId === 'noticias_oculto' && typeof carregarNoticiasKpop === 'function' && !window.noticiasJaCarregadas) {
+                    carregarNoticiasKpop();
                 }
-            }
-        });
+            });
+        }
+
+        // Lógica para o botão "Mais" (se existir)
+        if (botaoMais && conteudoOculto) {
+            botaoMais.addEventListener('click', function() {
+                // Garante que a seção esteja no estado 'expandido' para a transição
+                if (!conteudoOculto.classList.contains('expandido')) {
+                    conteudoOculto.classList.add('expandido');
+                }
+
+                // Incrementa a altura em 1000px
+                currentMaxHeight += 1000;
+                conteudoOculto.style.maxHeight = currentMaxHeight + 'px';
+            });
+        }
     }
 
-    // --- Script para a seção do Glossário ---
-    const conteudoOcultoGlossario = document.getElementById('conteudoGlossario');
-    const botaoExpandirGlossario = document.getElementById('botaoExpandirGlossario');
-    const textoBotaoGlossario = botaoExpandirGlossario ? botaoExpandirGlossario.querySelector('p') : null;
+    // Aplica a função genérica para cada seção
+    // Parâmetros: ID do conteúdo oculto, ID do botão de expandir/recolher, ID do botão "Mais", Altura inicial
+    setupExpandCollapse('noticias_oculto', 'botaoExpandirNOTICIAS', 'maisNOTICIAS', 1000);
+    setupExpandCollapse('HOTNEWS_oculto', 'botaoExpandirHOTNEWS', 'maisHOTNEWS', 1000);
+    setupExpandCollapse('FAQ', 'botaoExpandirFAQ', 'maisPerguntas', 1000);
+    setupExpandCollapse('conteudoGlossario', 'botaoExpandirGlossario', 'maisTERMOS', 1000);
 
-    if (botaoExpandirGlossario && conteudoOcultoGlossario) {
-        botaoExpandirGlossario.addEventListener('click', function() {
-            if (conteudoOcultoGlossario.classList.contains('expandido')) {
-                conteudoOcultoGlossario.classList.remove('expandido');
-                if (textoBotaoGlossario) textoBotaoGlossario.textContent = 'clique para expandir';
-            } else {
-                conteudoOcultoGlossario.classList.add('expandido');
-                if (textoBotaoGlossario) textoBotaoGlossario.textContent = '🔝 clique para recolher 🔝';
-            }
-        });
-    }
 
     // --- Script para os itens individuais do glossário (o toggle-icon) ---
+    // Esta parte do seu script funciona de forma independente e deve ser mantida.
     const glossaryItems = document.querySelectorAll('.glossary-item');
 
     glossaryItems.forEach(item => {
@@ -80,85 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // --- Script para a lógica de expansão/recolhimento da seção de Notícias ---
-    const noticiasOculto = document.getElementById('noticias_oculto');
-    const botaoExpandirNOTICIAS = document.getElementById('botaoExpandirNOTICIAS');
-    const textoBotaoNOTICIAS = botaoExpandirNOTICIAS ? botaoExpandirNOTICIAS.querySelector('p') : null;
-
-    // Botão "Mais Notícias"
-    const botaoMaisNOTICIAS = document.getElementById('maisNOTICIAS');
-    let currentMaxHeight = 0; // Para controlar a altura atual
-
-    if (noticiasOculto && botaoExpandirNOTICIAS) {
-        // Lógica para o botão "clique para expandir/recolher" principal
-        botaoExpandirNOTICIAS.addEventListener('click', function() {
-            if (noticiasOculto.classList.contains('expandido')) {
-                // Se já está expandido, recolhe tudo
-                noticiasOculto.classList.remove('expandido');
-                noticiasOculto.style.maxHeight = '0px'; // Reseta a altura para recolher
-                currentMaxHeight = 0; // Reseta o contador
-                if (textoBotaoNOTICIAS) textoBotaoNOTICIAS.textContent = 'clique para expandir';
-                if (botaoMaisNOTICIAS) botaoMaisNOTICIAS.style.display = 'none'; // Esconde o botão "Mais Notícias" ao recolher
-            } else {
-                // Se está recolhido, expande para o estado inicial (ou a primeira porção)
-                noticiasOculto.classList.add('expandido');
-                currentMaxHeight = 1000; // Define a altura inicial para 1000px
-                noticiasOculto.style.maxHeight = currentMaxHeight + 'px';
-                if (textoBotaoNOTICIAS) textoBotaoNOTICIAS.textContent = '🔝 clique para recolher 🔝';
-                if (botaoMaisNOTICIAS) botaoMaisNOTICIAS.style.display = 'block'; // Mostra o botão "Mais Notícias"
-            }
-            // Chama a função para carregar notícias se ainda não tiverem sido carregadas
-            if (typeof carregarNoticiasKpop === 'function' && !window.noticiasJaCarregadas) {
-                carregarNoticiasKpop();
-            }
-        });
-    }
-
-    // Lógica para o botão "Mais Notícias"
-    if (botaoMaisNOTICIAS && noticiasOculto) {
-        // Inicialmente esconda o botão "Mais Notícias" se a seção não estiver expandida
-        botaoMaisNOTICIAS.style.display = 'none';
-
-        botaoMaisNOTICIAS.addEventListener('click', function() {
-            // Garante que a seção esteja no estado 'expandido' para a transição
-            if (!noticiasOculto.classList.contains('expandido')) {
-                noticiasOculto.classList.add('expandido');
-            }
-
-            // Incrementa a altura em 1000px
-            currentMaxHeight += 1000;
-            noticiasOculto.style.maxHeight = currentMaxHeight + 'px';
-        });
-    }
-
-    // --- Script para o botão Expandir/Recolher HOTNEWS ---
-    const botaoExpandirHOTNEWS = document.getElementById('botaoExpandirHOTNEWS');
-    const hotnewsOculto = document.getElementById('HOTNEWS_oculto');
-    const hotnewsContainer = document.getElementById('HOTNEWS');
-    const textoBotaoExpandirHOTNEWS = botaoExpandirHOTNEWS ? botaoExpandirHOTNEWS.querySelector('p') : null;
-
-    if (botaoExpandirHOTNEWS && hotnewsOculto && hotnewsContainer) {
-        botaoExpandirHOTNEWS.addEventListener('click', function() {
-            if (hotnewsOculto.style.display === 'block') {
-                // Se está expandido, recolhe
-                hotnewsOculto.style.display = 'none';
-                hotnewsContainer.style.height = '270px'; // Volta para a altura original
-                if (textoBotaoExpandirHOTNEWS) textoBotaoExpandirHOTNEWS.textContent = 'clique para expandir';
-
-                // Também fecha os conteúdos individuais HOTNEWS_X ao recolher a seção principal
-                for (let i = 1; i <= 6; i++) {
-                    const hotnewsContent = document.getElementById(`conteudoOculto-HOTNEWS_${i}`);
-                    if (hotnewsContent) {
-                        hotnewsContent.style.display = 'none';
-                    }
-                }
-
-            } else {
-                // Se está recolhido, expande
-                hotnewsOculto.style.display = 'block';
-                hotnewsContainer.style.height = 'auto'; // Ajusta a altura automaticamente
-                if (textoBotaoExpandirHOTNEWS) textoBotaoExpandirHOTNEWS.textContent = '🔝 clique para recolher 🔝';
-            }
-        });
-    }
+    // Se você tiver a função carregarNoticiasKpop em outro lugar, ela será chamada quando necessário.
+    // Certifique-se de que window.noticiasJaCarregadas seja definida após o carregamento inicial das notícias.
 });
