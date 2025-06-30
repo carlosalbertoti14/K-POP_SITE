@@ -1414,6 +1414,8 @@ section.RESPOSTA {
     margin-top: 0px;
 }
 
+
+
 .botao_mais { /* Aplica o estilo a ambos os botões */
     background-color: rgb(226, 186, 5);
     color: rgb(0, 0, 0);
@@ -1421,16 +1423,13 @@ section.RESPOSTA {
     padding: 10px 0;
     cursor: pointer;
     width: 100%;
-    border-radius: 0 0 10px 10px;
+    border-radius:10px 10px 0 0 ;
     font-weight: bold;
     margin-top: 0px;
 }
 
-
-
-
-.botao_mais { /* Aplica o estilo a ambos os botões */
-    background-color: rgb(226, 186, 5);
+.botao_mais2 { /* Aplica o estilo a ambos os botões */
+    background-color: rgb(2, 119, 51);
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 10px 0;
