@@ -605,6 +605,7 @@ div#ahyeon span a{color: rgb(26, 26, 238)}
 #RIIZE {background-image: url(../midia/RIIZE_POSTER.jpg);}
 #ENHYPEN {background-image: url(../midia/ENHYPEN_POSTER.jpg);}
 #NTX {background-image: url(../midia/NTX_POSTER.jpg);}
+#ARTMS {background-image: url(../midia/ARTMS_POSTER.jpg);}
 
 
 
@@ -814,10 +815,11 @@ align-items: end;
   /* Estilos para o seu link e texto existentes */
   .linkh3 {
     font-size: 0.8em; /* Exemplo de estilo */
-   color: var(--cor9);
+   color: white;
     text-decoration: none; /* Exemplo de estilo */
     display: inline; /* Garante que o h4 se comporte como parte do texto */
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.61);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.822);
+   
   }
 
 
