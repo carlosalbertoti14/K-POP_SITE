@@ -268,6 +268,14 @@ h5{
 }
 
 
+#menukpop{
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    background-color: yellow;
+    margin-bottom: 10px;
+}
+
 
 /* --- ESTILOS PARA O BOTÃO EXPANDIR/RECOLHER --- */
 
@@ -1267,6 +1275,72 @@ header > h1 {
     
 
 }
+
+/* cabeçalho com imagem */
+
+
+/* CONFIGURAÇÃO HEAD DE CABEÇALHO VISUAL CONTAINER */
+
+/* CONFIGURAÇÃO HEAD DE CABEÇALHO VISUAL CONTAINER */
+
+/* CSS para o cabeçalho responsivo e slideshow */
+header {
+    max-width: 800px; /* Limita a largura máxima do header */
+    margin: 0 auto; /* Centraliza o header */
+    width: 100%; /* Garante que o header ocupe a largura total disponível até 800px */
+}
+
+.header-visual-container {
+    position: relative;
+    width: 100%;
+    /* Usamos padding-bottom para criar uma altura responsiva baseada na largura.
+       56.25% é a proporção 16:9. Se suas imagens forem mais quadradas,
+       tente 75% (4:3) ou 100% (1:1). */
+    padding-bottom: 30%;
+    height: auto; /* Essencial para que padding-bottom defina a altura */
+    overflow: hidden;
+    background-color: black; /* Cor de fundo para as "barras" se a imagem não preencher */
+}
+
+.slideshow-image {
+    position: absolute; /* Para sobrepor as imagens e permitir o fade */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* A imagem preenche a área definida pelo padding-bottom do pai */
+    object-fit: contain; /* Redimensiona a imagem para caber sem cortar, adicionando barras se necessário */
+    /* Remove a opacidade inicial e a animação padrão daqui */
+}
+
+/* --- Novas Regras para cada imagem --- */
+
+.slideshow-image:nth-child(1) {
+    opacity: 1; /* A primeira imagem fica sempre visível */
+    z-index: 1; /* Garante que ela esteja por baixo da imagem que oscila */
+}
+
+.slideshow-image:nth-child(2) {
+    z-index: 2; /* Garante que ela esteja por cima da imagem fixa */
+    animation: fadeOscillation 6s infinite alternate; /* Nova animação de oscilação */
+}
+
+/* --- Nova Keyframe para a oscilação da segunda imagem --- */
+@keyframes fadeOscillation {
+    0% {
+        opacity: 1; /* Começa totalmente visível */
+    }
+    50% {
+        opacity: 0.2; /* Vai até 20% de transparência no meio da animação */
+    }
+    100% {
+        opacity: 1; /* Retorna à opacidade total no final */
+    }
+}
+
+/***************CONFIGURAÇÃO DA CAIXA DE EXPLICAÇÃO*************/
+
+/***************CONFIGURAÇÃO DA CAIXA DE EXPLICAÇÃO*************/
+
 
 
 /* Estilos para o cabeçalho principal */
