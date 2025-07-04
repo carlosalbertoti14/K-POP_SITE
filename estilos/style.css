@@ -355,7 +355,7 @@ margin-bottom: 10px;
   background-image: url(../midia/NEWS/NEWS__Ubermensch-GDRAGON.jpg);
 }
 #HOTNEWS_content_3 {
-  background-image: url(../midia/NEWS/NEWS_STRAYKIDS.jpg);
+  background-image: url(../midia/NEWS/NEWS_newjeans_EXERCITO.jpg);
 }
 #HOTNEWS_content_4 {
   background-image: url(../midia/NEWS/NEWS_NTX_BOTAFOGO1.jpg);
@@ -504,6 +504,7 @@ background-repeat: no-repeat; /* Evita que a imagem se repita */
     color: white;
     text-align: center;
     padding: 10px;
+    text-shadow: 2px 2px 3px black;
 
 }
 
@@ -512,6 +513,7 @@ background-repeat: no-repeat; /* Evita que a imagem se repita */
     color: white;
     font-weight: bolder;
     text-align: center;
+    text-shadow: 2px 2px 3px black;
 
 }
 

@@ -10,4 +10,4 @@ dir /b /a-d | findstr /v /i "listar_arquivos.bat Nomes_dos_Arquivos.txt NOTA.txt
 
 echo.
 echo Nomes dos arquivos (excluindo os especificados) salvos em "%outputFile%".
-pause
+explorer "Nomes_dos_Arquivos.txt"
