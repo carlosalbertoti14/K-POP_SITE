@@ -1826,6 +1826,118 @@ footer, footer a {
     text-shadow: 1px 1px 3px black;
 }
 
+
+/*********************** entre em cotato *************************/
+
+/* Estilos Gerais (exemplo, ajuste conforme seu site) */
+/* body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+} */
+
+/* --- Seção de Contato --- */
+#contato {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o texto dentro da seção */
+}
+
+#contato h2 {
+    color: #882baf; /* Cor para o título */
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+#contato p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Estilo para o link "FALE CONOSCO" */
+#contato div:nth-of-type(2) { /* Seleciona o segundo div da seção */
+    margin-bottom: 30px;
+}
+
+#contato a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: inline-flex; /* Para alinhar imagem e texto */
+    align-items: center;
+    gap: 10px; /* Espaço entre imagem e texto */
+    transition: color 0.3s ease;
+}
+
+#contato a:hover {
+    color: #0056b3;
+}
+
+.fale-conosco-icon { /* Classe para sua imagem */
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    vertical-align: middle; /* Alinha a imagem com o texto */
+}
+
+/* Estilos para o formulário */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Alinha os rótulos e campos à esquerda */
+}
+
+.form-group label {
+    display: block; /* Cada label em uma nova linha */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 20px); /* Ocupa a largura total menos o padding */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Garante que padding não aumente a largura total */
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
+    min-height: 120px; /* Altura mínima da caixa de texto */
+}
+
+button {
+    background-color: #882baf; /* Cor do botão */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #6a2185; /* Cor mais escura no hover */
+    transform: translateY(-2px); /* Pequeno efeito de elevação */
+}
+
+
+
+/****************************** fim de entre em cotato *******************************/
+
+
 /****************************** CONFIGURAÇÃO DO PERFIL********************************/
 
 
