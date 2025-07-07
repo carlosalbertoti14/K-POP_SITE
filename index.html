@@ -1934,20 +1934,28 @@
 
     <h3>Ou use nosso formulário de feedback:</h3>
 
-    <form name="feedback" method="POST" data-netlify="true" action="obrigado.html">
+    <form name="feedback" method="POST" data-netlify="true" id="feedbackForm">
         <input type="hidden" name="form-name" value="feedback" />
+        <input type="hidden" name="subject" value="Nova Mensagem: Opinião sobre o site K-POP" />
 
         <div class="form-group">
             <label for="assuntoForm">Assunto:</label>
             <input type="text" id="assuntoForm" name="assunto" placeholder="Digite o assunto da sua mensagem" required>
         </div>
 
+        
         <div class="form-group">
             <label for="mensagemForm">Mensagem:</label>
             <textarea id="mensagemForm" name="mensagem" placeholder="Digite sua mensagem aqui" required></textarea>
         </div>
-
+        
+        <div class="form-group">
+            <label for="emailForm">Seu E-mail:</label>
+            <input type="email" id="emailForm" name="email" placeholder="Seu e-mail para contato" required>
+        </div>
         <button type="submit">Enviar Mensagem</button>
+
+        <p id="formMessage" style="margin-top: 15px; font-weight: bold;"></p>
     </form>
 
 </section>
@@ -1955,28 +1963,30 @@
 
 
 
+
 </main>
 
 
-        </div>
+</div>
 
-        <script>
+<script>
+    
+    
+    
+    
+</script>
 
 
 
-                 
-         </script>
-            
 
+<script src="script/expandir_artigo.js"></script>
+<script src="script/aniversariante.js"></script>
+<script src="script/noticias_google.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script/carrocel.js"></script>
+<script src="script/saiba_mais_individual.js"></script>
 
-            
-     <script src="script/expandir_artigo.js"></script>
-     <script src="script/aniversariante.js"></script>
-     <script src="script/noticias_google.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-     <script src="script/carrocel.js"></script>
-     <script src="script/saiba_mais_individual.js"></script>
-     
+<script src="js/contato.js"></script>
      
      <!--
         

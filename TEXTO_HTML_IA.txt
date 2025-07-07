@@ -1,8 +1,8 @@
-Criei esse site e gostaria da sua ajuda para resolver algo. eu gostaria de que quando clicasse no botão <div id="saibamais_4" class="botao_mais"> <p>saiba mais</p>  </div>  , saibamais_3, 1, 2 ..etc.. ele fizesse 2 coisas.
+Criei esse site e gostaria da sua ajuda para resolver algo.
 
-1 - deixar as divs referente a noticia ex.: <div class="HOTNEWS_section_head"> e <div class="HOTNEWS_section_body">  transparentes com opacidade 0 (para não atrapalhar a visualização do background)
-2 - note que o background de cada noticia esta meio transparente, eu gostaria que o scrip tbm removesse isso e deixasse o bg com exibição normal.
-
+1 - 
+2 - 
+3 - 
 
 Obs.: Não coloque espaço antes dos código (para não dar erro de caracteres quando eu for colar).
 
@@ -10,145 +10,6 @@ Obs.: Não coloque espaço antes dos código (para não dar erro de caracteres q
 ...restante do código...
 
 
-
-<article id="HOTNEWS">
-    <h3>NOTÍCIAS QUENTES PARA OS FÃS!</h3>
-
-    <div id="HOTNEWS_box">
-
-            <section id="hotnews_destaque_4" class="HOTNEWS_section"> 
-                <div id="HOTNEWS_content_4" class="HOTNEWS_content">
-                    <div class="HOTNEWS_section_head">
-                        <h3>NTX e o Botafogo</h3>
-                    </div>
-                    <div class="HOTNEWS_section_body">
-                        <p>"K-pop e Futebol: NTX se apresenta com a camisa do Botafogo no Rio!"</p>
-                    </div>
-                </div>
-                
-                <div id="conteudoOculto-HOTNEWS_4" class="conteudoOculto-HOTNEWS">
-                    <p>
-                        O grupo de K-pop NTX tem dado o que falar no Brasil ao aparecer em seus shows vestindo a camisa do Botafogo! Essa iniciativa faz parte de uma estratégia de internacionalização da marca do clube carioca.
-                        <br><br>
-                        As aparições do NTX com a camisa alvinegra ocorreram em shows no Rio de Janeiro em agosto de 2024, durante a turnê brasileira do grupo. Uma das performances mais comentadas foi no Circo Voador, na Lapa, e outra em Niterói, no Centro de Artes UFF, como parte do 17º Festival da Cultura Coreana. Mais recentemente, em junho de 2025, o grupo voltou a se apresentar no Rio, novamente com os uniformes mais recentes do Botafogo.
-                        <br><br>
-                        A escolha da camisa do Botafogo não foi por acaso. O próprio clube presenteou os integrantes do NTX com os uniformes, aproveitando a popularidade do K-pop para expandir sua imagem globalmente. A ideia é que, ao vestir a camisa, os artistas ajudem a criar uma conexão com um novo público e a difundir a marca do Botafogo em um cenário internacional. Essa parceria tem sido muito bem recebida pelos torcedores, que veem com entusiasmo a visibilidade que o time ganhou no universo do K-pop. <a href="https://ge.globo.com/futebol/times/botafogo/noticia/2025/06/26/banda-sul-coreana-de-k-pop-faz-show-com-a-camisa-do-botafogo.ghtml" target="_blank"></a>
-                    </p>
-                </div>
-
-                <div id="saibamais_4" class="botao_mais"> 
-                    <p>saiba mais</p>
-                </div>
-            </section>
-
-
-    </div>
-
-    <div id="HOTNEWS_oculto" class="conteudoOculto">
-
-
-        <section id="hotnews_destaque_1" class="hotnews_destaque"> 
-                <div id="HOTNEWS_content_1" class="HOTNEWS_content">
-                    <!-- <img src="midia/NEWS/NEWS_BTS_EXERCITO.jpg" alt="Imagem"> -->
-
-                    <div class="HOTNEWS_section_head">
-                        <h3>BTS ESTÁ DE VOLTA</h3>
-                    </div>
-                    <div class="HOTNEWS_section_body">
-                        <p>"Todos os 7 integrantes concluíram o serviço militar e iniciam nova era!"</p>
-                    </div>
-                </div>
-            
-                                <div  id="conteudoOculto-HOTNEWS_1" class="conteudoOculto-HOTNEWS">
-                        <p>
-                           A Big Hit Music (agora HYBE), agência do BTS, já confirmou que todos os sete membros renovaram seus contratos, o que garante a continuidade do grupo. A expectativa geral é que o reencontro completo do grupo para atividades musicais e turnês ocorra em 2025 ou, mais provavelmente, em 2026.
-                        </p>
-                    </div>
-
-                    <div id="saibamais_1" class="botao_mais"> 
-                        <p>saiba mais</p>
-                    </div>
-            
-            </section>
-
-        <section id="hotnews_destaque_2" class="HOTNEWS_section"> 
-                <div id="HOTNEWS_content_2" class="HOTNEWS_content">
-                    <div class="HOTNEWS_section_head">
-                        <h3>BIGBANG</h3>
-                    </div>
-                    <div class="HOTNEWS_section_body">
-                        <p>"G-Dragon anuncia novo álbum solo ainda para 2025, Übermensch"</p>
-                    </div>
-                </div>
-            
-                <div  id="conteudoOculto-HOTNEWS_2" class="conteudoOculto-HOTNEWS">
-                        <p>
-                            Os fãs do BIGBANG, um dos grupos mais icônicos do K-Pop, também têm motivos para se animar.  Além de G-Dragon, e Taeyang e Daesung também têm se mantido ativos. Embora um retorno completo do grupo seja mais incerto devido às atividades solo e à saída de alguns membros, a atividade de G-Dragon é uma notícia gigante.
-                        </p>
-                    </div>
-
-                    <div id="saibamais_2" class="botao_mais"> 
-                        <p>saiba mais</p>
-                    </div>
-            
-            </section>
-
-
-        <section id="hotnews_destaque_3" class="HOTNEWS_section"> 
-                <div id="HOTNEWS_content_3" class="HOTNEWS_content">
-                    <div class="HOTNEWS_section_head">
-                        <h3>Stray Kids & NTX</h3>
-                    </div>
-                    <div class="HOTNEWS_section_body">
-                        <p>"Preparen-se! Esta Confirmado, Shows no Brasil para 2025!"</p>
-                    </div>
-                </div>
-            
-                <div  id="conteudoOculto-HOTNEWS_3" class="conteudoOculto-HOTNEWS">
-                        <p>
-                            <strong>Stray Kids</strong><br>
-                            1º de abril de 2025: Estádio Nilton Santos, Rio de Janeiro. <br>
-
-                            5 e 6 de abril de 2025: Estádio do MorumBIS, São Paulo.
-                            <i>(Os ingressos já estão à venda pela Ticketmaster)</i> <br> <br>
-
-                            <strong>NTX:</strong><br>
-
-                            21 de junho: São Paulo <br>
-
-                            22 de junho: Rio de Janeiro <i>(no Circo Voador!)</i> <br>
-
-                            26 de junho: Belo Horizonte <br>
-
-                            28 de junho: Brasília <br>
-
-                            29 de junho: Goiânia <br>
-
-                            3 de julho: Recife <br>
-
-                            4 de julho: João Pessoa 
-                        </p>
-                    </div>
-
-                    <div id="saibamais_3" class="botao_mais"> 
-                        <p>saiba mais</p>
-                    </div>
-            
-            </section>
-
-
-
-
-        <div id="maisHOTNEWS" class="botao_mais">
-            <p>⬇️ MAIS NOTÍCIAS ⬇️</p>
-        </div>
-
-    </div>
-
-    <div id="botaoExpandirHOTNEWS" class="expandir-recolher">
-        <p>clique para expandir</p>
-    </div>
-</article><!-- fim da HOTNEWS -->
 
 ...restante do código...
 ...................FIM DO index.html......................
@@ -158,25 +19,7 @@ Obs.: Não coloque espaço antes dos código (para não dar erro de caracteres q
 ...................INICIO DO style.css......................
 ...restante do código...
 
-#HOTNEWS_content_1 {
-     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../midia/NEWS/NEWS_BTS_EXERCITO.jpg);
-}
-#HOTNEWS_content_2 {
-     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../midia/NEWS/NEWS__Ubermensch-GDRAGON.jpg);
-}
-#HOTNEWS_content_3 {
-     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../midia/NEWS/NEWS_STRAYKIDS.jpg);
-}
-#HOTNEWS_content_4 {
-     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../midia/NEWS/NEWS_NTX_BOTAFOGO1.jpg);
- }
- /*
-#HOTNEWS_content_5 {
-     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../midia/NEWS/NEWS_STRAYKIDS.jpg);
-}
-#HOTNEWS_content_6 {
-     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../midia/NEWS/NEWS_STRAYKIDS.jpg);
-} */
+
 
 ...restante do código...
 ...................FIM DO style.css......................
@@ -185,63 +28,12 @@ Obs.: Não coloque espaço antes dos código (para não dar erro de caracteres q
 ...................INICIO DO script.js......................
 ...restante do código...
 
-/* script/saiba_mais_individual.js */
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Função para alternar a visibilidade do conteúdo e aplicar regras adicionais
-    function toggleContent(buttonId) {
-        // Extrai o número do ID do botão (ex: de "saibamais_1" pega "1")
-        const number = buttonId.split('_')[1];
-        
-        // Constrói o ID do conteúdo oculto correspondente
-        const contentId = `conteudoOculto-HOTNEWS_${number}`;
-        
-        // Pega o elemento do conteúdo oculto pelo ID
-        const contentElement = document.getElementById(contentId);
-
-        // Verifica se o elemento existe para evitar erros no console
-        if (contentElement) {
-            // Lógica para alternar a visibilidade
-            if (contentElement.style.display === 'none' || contentElement.style.display === '') {
-                contentElement.style.display = 'block';
-            } else {
-                contentElement.style.display = 'none'; // Esta linha faz o conteúdo fechar
-            }
-
-            // Lógica específica para o botão 'saibamais_1'
-            if (buttonId === 'saibamais_1') {
-                const botaoMaisDiv = document.getElementById('maisHOTNEWS'); // Elemento com .botao_mais
-                const hotnewsContainer = document.getElementById('HOTNEWS'); // Container #HOTNEWS
-
-                if (botaoMaisDiv) {
-                    botaoMaisDiv.style.marginBottom = '0px'; // Altera margin-bottom para 0px
-                }
-                if (hotnewsContainer) {
-                    hotnewsContainer.style.height = 'auto'; // Altera height de #HOTNEWS para auto
-                }
-            } else {
-                // Para os outros botões (saibamais_2, saibamais_3), garanta que #HOTNEWS tenha height: auto
-                const hotnewsContainer = document.getElementById('HOTNEWS');
-                if (hotnewsContainer) {
-                    hotnewsContainer.style.height = 'auto';
-                }
-            }
-        }
-    }
-
-    // Pega todos os botões que têm IDs no formato 'saibamais_X'
-    const saibaMaisButtons = document.querySelectorAll('[id^="saibamais_"]');
-
-    // Adiciona um ouvinte de evento 'click' para cada botão encontrado
-    saibaMaisButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Chama a função toggleContent passando o ID do botão que foi clicado
-            toggleContent(this.id);
-        });
-    });
-});
 
 ...restante do código...
 ...................FIM DO script.js......................
 
 LISTA DE ARQUIVOS midia/:
+
+
+Fim dos códigos.
