@@ -1450,7 +1450,7 @@ section.entquete {
     font-weight: bolder;
     border-radius: 10px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.534);
-    margin-top: 5px; /* Adicione um pequeno espaçamento superior para separar das seções anteriores */
+    margin: 5px 0 10px 0; /* Adicione um pequeno espaçamento superior para separar das seções anteriores */
 }
 
 
@@ -1842,7 +1842,7 @@ footer, footer a {
 /* --- Seção de Contato --- */
 #contato {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 10px auto;
     padding: 30px;
     background: #fff;
     border-radius: 10px;
@@ -1917,7 +1917,7 @@ textarea {
 }
 
 button {
-    background-color: #882baf; /* Cor do botão */
+    background-color: #03571c; /* Cor do botão */
     color: white;
     padding: 12px 25px;
     border: none;
@@ -1965,7 +1965,7 @@ textarea {
 }
 
 button {
-    background-color: #882baf; /* Cor do botão */
+    background-color: #03772a; /* Cor do botão */
     color: white;
     padding: 12px 25px;
     border: none;
@@ -1977,7 +1977,7 @@ button {
 }
 
 button:hover {
-    background-color: #6a2185; /* Cor mais escura no hover */
+    background-color: #3268db; /* Cor mais escura no hover */
     transform: translateY(-2px); /* Pequeno efeito de elevação */
 }
 
@@ -2108,6 +2108,46 @@ div#ahyeon, div#asa, div#chiquita, div#pharita, div#rami, div#rora, div#ruka{
 
 }
 
+/*********************** apoio */
+
+/* ... seu restante do código CSS ... */
+
+#apoio { /* Use o ID se a seção tiver um ID, como no seu HTML */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo (se houver espaço suficiente) */
+    min-height: 0px; /* Opcional: Garante uma altura mínima para ver o alinhamento vertical */
+    /* Você pode adicionar um margin-top ou bottom se quiser espaçamento extra para a seção */
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+
+/* Se você quiser centralizar o texto dentro do <div> que contém o link */
+#apoio div {
+    text-align: center; 
+    width: 100%; /* Garante que o div ocupe a largura para o text-align funcionar */
+}
+
+#apoio a {
+    /* Mantenha os estilos do seu link aqui */
+    display: inline-block; /* Importante para que o padding e margin funcionem corretamente */
+    padding: 15px 30px;
+    background-color: #e229d9; /* Exemplo de cor de fundo para o botão */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#apoio a:hover {
+    background-color: #6a2185;
+}
+
+/* ... seu restante do código CSS ... */
+
+/********************* fim apoio */
 
 /**********************FIM CONFIG LISTA************************************/
 

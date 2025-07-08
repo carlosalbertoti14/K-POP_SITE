@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoie nosso Trabalho - KPOP Brasil</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Estilos específicos para a página de apoio */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+        .apoio-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .apoio-container h1 {
+            color: #882baf;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+        }
+        .apoio-container p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        .pix-option {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .pix-option h3 {
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .pix-option img {
+            max-width: 250px; /* Tamanho da imagem do QR Code */
+            height: auto;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .pix-key-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+            margin-top: 15px;
+        }
+        .pix-key {
+            background-color: #e9e9e9;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada para a chave */
+            font-size: 0.95em;
+            color: #333;
+            user-select: all; /* Permite selecionar o texto facilmente */
+            margin-right: 10px; /* Espaço entre a chave e o botão */
+            margin-bottom: 10px; /* Para flex-wrap */
+            max-width: 100%; /* Garante que não transborde */
+            overflow-wrap: break-word; /* Quebra palavras longas */
+        }
+        .copy-button {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px; /* Para flex-wrap */
+        }
+        .copy-button:hover {
+            background-color: #0056b3;
+        }
+        .copy-message {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: green;
+            visibility: hidden; /* Inicialmente oculto */
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .back-home {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 25px;
+            background-color: #882baf;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .back-home:hover {
+            background-color: #6a2185;
+        }
+
+        h3{
+            color: #0056b3;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="apoio-container">
+        <h1>Apoie nosso Trabalho! 👍</h1>
+        <p>Agradecemos a sua visita! Este site deu bastante trabalho para fazer e deixá-lo bem amigável e de fácil acesso às informações do mundo K-Pop para você. Se puder ajudar com qualquer quantia abaixo, ficaremos muito gratos!</p>
+        <h3>Ass.: Carlos Alberto L. Pinheiro.</h3>
+
+        <div class="pix-option">
+            <h3>Pix de R$ 5,00</h3>
+            <img src="midia/pix/pix_5.jpg" alt="QR Code Pix R$5">
+            <div class="pix-key-wrapper">
+                <span id="pix-key-5" class="pix-key">00020126380014BR.GOV.BCB.PIX0111121008577110201552040000530398654045.005802BR5925CARLOS ALBERTO L PINHEIRO6011SAO GONCALO622605225JkNLYDYQPLcBpN9tVvTJr63040AC8</span>
+                <button class="copy-button" onclick="copyPixKey('pix-key-5', 'message-5')">Copiar Código</button>
+            </div>
+            <p id="message-5" class="copy-message">Copiado!</p>
+        </div>
+
+        <div class="pix-option">
+            <h3>Pix de R$ 10,00</h3>
+            <img src="midia/pix/pix_10.jpg" alt="QR Code Pix R$10">
+            <div class="pix-key-wrapper">
+                <span id="pix-key-10" class="pix-key">00020126390014BR.GOV.BCB.PIX011112100857711020210520400005303986540510.005802BR5925CARLOS ALBERTO L PINHEIRO6011SAO GONCALO622605222FKV6S3ZKYP56aLD7f3cjw6304BCF5</span>
+                <button class="copy-button" onclick="copyPixKey('pix-key-10', 'message-10')">Copiar Código</button>
+            </div>
+            <p id="message-10" class="copy-message">Copiado!</p>
+        </div>
+
+        <div class="pix-option">
+            <h3>Pix de R$ 25,00</h3>
+            <img src="midia/pix/pix_25.jpg" alt="QR Code Pix R$25">
+            <div class="pix-key-wrapper">
+                <span id="pix-key-25" class="pix-key">00020126330014BR.GOV.BCB.PIX011112100857711520400005303986540525.005802BR5925CARLOS ALBERTO L PINHEIRO6011SAO GONCALO622605221xSZXg2Rgzt7EnF0zb8gkX63047165</span>
+                <button class="copy-button" onclick="copyPixKey('pix-key-25', 'message-25')">Copiar Código</button>
+            </div>
+            <p id="message-25" class="copy-message">Copiado!</p>
+        </div>
+
+        <div class="pix-option">
+            <h3>Pix de R$ 50,00</h3>
+            <img src="midia/pix/pix_50.jpg" alt="QR Code Pix R$50">
+            <div class="pix-key-wrapper">
+                <span id="pix-key-50" class="pix-key">00020126330014BR.GOV.BCB.PIX011112100857711520400005303986540550.005802BR5925CARLOS ALBERTO L PINHEIRO6011SAO GONCALO62250521d3hm0BMSMhsL3JVWqlOW06304091B</span>
+                <button class="copy-button" onclick="copyPixKey('pix-key-50', 'message-50')">Copiar Código</button>
+            </div>
+            <p id="message-50" class="copy-message">Copiado!</p>
+        </div>
+
+        <div class="pix-option">
+            <h3>Pix de R$ 100,00</h3>
+            <img src="midia/pix/pix_100.jpg" alt="QR Code Pix R$100">
+            <div class="pix-key-wrapper">
+                <span id="pix-key-100" class="pix-key">00020126330014BR.GOV.BCB.PIX0111121008577115204000053039865406100.005802BR5925CARLOS ALBERTO L PINHEIRO6011SAO GONCALO622605225eSRaW2Eu3qbJp1gFS2Psk6304A8B9</span>
+                <button class="copy-button" onclick="copyPixKey('pix-key-100', 'message-100')">Copiar Código</button>
+            </div>
+            <p id="message-100" class="copy-message">Copiado!</p>
+        </div>
+
+        <a href="index.html" class="back-home">Voltar para o Site</a>
+    </div>
+
+    <script>
+        function copyPixKey(keyId, messageId) {
+            const pixKeyElement = document.getElementById(keyId);
+            const pixKey = pixKeyElement.textContent;
+            const messageElement = document.getElementById(messageId);
+
+            navigator.clipboard.writeText(pixKey)
+                .then(() => {
+                    messageElement.textContent = "Chave copiada!";
+                    messageElement.style.color = "green";
+                    messageElement.style.visibility = "visible";
+                    messageElement.style.opacity = "1";
+                    setTimeout(() => {
+                        messageElement.style.opacity = "0";
+                        messageElement.style.visibility = "hidden";
+                    }, 2000); // Esconde a mensagem após 2 segundos
+                })
+                .catch(err => {
+                    messageElement.textContent = "Erro ao copiar. Tente novamente.";
+                    messageElement.style.color = "red";
+                    messageElement.style.visibility = "visible";
+                    messageElement.style.opacity = "1";
+                    setTimeout(() => {
+                        messageElement.style.opacity = "0";
+                        messageElement.style.visibility = "hidden";
+                    }, 2000);
+                    console.error('Falha ao copiar:', err);
+                });
+        }
+    </script>
+</body>
+</html>
