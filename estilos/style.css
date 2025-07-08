@@ -2150,46 +2150,111 @@ div#ahyeon, div#asa, div#chiquita, div#pharita, div#rami, div#rora, div#ruka{
 
 }
 
-/*********************** apoio */
-
 /* ... seu restante do código CSS ... */
 
-#apoio { /* Use o ID se a seção tiver um ID, como no seu HTML */
+/*********************** apoio ************************/
+
+#apoio {
+    /* ... (manter estilos existentes para #apoio) ... */
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente o conteúdo */
-    align-items: center; /* Centraliza verticalmente o conteúdo (se houver espaço suficiente) */
-    min-height: 0px; /* Opcional: Garante uma altura mínima para ver o alinhamento vertical */
-    /* Você pode adicionar um margin-top ou bottom se quiser espaçamento extra para a seção */
-    margin-top: 10px; 
-    margin-bottom: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: 20px 0;
 }
 
-/* Se você quiser centralizar o texto dentro do <div> que contém o link */
-#apoio div {
-    text-align: center; 
-    width: 100%; /* Garante que o div ocupe a largura para o text-align funcionar */
+#apoio p {
+    /* ... (manter estilos existentes para #apoio p) ... */
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+    color: #333;
+    max-width: 600px;
+    line-height: 1.6;
 }
 
-#apoio a {
-    /* Mantenha os estilos do seu link aqui */
-    display: inline-block; /* Importante para que o padding e margin funcionem corretamente */
-    padding: 15px 30px;
-    background-color: #e229d9; /* Exemplo de cor de fundo para o botão */
+#apoio .share-buttons {
+    /* ... (manter estilos existentes para #apoio .share-buttons) ... */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Reduzi um pouco a margem para dar espaço ao novo botão */
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#apoio .share-buttons img {
+    /* ... (manter estilos existentes para #apoio .share-buttons img) ... */
+    max-width: 150px;
+    height: auto;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#apoio .share-buttons img:hover {
+    /* ... (manter estilos existentes para hover) ... */
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para o novo botão "COPIAR LINK" */
+#apoio .copy-link-button {
+    text-align: center;
+    margin-bottom: 20px; /* Espaço entre o botão de copiar e o botão de apoio */
+    width: 100%; /* Garante que a div ocupe a largura total para centralizar */
+}
+
+#apoio .copy-link-button button {
+    display: inline-block;
+    padding: 12px 30px; /* Um pouco menor que o botão de apoio principal */
+    background-color: #4681b6; /* Uma cor neutra para o botão de copiar */
     color: white;
-    text-decoration: none;
+    border: none;
     border-radius: 8px;
     font-weight: bold;
     font-size: 1em;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
-#apoio a:hover {
+#apoio .copy-link-button button:hover {
+    background-color: #495057; /* Cor mais escura no hover */
+    transform: translateY(-2px); /* Leve movimento para cima */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilos para o botão "APOIAR COM DONATIOVO" */
+#apoio div:last-of-type a { /* Importante: este seletor pode precisar de ajuste se adicionar mais divs */
+    /* ... (manter estilos existentes para #apoio div:last-of-type a) ... */
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #e229d9;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    letter-spacing: 0.05em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#apoio div:last-of-type a:hover {
+    /* ... (manter estilos existentes para hover) ... */
     background-color: #6a2185;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* ... seu restante do código CSS ... */
-
-/********************* fim apoio */
+/********************* fim apoio *************************/
 
 /**********************FIM CONFIG LISTA************************************/
 
