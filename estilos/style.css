@@ -714,7 +714,7 @@ div#ahyeon span a{color: rgb(26, 26, 238)}
     /* bottom: 0; */       /* Alinha na parte inferior da viewport */
     /* left: 0; */         /* Alinha à esquerda da viewport (se você quiser centralizar, use left: 50%; transform: translateX(-50%);) */
     width: 100%;     /* Ocupa toda a largura da viewport */
-    z-index: 1000;   /* Garante que ele fique acima de outros elementos (opcional) */
+    z-index: 1;   /* Garante que ele fique acima de outros elementos (opcional) */
 }
 
   .container-float a {
@@ -1644,119 +1644,80 @@ audio {
   }
 
 
-/**********************CONFIG MENU************************************/
+/********************** CONFIG MENU ************************************/
 
-
-div#menu {
+/* Estilos para o contêiner que será fixado no topo */
+div#fixo {
     background-color: black;
-    display: flex;
-    justify-content: center;
-    
+    width: 100%;
+    z-index: 1000; /* Um z-index alto para garantir que ele fique acima de outros elementos */
+    /* Estas propriedades serão controladas pelo JavaScript quando fixado: */
+    position: relative; /* Começa como relativo */
+    top: auto; /* Posição inicial */
+    left: 0; /* Alinha à esquerda */
 }
 
-div#menu  > nav {
-    border: 1px dotted black;
-    width: 800px;
+/* Estilos para o menu principal dentro do #fixo */
+div#menu-principal { /* Usando a nova ID */
     display: flex;
-    justify-content: space-around;
-    
-
+    justify-content: center; /* Centraliza a nav */
+    padding: 10px 0; /* Espaçamento interno para o menu */
+    max-width: 1200px; /* Limita a largura máxima do menu centralizado */
+    margin: 0 auto; /* Centraliza o menu em telas maiores */
 }
 
-div#menu > nav a {
-    background-color:var(--cor2);
+div#menu-principal > nav { /* Usando a nova ID */
+    display: flex;
+    flex-wrap: wrap; /* Permite que os links quebrem a linha em telas menores */
+    justify-content: center; /* Centraliza os links quando eles quebram a linha */
+    gap: 10px; /* Espaçamento entre os links */
+    width: 100%; /* Ocupa a largura total da div pai (menu-principal) */
+    padding: 0 10px; /* Pequeno padding para as bordas em telas menores */
+}
+
+div#menu-principal > nav a { /* Usando a nova ID */
+    background-color: var(--cor2); /* Certifique-se que --cor2 está definida em algum lugar */
     color: white;
-    padding: 10px;
-    /* width: auto; */ /* Mantém o ajuste da largura */
-   /*  margin: 5px; */
+    padding: 10px 15px; /* Ajuste o padding para os links */
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
-    min-width: 70px;
-
-
+    font-weight: bold; /* Deixa o texto do link mais forte */
+    white-space: nowrap; /* Impede que o texto do link quebre a linha */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
-
-/* Ajuste para telas menores (até 600px) */
-@media (max-width: 600px) {
-
-    div#menu  > nav {
-        border: 1px dotted black;
-    
-        display: flex;
-        justify-content: space-around;
-
-        
-    
-    }
-
-
-    div#menu  > nav a {
-      /*  width: auto;  *//* Mantém o ajuste da largura */
-       min-width: 40px;
-        padding: 5px 10px 5px 10px; /* Reduz o espaçamento */
-       /*  margin-left: 1px; */
-        font-size: 0.8em; /* Reduz o tamanho da fonte */
-     
-        /* text-align: center; */
-
-        
-    }
-
-
-
-
-    body{
-        
-        background-attachment: fixed;
-
-
-        overflow-x: hidden; /* Esconde o que ultrapassa a largura da tela */
-        /* Se você ainda precisar de rolagem vertical: */
-        overflow-y: auto;
-
-    }    
-
-
-}
-
-
-
-
-div#menu  > nav a:hover {
+div#menu-principal > nav a:hover { /* Usando a nova ID */
     background-color: white;
     color: rgb(180, 17, 180);
-   /*  font-weight: bolder; */
-    transition: 0.5s;
-    
 }
 
-/* PARA QUANDO O SCRIPT DO MENU FOR ATIVADO */
+/* Ajustes para telas menores */
+@media (max-width: 768px) { /* Use um breakpoint mais comum para tablets/celulares */
+    div#menu-principal > nav {
+        justify-content: center; /* Garante centralização em telas menores */
+        padding: 5px; /* Reduz padding em telas pequenas */
+    }
 
-#fixo {
-    background-color: black;
-    width: 100%; /* Garante que a largura seja responsiva */
-    /* max-width: 800px; */ /* Define o limite máximo */
-   /*  text-align: center;  */
-   z-index: 10;
-
+    div#menu-principal > nav a {
+        padding: 8px 12px; /* Reduz padding dos links */
+        font-size: 0.9em; /* Reduz um pouco o tamanho da fonte */
+    }
 }
 
-#fixo nav {
-    display: flex; /* Organiza os links horizontalmente */
-    justify-content: space-around; /* Espaçamento uniforme entre os links */
+/* Regra para quando o menu estiver fixo (adicionada via JavaScript) */
+.fixed-menu { /* Esta classe será adicionada/removida pelo JavaScript */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adiciona uma sombra para destacar quando fixo */
+    /* background-color: black; -- já definido em div#fixo */
 }
 
-#fixo a {
-    width: auto; /* Ajusta a largura automaticamente */
-    max-width: 150px; /* Limita os links responsivamente */
-    text-align: center; /* Centraliza o texto */
-}
+/********************* FIM CONFIG MENU *************************/
 
 
-/**********************FIM CONFIG MENU************************************/
 div#centro{
     display: flex;
     justify-content: center;
@@ -2255,6 +2216,37 @@ div#ahyeon, div#asa, div#chiquita, div#pharita, div#rami, div#rora, div#ruka{
 }
 
 /********************* fim apoio *************************/
+
+
+/* botão ir para o top */
+
+/* --- Botão Ir para o Topo --- */
+#scrollToTopBtn {
+    display: none; /* Esconde o botão por padrão */
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 30px; /* Distância do fundo da tela */
+    right: 30px; /* Distância da direita da tela */
+    z-index: 99; /* Garante que o botão fique acima de outros elementos */
+    border: none; /* Remove a borda padrão do botão */
+    outline: none; /* Remove o contorno ao focar */
+    background-color: #e229d9; /* Cor de fundo (pode usar a mesma cor do seu botão de apoio) */
+    color: white; /* Cor do texto/seta */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    padding: 15px 20px; /* Espaçamento interno */
+    border-radius: 50%; /* Torna o botão redondo */
+    font-size: 24px; /* Tamanho da seta */
+    line-height: 1; /* Ajusta a altura da linha para centralizar a seta */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #6a2185; /* Cor de hover */
+    transform: translateY(-3px); /* Leve movimento para cima */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+}
+
+/* fim do botão ir para o top */
 
 /**********************FIM CONFIG LISTA************************************/
 

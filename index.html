@@ -48,26 +48,27 @@
 
 <!--     <header class="main-header">
         <h1>K-POP <span class="letra-B">B</span><span class="letra-r">r</span><span class="letra-a">a</span><span class="letra-s">s</span><span class="letra-i">i</span><span class="letra-l">l</span></h1>
-    </header> -->
+    </header>  -->
 
-<!--             <div id="fixo">
-                    <div id="menu">
-                        <nav>
-                            <a href="index.html">HOME</a>
-                            <a href="album.html">ALBUM</a>
-                            <a href="PERFIL.html">PERFIL</a>
-                            <a href="https://br.pinterest.com/search/pins/?q=TWICE%20Nayeon%2C%20Jeongyeon%2C%20Momo%2C%20Sana%2C%20Jihyo%2C%20Mina%2C%20Dahyun%2C%20Chaeyoung%2C%20Tzuyu&rs=typed" id="fotos" target="_blank">FOTOS</a>
-                            <a href="https://twice.jype.com/en/SCHEDULE" target="_blank">EVENTOS</a>
-                            <a id = "produtos" href="#">PRODUTOS</a>
-                        </nav>
-                    </div>
-            </div> -->
+    <div id="fixo">
+        <div id="menu-principal"> <nav>
+                <a href="#noticias">NOTÍCIAS</a>
+                <a href="#HOTNEWS">HOT NEWS</a>
+                <a href="#artigo">CURIOSIDADES</a>
+                <a href="#artigo-glossario">GLOSSÁRIO</a>
+                <a href="#mascara_carrocel">HITS DO MOMENTO</a>
+                <a href="#SECniver">ANIVERSÁRIOS</a>
+                <a href="#todos_os_grupos">CARDÁPIO K-POP</a>
+                <a href="#contato">FALE CONOSCO</a>
+            </nav>
+        </div>
+    </div>
             
-            <div id="centro">
 
 
 
-            <main class="homemain">
+ <div id="centro">
+<main class="homemain">
 
 <section>
 
@@ -432,7 +433,10 @@
 
 </div> 
 
-<section><div id="artigo-glossario">
+<section>
+    
+    <div id="artigo-glossario">
+
     <section class="RESPOSTA">
         <h2 class="h2azul">Glossário K-Pop</h2><br>
     </section>
@@ -1922,7 +1926,7 @@
 
 <section id="contato">
     <div>
-        <h2>DE-NOS SUA OPINIÃO! ELA É MUITO IMPORTANTE</h2>
+        <h2>NOS DÊ SUA OPINIÃO! ELA É MUITO IMPORTANTE</h2>
         <p>"Aqui é um espaço destinado aos fãs que visitam nosso site. Nos diga o que podemos melhorar? Está faltando alguma coisa que você gostaria que o site abordasse?"</p>
     </div>
 
@@ -1975,7 +1979,7 @@
     <div><a href="apoio.html" target="_blank" >APOIAR COM DONATIOVO</a> </div>
 </section>
 
-
+<button id="scrollToTopBtn" title="Ir para o Topo">↑</button>
 
 </main>
 
@@ -1983,8 +1987,31 @@
 </div>
 
 <script>
+
+//script para ir para o top da página
     
-    
+    document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    if (scrollToTopBtn) {
+        // Mostra ou esconde o botão dependendo da posição de scroll
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 200) { // Mostra o botão após rolar 200px
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        // Rolagem suave para o topo ao clicar
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Faz a rolagem ser suave
+            });
+        });
+    }
+});
     
     
 </script>
@@ -1999,6 +2026,7 @@
 <script src="script/carrocel.js"></script>
 <script src="script/saiba_mais_individual.js"></script>
 <script src="script/compartilhe.js"></script>
+<script src="script/barra_de_menus.js"></script>
 
 
      
@@ -2007,7 +2035,6 @@
      <script src="script/contato.js"></script>
      
       <script src="script/video_cabecalho.js"></script>
-        <script src="script/barra_de_menus.js"></script>
         <script src="script/caixa_explicacao.js"></script>
         <script src="script/mouse_magico.js"></script>
 -->
