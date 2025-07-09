@@ -1644,13 +1644,16 @@ audio {
   }
 
 
+
 /********************** CONFIG MENU ************************************/
 
 /* Estilos para o contêiner que será fixado no topo */
 div#fixo {
     background-color: black;
+    max-width: 800px; /* Seu limite de largura */
     width: 100%;
-    z-index: 1000; /* Um z-index alto para garantir que ele fique acima de outros elementos */
+    margin: 0 auto; /* ISSO VAI CENTRALIZAR O ELEMENTO DE BLOCO */
+    z-index: 1000;
     /* Estas propriedades serão controladas pelo JavaScript quando fixado: */
     position: relative; /* Começa como relativo */
     top: auto; /* Posição inicial */
@@ -1658,61 +1661,69 @@ div#fixo {
 }
 
 /* Estilos para o menu principal dentro do #fixo */
-div#menu-principal { /* Usando a nova ID */
+div#menu-principal {
     display: flex;
-    justify-content: center; /* Centraliza a nav */
-    padding: 10px 0; /* Espaçamento interno para o menu */
-    max-width: 1200px; /* Limita a largura máxima do menu centralizado */
-    margin: 0 auto; /* Centraliza o menu em telas maiores */
+    justify-content: center;
+    padding: 10px 0;
+    /* max-width: 1200px; -- Esta linha pode ser removida ou ajustada */
+    /* Se #fixo já tem max-width: 800px, a max-width de #menu-principal não precisa ser maior */
+    /* Sugestão: defina #menu-principal para ocupar 100% da largura de #fixo */
+    width: 100%; /* Garante que o menu ocupe a largura do seu pai (#fixo) */
+    /* margin: 0 auto; -- Não é necessário aqui se o pai (#fixo) já está centralizado e tem display flex */
 }
 
-div#menu-principal > nav { /* Usando a nova ID */
+div#menu-principal > nav {
     display: flex;
-    flex-wrap: wrap; /* Permite que os links quebrem a linha em telas menores */
-    justify-content: center; /* Centraliza os links quando eles quebram a linha */
-    gap: 10px; /* Espaçamento entre os links */
-    width: 100%; /* Ocupa a largura total da div pai (menu-principal) */
-    padding: 0 10px; /* Pequeno padding para as bordas em telas menores */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0 10px;
 }
 
-div#menu-principal > nav a { /* Usando a nova ID */
-    background-color: var(--cor2); /* Certifique-se que --cor2 está definida em algum lugar */
+div#menu-principal > nav a {
+    background-color: var(--cor2);
     color: white;
-    padding: 10px 15px; /* Ajuste o padding para os links */
+    padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
-    font-weight: bold; /* Deixa o texto do link mais forte */
-    white-space: nowrap; /* Impede que o texto do link quebre a linha */
+    font-weight: bold;
+    white-space: nowrap;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-div#menu-principal > nav a:hover { /* Usando a nova ID */
+div#menu-principal > nav a:hover {
     background-color: white;
     color: rgb(180, 17, 180);
 }
 
 /* Ajustes para telas menores */
-@media (max-width: 768px) { /* Use um breakpoint mais comum para tablets/celulares */
+@media (max-width: 768px) {
     div#menu-principal > nav {
-        justify-content: center; /* Garante centralização em telas menores */
-        padding: 5px; /* Reduz padding em telas pequenas */
+        justify-content: center;
+        padding: 5px;
     }
 
     div#menu-principal > nav a {
-        padding: 8px 12px; /* Reduz padding dos links */
-        font-size: 0.9em; /* Reduz um pouco o tamanho da fonte */
+        padding: 8px 12px;
+        font-size: 0.9em;
     }
 }
 
 /* Regra para quando o menu estiver fixo (adicionada via JavaScript) */
-.fixed-menu { /* Esta classe será adicionada/removida pelo JavaScript */
+.fixed-menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adiciona uma sombra para destacar quando fixo */
-    /* background-color: black; -- já definido em div#fixo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    /* Quando fixo, o margin: 0 auto; não é aplicado automaticamente da mesma forma */
+    /* Para manter a centralização quando fixo, você pode precisar de um ajuste aqui */
+    /* Por exemplo: */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 800px; /* Repita o max-width para garantir que ele não se estique */
 }
 
 /********************* FIM CONFIG MENU *************************/
