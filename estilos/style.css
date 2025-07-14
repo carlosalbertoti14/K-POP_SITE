@@ -1712,19 +1712,18 @@ div#menu-principal > nav a:hover {
 }
 
 /* Regra para quando o menu estiver fixo (adicionada via JavaScript) */
-.fixed-menu {
+/* .fixed-menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    /* Quando fixo, o margin: 0 auto; não é aplicado automaticamente da mesma forma */
-    /* Para manter a centralização quando fixo, você pode precisar de um ajuste aqui */
-    /* Por exemplo: */
+
+
     left: 50%;
     transform: translateX(-50%);
-    max-width: 800px; /* Repita o max-width para garantir que ele não se estique */
-}
+    max-width: 800px;  
+} */
 
 /********************* FIM CONFIG MENU *************************/
 
