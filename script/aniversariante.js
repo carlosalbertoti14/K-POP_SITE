@@ -228,6 +228,38 @@ const nivernome = [
     { nome: "ZHANG HAO", url: "url('midia/zerobaseone_PERFIL_BG_ZhangHao.jpg')" },
     { nome: "KIM GYUVIN", url: "url('midia/zerobaseone_PERFIL_BG_KimGyuvin.jpg')" },
     { nome: "KIM JIWOONG", url: "url('midia/zerobaseone_PERFIL_BG_KimJiwoong.jpg')" },
+
+    // ARTMS
+    { nome: "CHOERRY", url: "url('midia/artms_PERFIL_BG_Choerry.jpg')" },
+    { nome: "HASEUL", url: "url('midia/artms_PERFIL_BG_Haseul.jpg')" },
+    { nome: "HEEJIN", url: "url('midia/artms_PERFIL_BG_Heejin.jpg')" },
+    { nome: "JINSOUL", url: "url('midia/artms_PERFIL_BG_Jinsoul.jpg')" },
+    { nome: "KIMLIP", url: "url('midia/artms_PERFIL_BG_Kimlip.jpg')" },
+
+    // FIFTYFIFTY
+    { nome: "ATHENA", url: "url('midia/fiftyfifty_PERFIL_BG_Athena.jpg')" },
+    { nome: "CHANELLE", url: "url('midia/fiftyfifty_PERFIL_BG_Chanelle.jpg')" },
+    { nome: "HANA", url: "url('midia/fiftyfifty_PERFIL_BG_Hana.jpg')" },
+    { nome: "KEENA", url: "url('midia/fiftyfifty_PERFIL_BG_Keena.jpg')" },
+    { nome: "YEWON", url: "url('midia/fiftyfifty_PERFIL_BG_Yewon.jpg')" },
+
+    // hearts2hearts
+    { nome: "ANA", url: "url('midia/hearts2hearts_PERFIL_BG_Ana.jpg')" },
+    { nome: "IAN", url: "url('midia/hearts2hearts_PERFIL_BG_Ian.jpg')" },
+    { nome: "JIWOO", url: "url('midia/hearts2hearts_PERFIL_BG_Jiwoo.jpg')" },
+    { nome: "JUUN", url: "url('midia/hearts2hearts_PERFIL_BG_Juun.jpg')" },
+    { nome: "STELLA", url: "url('midia/hearts2hearts_PERFIL_BG_Stella.jpg')" },
+    { nome: "YEON", url: "url('midia/hearts2hearts_PERFIL_BG_Yeon.jpg')" },
+    { nome: "YUHA", url: "url('midia/hearts2hearts_PERFIL_BG_Yuha.jpg')" },
+    { nome: "CARMEN", url: "url('midia/hearts2hearts_PERFIL_BG_Carmen.jpg')" },
+
+    // ITZY
+    { nome: "CHAERYEONG", url: "url('midia/itzy_PERFIL_BG_Chaeryeong.jpg')" },
+    { nome: "LIA", url: "url('midia/itzy_PERFIL_BG_Lia.jpg')" },
+    { nome: "RYUJIN", url: "url('midia/itzy_PERFIL_BG_Ryujin.jpg')" },
+    { nome: "YEJI", url: "url('midia/itzy_PERFIL_BG_Yeji.jpg')" },
+    { nome: "YUNA", url: "url('midia/itzy_PERFIL_BG_Yuna.jpg')" },
+
 ];
 
    const secNiver = document.getElementById("SECniver");
