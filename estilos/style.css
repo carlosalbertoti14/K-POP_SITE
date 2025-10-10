@@ -1685,7 +1685,7 @@ div#menu-principal > nav {
 }
 
 div#menu-principal > nav a {
-    background-color: var(--cor2);
+   /*  background-color: var(--cor2); */
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
@@ -1694,6 +1694,11 @@ div#menu-principal > nav a {
     font-weight: bold;
     white-space: nowrap;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+div#menu-principal > nav p {
+    margin-top: 5px;
+    color: white;
 }
 
 div#menu-principal > nav a:hover {
