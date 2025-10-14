@@ -626,6 +626,7 @@ div#ahyeon span a{color: rgb(26, 26, 238)}
 #IFEYE {background-image: url(../midia/IFEYE_POSTER.jpg);}
 #IZNA {background-image: url(../midia/IZNA_POSTER.jpg);}
 #VIVIZ {background-image: url(../midia/VIVIZ_POSTER.jpg);}
+#fromis_9 {background-image: url(../midia/fromis_9_POSTER.jpg);}
 
 
 
@@ -727,7 +728,7 @@ div#ahyeon span a{color: rgb(26, 26, 238)}
 }
 
   .container-float a {
-  
+   
 
   }
 
@@ -1658,7 +1659,7 @@ audio {
 
 /* Estilos para o contêiner que será fixado no topo */
 div#fixo {
-    background-color: black;
+    background-color: rgb(60, 176, 243);
     max-width: 800px; /* Seu limite de largura */
     width: 100%;
     margin: 0 auto; /* ISSO VAI CENTRALIZAR O ELEMENTO DE BLOCO */
@@ -1673,7 +1674,7 @@ div#fixo {
 div#menu-principal {
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding: 2px 0;
     /* max-width: 1200px; -- Esta linha pode ser removida ou ajustada */
     /* Se #fixo já tem max-width: 800px, a max-width de #menu-principal não precisa ser maior */
     /* Sugestão: defina #menu-principal para ocupar 100% da largura de #fixo */
@@ -1685,7 +1686,7 @@ div#menu-principal > nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    /* gap: 10px; */
     width: 100%;
     padding: 0 10px;
 }
@@ -1693,7 +1694,7 @@ div#menu-principal > nav {
 div#menu-principal > nav a {
    /*  background-color: var(--cor2); */
     color: white;
-    padding: 10px 15px;
+    padding: 6px 8px;
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
