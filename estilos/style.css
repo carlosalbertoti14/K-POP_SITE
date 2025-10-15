@@ -1685,7 +1685,7 @@ div#menu-principal {
 div#menu-principal > nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     /* gap: 10px; */
     width: 100%;
     padding: 0 10px;
@@ -1716,12 +1716,12 @@ div#menu-principal > nav a:hover {
 /* Ajustes para telas menores */
 @media (max-width: 768px) {
     div#menu-principal > nav {
-        justify-content: center;
+        justify-content: space-around;
         padding: 5px;
     }
 
     div#menu-principal > nav a {
-        padding: 8px 12px;
+        padding: 5px 12px;
         font-size: 0.9em;
     }
 }
