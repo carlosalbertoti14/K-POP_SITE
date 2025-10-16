@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const botaoExpandir = document.getElementById(buttonExpandId);
         const textoBotao = botaoExpandir ? botaoExpandir.querySelector('p') : null;
         const botaoMais = document.getElementById(buttonMoreId);
+        
+        
 
         // Determina o elemento para onde a tela deve rolar ao recolher.
         // Tenta encontrar o 'article' pai, se não, a 'div' pai com ID, senão, o próprio 'conteudoOculto'.
@@ -76,6 +78,8 @@ document.addEventListener('DOMContentLoaded', function() {
     setupExpandCollapse('HOTNEWS_oculto', 'botaoExpandirHOTNEWS', 'maisHOTNEWS', 1000);
     setupExpandCollapse('FAQ', 'botaoExpandirFAQ', 'maisPerguntas', 1000);
     setupExpandCollapse('conteudoGlossario', 'botaoExpandirGlossario', 'maisTERMOS', 1000);
+    setupExpandCollapse('eventos_oculto','botaoExpandirEVENTOS','maisEVENTOS',1000);
+    
 
 
     // --- Script para os itens individuais do glossário (o toggle-icon) ---

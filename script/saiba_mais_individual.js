@@ -1,4 +1,4 @@
-/* script.js */
+/* /script/saiba_mais_individual.js */
 
 /* ... (seu código JavaScript existente antes deste bloco) ... */
 
