@@ -1040,7 +1040,22 @@ transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave para a o
 
 }
 
+.H4FEMININOS {
+    color: white;
+    background-color: rgb(219, 152, 163);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
 
+.H4MACULINO {
+    color: white;
+    background-color: rgb(139, 181, 216);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
 
 /****************************FIM DA CONFIG CARROCEL*************************/
 
