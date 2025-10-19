@@ -1973,6 +1973,110 @@ padding: 5px;
 
 
 
+/****************************** CONFIGURAÇÃO DE HANKING********************************/
+
+#hankingKPOP {
+    background-color: rgba(255, 255, 255, 0.904);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.534);
+    margin-bottom: 10px;
+    background-color: #9fc7e2;
+}
+
+#hankingKPOP h2 {
+    color: rgb(255, 255, 255);
+}
+
+/* Div oculta inicial para conteúdo retrátil */
+#hanking_oculto {
+display: block; /* NÃO use 'none' aqui por padrão, pois é controlado só pelo JS */
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.7s ease-in-out;
+padding-bottom: 0;
+}
+
+.conteudo_Oculto.expandido {
+    /* O max-height será controlado via JavaScript para a expansão */
+    padding-bottom: 0px;
+}
+
+/* Botão para expandir/recolher */
+.expandir-recolher {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+ .box_linear_hanking {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 5px;
+   
+    border: 2px solid #0b7eac; /* Cor roxa. Troque por qualquer cor que quiser */
+    border-radius: 10px;        /* Deixa os cantos arredondados */
+    margin-bottom: 5px;
+    padding: 5px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.08);
+
+ }
+
+
+.hanking_numero {
+    display: flex;
+    align-items: center;
+
+    background-color: #b40505;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    height: auto;
+    
+ }
+              
+
+.hanking_nome {
+display: flex;
+align-items: center;
+padding: 5px;
+ color: #c4b704;
+   
+ }
+
+
+ @media (max-width: 500px) {
+    #hankingKPOP {
+        font-size: 0.8em;
+    }
+    .box_linear,
+    .data_eventos,
+    .discricao_eventos {
+        font-size: 1em;
+    }
+    /* Caso queira também espaço um pouco mais compacto em telas pequenas: */
+    .box_linear_hanking {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    #hankingKPOP h2 {
+    font-size: 1.5em;
+}
+}
+
+
+
+/****************************** FIM DE CONFIGURAÇÃO DE HANKING********************************/
+
+
+
 div.perfil {
     width: 375px;
     height: 600px;

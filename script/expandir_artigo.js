@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setupExpandCollapse('FAQ', 'botaoExpandirFAQ', 'maisPerguntas', 1000);
     setupExpandCollapse('conteudoGlossario', 'botaoExpandirGlossario', 'maisTERMOS', 1000);
     setupExpandCollapse('eventos_oculto','botaoExpandirEVENTOS','maisEVENTOS',1000);
+    setupExpandCollapse('hanking_oculto','botaoExpandirHANKING','maisEVENTOS',1000);
     
 
 
