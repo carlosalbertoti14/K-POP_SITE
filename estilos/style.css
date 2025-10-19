@@ -589,44 +589,46 @@ div#ahyeon span a{color: rgb(26, 26, 238)}
 
 /****************************CONFIG GRUPO*************************/
 
-#babymonster {background-image: url(../midia/babymonster_poster.jpg);}
-#aespa {background-image: url(../midia/aespagroup2.jpg);}
-#TWICE {background-image: url(../midia/twice_POSTER.jpg);}
-#BLACK_PINK {background-image: url(../midia/blackpink_POSTER.jpg);}
-#ATEEZ {background-image: url(../midia/ateez_POSTER.jpg);}
-#stray_kids {background-image: url(../midia/straykids_POSTER.jpg);}
-#BTS {background-image: url(../midia/bts_POSTER.jpg);}
-#KISS_OF_LIFE {background-image: url(../midia/kissoflife_poster.jpg);}
-#NewJeans {background-image: url(../midia/newjeans_POSTER.jpg);}
-#G-IDLE {background-image: url(../midia/G-IDLE_POSTER.jpg);}
-#ILLIT {background-image: url(../midia/ILLIT_POSTER.jpg);}
-#IVE {background-image: url(../midia/IVE_POSTER.jpg);}
-#KATSEYE {background-image: url(../midia/katseye_POSTER.jpg);}
-#LE-SSERAFIM {background-image: url(../midia/LE-SSERAFIM_POSTER.jpg);}
-#SEVENTEEN {background-image: url(../midia/seventeen_POSTER.jpg);}
-#BIGBANG {background-image: url(../midia/BIGBANG_POSTER.jpg);}
-#Girls-Generation {background-image: url(../midia/Girls-Generation_POSTER.jpg);}
-#TXT {background-image: url(../midia/TXT_POSTER.jpg);}
-#EXO-K {background-image: url(../midia/EXO-K_POSTER.jpg);}
-#Kep1er {background-image: url(../midia/Kep1er_POSTER.jpg);}
-#NMIXX {background-image: url(../midia/NMIXX_POSTER.jpg);}
-#TREASURE {background-image: url(../midia/TREASURE_POSTER.jpg);}
-#ZEROBASEONE {background-image: url(../midia/ZEROBASEONE_POSTER.jpg);}
-#RIIZE {background-image: url(../midia/RIIZE_POSTER.jpg);}
-#ENHYPEN {background-image: url(../midia/ENHYPEN_POSTER.jpg);}
-#NTX {background-image: url(../midia/NTX_POSTER.jpg);}
-#ARTMS {background-image: url(../midia/ARTMS_POSTER.jpg);}
-#RedVelvet {background-image: url(../midia/REDVELVET_POSTER.jpg);}
-#ITZY {background-image: url(../midia/ITZY_POSTER.jpg);}
-#FIFTYFIFTY {background-image: url(../midia/FIFTYFIFTY_POSTER.jpg);}
-#HEARTS2HEARTS {background-image: url(../midia/HEARTS2HEARTS_POSTER.jpg);}
-#MEOVV {background-image: url(../midia/MEOVV_POSTER.jpg);}
-#STAYC {background-image: url(../midia/STAYC_POSTER.jpg);}
-#KIIIKIII {background-image: url(../midia/KIIIKIII_POSTER.jpg);}
-#IFEYE {background-image: url(../midia/IFEYE_POSTER.jpg);}
-#IZNA {background-image: url(../midia/IZNA_POSTER.jpg);}
-#VIVIZ {background-image: url(../midia/VIVIZ_POSTER.jpg);}
-#fromis_9 {background-image: url(../midia/fromis_9_POSTER.jpg);}
+#babymonster {background-image: url(../midia/POSTER/babymonster_poster.jpg);}
+#aespa {background-image: url(../midia/POSTER/aespa_POSTER.jpg);}
+#TWICE {background-image: url(../midia/POSTER/twice_POSTER.jpg);}
+#BLACK_PINK {background-image: url(../midia/POSTER/blackpink_POSTER.jpg);}
+#ATEEZ {background-image: url(../midia/POSTER/ateez_POSTER.jpg);}
+#stray_kids {background-image: url(../midia/POSTER/straykids_POSTER.jpg);}
+#BTS {background-image: url(../midia/POSTER/bts_POSTER.jpg);}
+#KISS_OF_LIFE {background-image: url(../midia/POSTER/kissoflife_poster.jpg);}
+#NewJeans {background-image: url(../midia/POSTER/newjeans_POSTER.jpg);}
+#G-IDLE {background-image: url(../midia/POSTER/G-IDLE_POSTER.jpg);}
+#ILLIT {background-image: url(../midia/POSTER/ILLIT_POSTER.jpg);}
+#IVE {background-image: url(../midia/POSTER/IVE_POSTER.jpg);}
+#KATSEYE {background-image: url(../midia/POSTER/katseye_POSTER.jpg);}
+#LE-SSERAFIM {background-image: url(../midia/POSTER/LE-SSERAFIM_POSTER.jpg);}
+#SEVENTEEN {background-image: url(../midia/POSTER/seventeen_POSTER.jpg);}
+#BIGBANG {background-image: url(../midia/POSTER/BIGBANG_POSTER.jpg);}
+#Girls-Generation {background-image: url(../midia/POSTER/Girls-Generation_POSTER.jpg);}
+#TXT {background-image: url(../midia/POSTER/TXT_POSTER.jpg);}
+#EXO-K {background-image: url(../midia/POSTER/EXO-K_POSTER.jpg);}
+#Kep1er {background-image: url(../midia/POSTER/Kep1er_POSTER.jpg);}
+#NMIXX {background-image: url(../midia/POSTER/NMIXX_POSTER.jpg);}
+#TREASURE {background-image: url(../midia/POSTER/TREASURE_POSTER.jpg);}
+#ZEROBASEONE {background-image: url(../midia/POSTER/ZEROBASEONE_POSTER.jpg);}
+#RIIZE {background-image: url(../midia/POSTER/RIIZE_POSTER.jpg);}
+#ENHYPEN {background-image: url(../midia/POSTER/ENHYPEN_POSTER.jpg);}
+#NTX {background-image: url(../midia/POSTER/NTX_POSTER.jpg);}
+#ARTMS {background-image: url(../midia/POSTER/ARTMS_POSTER.jpg);}
+#RedVelvet {background-image: url(../midia/POSTER/REDVELVET_POSTER.jpg);}
+#ITZY {background-image: url(../midia/POSTER/ITZY_POSTER.jpg);}
+#FIFTYFIFTY {background-image: url(../midia/POSTER/FIFTYFIFTY_POSTER.jpg);}
+#HEARTS2HEARTS {background-image: url(../midia/POSTER/HEARTS2HEARTS_POSTER.jpg);}
+#MEOVV {background-image: url(../midia/POSTER/MEOVV_POSTER.jpg);}
+#STAYC {background-image: url(../midia/POSTER/STAYC_POSTER.jpg);}
+#KIIIKIII {background-image: url(../midia/POSTER/KIIIKIII_POSTER.jpg);}
+#IFEYE {background-image: url(../midia/POSTER/IFEYE_POSTER.jpg);}
+#IZNA {background-image: url(../midia/POSTER/IZNA_POSTER.jpg);}
+#VIVIZ {background-image: url(../midia/POSTER/VIVIZ_POSTER.jpg);}
+#fromis_9 {background-image: url(../midia/POSTER/fromis_9_POSTER.jpg);}
+#RESCENE {background-image: url(../midia/POSTER/RESCENE_POSTER.jpg);}
+#UNIS {background-image: url(../midia/POSTER/UNIS_POSTER.jpg);}
 
 
 
@@ -1043,7 +1045,6 @@ transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave para a o
 
 
 
-
 /****************************CONFIG ANIVERSARIO*************************/
 
 /* ... seu CSS anterior ... */
@@ -1052,20 +1053,39 @@ transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave para a o
   /* ... seu CSS posterior ... */
 
 
-
-  section#SECniver {
+/* ********** */
+section#SECniver {
     display: none;
-    background-image: url(../midia/aniversario/ANIVERSÁRIO_BG.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: black; /* Importante manter o background-color: black */
+    background-color: black; /* Mantém o fundo preto */
     width: 100%;
     height: auto;
     max-width: 800px;
-    margin: 0 auto;
-    position: relative; /* Importante para posicionar o vídeo absolutamente dentro */
-    margin-bottom: 10px;
+    margin: 15px auto;
+    position: relative;
 }
+
+section#SECniver::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../midia/aniversario/ANIVERSÁRIO_BG.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5; /* Ajuste a transparência aqui - 0.3 = 30% */
+    z-index: 0; /* Fica atrás do conteúdo */
+}
+
+/* Garante que o conteúdo fique acima do background transparente */
+section#SECniver > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ********* */
 
 #fogosVideo {
     display: none;
@@ -1086,6 +1106,7 @@ div#felizniver {
 
 div#felizniver h4 {
     color: white;
+    text-shadow: 5px 5px 7px black ;
 }
 
 
@@ -1111,6 +1132,7 @@ div#DIVniver {
     justify-content: center;
     align-items: flex-end;
     padding-bottom: 0px;      /* Espaço no fundo para não colar a última img */
+    
 }
 
 div#DIVniver a {
