@@ -1,9 +1,380 @@
 fiz um site sobre kpop, e tem uma parte de aniversário dos integrantes.
 
-Quero que você analise minunciosamente essa imagem que te mandei, notará que o nome do grupo esta posicionada a sima, tem a imagem da integrante seguida do nome e da data de nascimento, FIZ UMA DASSAS PARA CADA MENBRO DO GRUPO.
+LISTE PARA MIM, SEM NENHUM MARCADOR DE BOLINHA. O ANIVERSARIO DE TODOS OS MEMBROS DO GRUPO K-POP listado abaixo,
+USE ESSE FORMATO: EX.: RedVelvet_JEONGYEON01NOV
 
-quero que você faça a mesma coisa só que com as informações pertinentes a esse grupo: MEOVV, faça todos e me envie em png.
+*novos grupos com niver faltando lista:
+fromis_9
+IFEYE
+IZNA
+KIIIKIII
+MEOVV
+RESCENE
+STAYC
+tripleS
+UNIS
+VIVIZ
 
+
+fromis9_SAEROM07JAN
+fromis9_HAYOUNG29SEP
+fromis9_JIWON20MAR
+fromis9_JISUN23NOV
+fromis9_SEOYEON22JAN
+fromis9_CHAEYOUNG14MAY
+fromis9_NAGYUNG01JUN
+fromis9_JIHEON17APR
+
+IFEYE_KASIA15FEB
+IFEYE_HWAYEON24JUN
+IFEYE_TAERIN08DEC
+IFEYE_RAHEE09MAR
+IFEYE_MEU12AUG
+IFEYE_SASHA25MAY
+
+IZNA_MAI28OCT
+IZNA_JEEMIN08MAY
+IZNA_JIYOON14JUL
+IZNA_KOKO14NOV
+IZNA_SARANG18APR
+IZNA_JUNGEUN04AUG
+IZNA_SAEBI22JAN
+
+KIIIKIII_JIYU14MAY
+KIIIKIII_LEESOL18SEP
+KIIIKIII_SUI10APR
+KIIIKIII_HAUM14NOV
+KIIIKIII_KYA18DEC
+
+MEOVV_SOOIN12APR
+MEOVV_GAWON27APR
+MEOVV_ANNA17NOV
+MEOVV_NARIN15AUG
+MEOVV_ELLA01DEC
+
+RESCENE_WONI25MAY
+RESCENE_LIV11OCT
+RESCENE_MINAMI29NOV
+RESCENE_MAY19AUG
+RESCENE_ZENA27NOV
+
+STAYC_SUMIN13MAR
+STAYC_SIEUN01AUG
+STAYC_ISA23JAN
+STAYC_SEEUN14JUN
+STAYC_YOON14APR
+STAYC_J09DEC
+
+tripleS_YOOYEON09FEB
+tripleS_MAYU12MAY
+tripleS_XINYU25MAY
+tripleS_NAKYOUNG13OCT
+tripleS_SOHYUN13OCT
+tripleS_DAHYUN08JAN
+tripleS_NIEN07APR
+tripleS_SEOYEON17FEB
+tripleS_JIYEON28JUL
+tripleS_KOTONE24MAR
+tripleS_CHAEYEON27MAY
+tripleS_YUBIN02NOV
+tripleS_JIWOO04NOV
+tripleS_KAEDE14AUG
+tripleS_SHION29DEC
+tripleS_SULLIN25SEP
+tripleS_LYNN12APR
+tripleS_HYERIN12APR
+tripleS_CHAEWON16JUL
+tripleS_HAYEON11FEB
+tripleS_SOOMIN16MAR
+tripleS_YEONJI08JAN
+tripleS_JOOBIN18NOV
+tripleS_SEOAH11JUN
+
+UNIS_HYEONJU03NOV
+UNIS_NANA06JUN
+UNIS_GEHLEE19AUG
+UNIS_YOONA07OCT
+UNIS_KOTOKO28OCT
+UNIS_YUNHA28FEB
+UNIS_ELISIA18APR
+UNIS_SEOWON27JAN
+
+VIVIZ_EUNHA30MAY
+VIVIZ_SINB03JUN
+VIVIZ_UMJI19AUG
+
+**************
+----------->fromis9:
+
+SAEROM
+07 de Janeiro
+
+HAYOUNG
+29 de Setembro
+
+JIWON
+20 de Março
+
+JISUN
+23 de Novembro
+
+SEOYEON
+22 de Janeiro
+
+CHAEYOUNG
+14 de Maio
+
+NAGYUNG
+01 de Junho
+
+JIHEON
+17 de Abril
+
+-----------> IFEYE:
+
+KASIA
+15 de Fevereiro
+
+HWAYEON
+24 de Junho
+
+TAERIN
+08 de Dezembro
+
+RAHEE
+09 de Março
+
+MEU
+12 de Agosto
+
+SASHA
+25 de Maio
+
+-----------> IZNA:
+
+MAI
+28 de Outubro
+
+JEEMIN
+08 de Maio
+
+JIYOON
+14 de Julho
+
+KOKO
+14 de Novembro
+
+SARANG
+18 de Abril
+
+JUNGEUN
+04 de Agosto
+
+SAEBI
+22 de Janeiro
+
+-----------> KIIIKIII:
+
+JIYU
+14 de Maio
+
+LEESOL
+18 de Setembro
+
+SUI
+10 de Abril
+
+HAUM
+14 de Novembro
+
+KYA
+18 de Dezembro
+
+-----------> MEOVV:
+
+SOOIN
+12 de Abril
+
+GAWON
+27 de Abril
+
+ANNA
+17 de Novembro
+
+NARIN
+15 de Agosto
+
+ELLA
+01 de Dezembro
+
+-----------> RESCENE:
+
+WONI
+25 de Maio
+
+LIV
+11 de Outubro
+
+MINAMI
+29 de Novembro
+
+MAY
+19 de Agosto
+
+ZENA
+27 de Novembro
+
+-----------> STAYC:
+
+SUMIN
+13 de Março
+
+SIEUN
+01 de Agosto
+
+ISA
+23 de Janeiro
+
+SEEUN
+14 de Junho
+
+YOON
+14 de Abril
+
+J
+09 de Dezembro
+
+-----------> tripleS:
+
+YOOYEON
+09 de Fevereiro
+
+MAYU
+12 de Maio
+
+XINYU
+25 de Maio
+
+NAKYOUNG
+13 de Outubro
+
+SOHYUN
+13 de Outubro
+
+DAHYUN
+08 de Janeiro
+
+NIEN
+07 de Abril
+
+SEOYEON
+17 de Fevereiro
+
+JIYEON
+28 de Julho
+
+KOTONE
+24 de Março
+
+CHAEYEON
+27 de Maio
+
+YUBIN
+02 de Novembro
+
+JIWOO
+04 de Novembro
+
+KAEDE
+14 de Agosto
+
+SHION
+29 de Dezembro
+
+SULLIN
+25 de Setembro
+
+LYNN
+12 de Abril
+
+HYERIN
+12 de Abril
+
+CHAEWON
+16 de Julho
+
+HAYEON
+11 de Fevereiro
+
+SOOMIN
+16 de Março
+
+YEONJI
+08 de Janeiro
+
+JOOBIN
+18 de Novembro
+
+SEOAH
+11 de Junho
+
+-----------> UNIS:
+
+HYEONJU
+03 de Novembro
+
+NANA
+06 de Junho
+
+GEHLEE
+19 de Agosto
+
+YOONA
+07 de Outubro
+
+KOTOKO
+28 de Outubro
+
+YUNHA
+28 de Fevereiro
+
+ELISIA
+18 de Abril
+
+SEOWON
+27 de Janeiro
+
+-----------> VIVIZ:
+
+EUNHA
+30 de Maio
+
+SINB
+03 de Junho
+
+UMJI
+19 de Agosto
+
+*************
+
+
+
+Quero que você analise minunciosamente essa imagem que te mandei, notará que o nome do grupo esta posicionada a Cima, tem a imagem da integrante seguida do nome e da data de nascimento, FIZ UMA DASSAS PARA CADA MENBRO DO GRUPO.Mandei 2 imagens de exemplo para você seguir: template de Back Graund.png e TEMPLATE DE IMAGEM PRONTA.png.
+
+
+quero que você faça a mesma coisa só que com as informações pertinentes a esse grupo: MEOVV, já vou te adiantar as informações, você só terá que encontrar as fotos das integrantes e colocar no circulo correspondente do exemplo, faça todos e me envie em png.
+
+
+VIVIZ:
+
+EUNHA
+30 de Maio
+
+SINB
+03 de Junho
+
+UMJI
+19 de Agosto
 
 ********************************
 
