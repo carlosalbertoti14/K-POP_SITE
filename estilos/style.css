@@ -1573,7 +1573,7 @@ section.RESPOSTA {
 
 /* Estilo para os botões de expandir/recolher */
 .expandir-recolher { /* Aplica o estilo a ambos os botões */
-    background-color: black;
+    background-color: rgb(121, 19, 134);
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -1941,7 +1941,7 @@ padding-bottom: 0;
 
 /* Botão para expandir/recolher */
 .expandir-recolher {
-    background-color: black;
+    background-color: rgb(135, 13, 151);
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -2042,7 +2042,7 @@ padding-bottom: 0;
 
 /* Botão para expandir/recolher */
 .expandir-recolher {
-    background-color: black;
+    background-color: rgb(138, 18, 168);
     color: white;
     text-align: center;
     padding: 10px 0;
