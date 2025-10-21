@@ -1042,7 +1042,8 @@ transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave para a o
 
 .H4FEMININOS {
     color: white;
-    background-color: rgb(233, 179, 188);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.493);
+    background-color: rgb(224, 170, 224);
     padding: 10px;
     margin-bottom: 5px;
     border-radius: 10px;
@@ -1078,6 +1079,11 @@ section#SECniver {
     max-width: 800px;
     margin: 15px auto;
     position: relative;
+    
+    /* === CORREÇÃO: Adicione border-radius e overflow: hidden aqui === */
+    border-radius: 10px; /* Aplica o arredondamento ao contêiner principal */
+    overflow: hidden; /* Corta o conteúdo (incluindo ::before) nas bordas arredondadas */
+    /* =================================================================== */
 }
 
 section#SECniver::before {
@@ -1088,6 +1094,7 @@ section#SECniver::before {
     width: 100%;
     height: 100%;
     background-image: url(../midia/aniversario/ANIVERSÁRIO_BG.png);
+    border-radius: 10px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1099,6 +1106,7 @@ section#SECniver::before {
 section#SECniver > * {
     position: relative;
     z-index: 1;
+    border-radius: 10px;
 }
 
 /* ********* */
@@ -1117,6 +1125,7 @@ section#SECniver > * {
 
 div#felizniver {
     display: block;
+    border-radius: 10px;
 
 }
 
@@ -1138,6 +1147,22 @@ div#felizniver h4 {
     padding-top: 10px;
     font-size: 2em;
 
+}
+
+DIV#proximo_niver a {
+     display: flex;
+      align-items: flex-end;
+      justify-content: left;
+      
+}
+
+DIV#proximo_niver p {
+text-align: center;
+font-weight: bolder;
+color: white;
+text-shadow: 5px 5px 5px black;
+margin: auto;
+      
 }
 
 div#DIVniver {
@@ -1180,6 +1205,7 @@ div#DIVniver img {
 
    
 }
+
 
 
 /* Aumenta espaço apenas na última imagem */
