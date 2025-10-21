@@ -1156,6 +1156,11 @@ DIV#proximo_niver a {
       
 }
 
+DIV#proximo_niver a img {
+    width: 50vw;
+
+}
+
 DIV#proximo_niver p {
 text-align: center;
 font-weight: bolder;
