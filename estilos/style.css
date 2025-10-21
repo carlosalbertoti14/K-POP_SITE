@@ -1116,7 +1116,7 @@ section#SECniver > * {
 }
 
 div#felizniver {
-    display: none;
+    display: block;
 
 }
 
@@ -1145,9 +1145,13 @@ div#DIVniver {
     flex-flow: column;
     height: 100%;              /* Deixe a altura se ajustar ao conteúdo */
     width: 100%;
-    justify-content: center;
+   /*  justify-content: center; */
     align-items: flex-end;
     padding-bottom: 0px;      /* Espaço no fundo para não colar a última img */
+
+    /* Adiciona flex-wrap para o layout de imagens */
+/* flex-wrap: wrap;
+justify-content: space-around; */
     
 }
 
@@ -1157,6 +1161,15 @@ div#DIVniver a {
     z-index: 2;
 }
 
+
+/* NOVO ESTILO: Garante display:flex para a DIVniver quando expandida, mantendo a transição max-height */
+#DIVniver.expandido {
+display: flex; /* Define o display como flex quando expandido */
+flex-wrap: wrap; /* Adicione isso se for flex-wrap */
+    /* justify-content: center; */
+    align-items: flex-end;
+}
+
 div#DIVniver img {
     display: none;
     width: 80%;                /* Ocupa 80% da largura da div, se ajusta em telas menores */
@@ -1164,6 +1177,8 @@ div#DIVniver img {
 /*     padding: 5px 0px 5px 5px; */
    /*  z-index: 200; */
    /*  box-shadow: 5px 5px 15px rgba(22, 22, 22, 0.5); */
+
+   
 }
 
 
@@ -1496,7 +1511,7 @@ header {
 }
 /*********************** configuração do HOME ***********************/
 
-/********************************************** config do artigo  *****************************/
+/********************************************** config do artigo *****************************/
 article {
     background-color: rgba(255, 255, 255, 0.904);
     padding: 10px;
