@@ -1157,7 +1157,8 @@ DIV#proximo_niver a {
 }
 
 DIV#proximo_niver a img {
-    width: 50vw;
+    
+    width: 350PX;
 
 }
 
@@ -1211,6 +1212,13 @@ div#DIVniver img {
    
 }
 
+  @media (max-width: 600px) {
+DIV#proximo_niver a img {
+    width: 50vw;
+
+}
+
+}
 
 
 /* Aumenta espaço apenas na última imagem */
