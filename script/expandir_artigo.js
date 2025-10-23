@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
   setupExpandCollapse('hanking_oculto','botaoExpandirHANKING','maisEVENTOS',2000);
   // DIVniver agora usa a mesma lógica de max-height/transição
   setupExpandCollapse('DIVniver','botaoExpandirDIVniver','maisEVENTOS',5000); 
+  setupExpandCollapse('BAIXAS_oculto','botaoExpandirBAIXAS','maisEVENTOS',5000); 
 
   // --- Script para os itens individuais do glossário (o toggle-icon) ---
   const glossaryItems = document.querySelectorAll('.glossary-item');

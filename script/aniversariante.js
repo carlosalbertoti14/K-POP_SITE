@@ -318,9 +318,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     mensagemAniversarioDiv.querySelector('h4').textContent = `🎉 Feliz aniversário, ${niver.nome}! Hoje é o seu dia mais FELIZ!!! 🎉`;
                     mensagemAniversarioDiv.style.display = "block";
                 }
-                if (fogosVideo) {
+/*                 if (fogosVideo) {
                     fogosVideo.style.display = "block";
-                }
+                } */
                 secNiver.style.display = "block"; // Exibe a seção
                 divNiver.style.maxHeight = '5000px'; // Mantém expandido para mostrar o aniversariante do dia
                 divNiver.classList.add('expandido');
