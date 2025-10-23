@@ -1172,6 +1172,7 @@ margin: auto;
 }
 
 div#DIVniver {
+    /* max-height: 10px; */
     display: flex;
     flex-flow: column;
     height: 100%;              /* Deixe a altura se ajustar ao conteúdo */

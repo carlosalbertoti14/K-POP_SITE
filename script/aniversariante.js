@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // ==================================================
+    // SEÇÃO 1: LÓGICA DE ANIVERSÁRIOS (CORRIGIDA)
+    // ==================================================
     const imagens = document.querySelectorAll('#DIVniver img');
     const mesAtual = new Date().getMonth() + 1;
     const hoje = new Date();
@@ -12,274 +15,376 @@ document.addEventListener("DOMContentLoaded", function () {
     const divNiver = document.getElementById("DIVniver");
     const mensagemAniversarioDiv = document.getElementById("felizniver");
     const fogosVideo = document.getElementById("fogosVideo");
-    // NOVA DIV
     const proximoNiverDiv = document.getElementById("proximo_niver");
 
-    const nivernome = [
-        // TWICE
-        { nome: "NAYEON", url: "url('midia/twice_PERFIL_BG_Nayeon.jpg')" },
-        { nome: "JEONGYEON", url: "url('midia/twice_PERFIL_BG_Jeongyeon.jpg')" },
-        { nome: "MOMO", url: "url('midia/twice_PERFIL_BG_Momo.jpg')" },
-        { nome: "SANA", url: "url('midia/twice_PERFIL_BG_Sana.jpg')" },
-        { nome: "JIHYO", url: "url('midia/twice_PERFIL_BG_Jihyo.jpg')" },
-        { nome: "MINA", url: "url('midia/twice_PERFIL_BG_Mina.jpg')" },
-        { nome: "DAHYUN", url: "url('midia/twice_PERFIL_BG_Dahyun.jpg')" }, // Não presente no HTML, mas mantido se for útil.
-        { nome: "CHAEYOUNG", url: "url('midia/twice_PERFIL_BG_Chaeyoung.jpg')" },
-        { nome: "TZUYU", url: "url('midia/twice_PERFIL_BG_Tzuyu.jpg')" },
+const nivernome = [
+    // TWICE
+    { nome: "NAYEON", url: "url('midia/twice_PERFIL_BG_Nayeon.jpg')" },
+    { nome: "JEONGYEON", url: "url('midia/twice_PERFIL_BG_Jeongyeon.jpg')" },
+    { nome: "MOMO", url: "url('midia/twice_PERFIL_BG_Momo.jpg')" },
+    { nome: "SANA", url: "url('midia/twice_PERFIL_BG_Sana.jpg')" },
+    { nome: "JIHYO", url: "url('midia/twice_PERFIL_BG_Jihyo.jpg')" },
+    { nome: "MINA", url: "url('midia/twice_PERFIL_BG_Mina.jpg')" },
+    { nome: "DAHYUN", url: "url('midia/twice_PERFIL_BG_Dahyun.jpg')" },
+    { nome: "CHAEYOUNG", url: "url('midia/twice_PERFIL_BG_Chaeyoung.jpg')" },
+    { nome: "TZUYU", url: "url('midia/twice_PERFIL_BG_Tzuyu.jpg')" },
 
-        // aespa
-        { nome: "GISELLE", url: "url('midia/aespa_PERFIL_BG_Giselle.jpg')" },
-        { nome: "KARINA", url: "url('midia/aespa_PERFIL_BG_Karina.jpg')" },
-        { nome: "NINGNING", url: "url('midia/aespa_PERFIL_BG_Ningning.jpg')" },
-        { nome: "WINTER", url: "url('midia/aespa_PERFIL_BG_Winter.jpg')" },
+    // AESPA
+    { nome: "GISELLE", url: "url('midia/aespa_GISELLE30NIVER.png')" },
+    { nome: "KARINA", url: "url('midia/aespa_KARINA11NIVER.png')" },
+    { nome: "NINGNING", url: "url('midia/aespa_NINGNING23NIVER.png')" },
+    { nome: "WINTER", url: "url('midia/aespa_WINTER1NIVER.png')" },
 
-        // ATEEZ
-        { nome: "HONGJOONG", url: "url('midia/ateez_PERFIL_BG_Hongjoong.jpg')" },
-        { nome: "JONGHO", url: "url('midia/ateez_PERFIL_BG_Jongho.jpg')" },
-        { nome: "MINGI", url: "url('midia/ateez_PERFIL_BG_Mingi.jpg')" },
-        { nome: "SAN", url: "url('midia/ateez_PERFIL_BG_San.jpg')" },
-        { nome: "SEONGHWA", url: "url('midia/ateez_PERFIL_BG_Seonghwa.jpg')" },
-        { nome: "WOOYOUNG", url: "url('midia/ateez_PERFIL_BG_Wooyoung.jpg')" },
-        { nome: "YEOSANG", url: "url('midia/ateez_PERFIL_BG_Yeosang.jpg')" },
-        { nome: "YUNHO", url: "url('midia/ateez_PERFIL_BG_Yunho.jpg')" },
+    // ARTMS
+    { nome: "CHOERRY", url: "url('midia/ARTMS_CHOERRY04JUN.png')" },
+    { nome: "HASEUL", url: "url('midia/ARTMS_HASEUL18AGO.png')" },
+    { nome: "HEEJIN", url: "url('midia/ARTMS_HEEJIN19OUT.png')" },
+    { nome: "JINSOUL", url: "url('midia/ARTMS_JINSOUL13JUN.png')" },
+    { nome: "KIMLIP", url: "url('midia/ARTMS_KIMLIP10FEV.png')" },
 
-        // BABYMONSTER
-        { nome: "AHYEON", url: "url('midia/babymonster_PERFIL_BG_Ahyeon.jpg')" },
-        { nome: "ASA", url: "url('midia/babymonster_PERFIL_BG_Asa.jpg')" },
-        { nome: "CHIQUITA", url: "url('midia/babymonster_PERFIL_BG_Chiquita.jpg')" },
-        { nome: "LUKA", url: "url('midia/babymonster_PERFIL_BG_Luka.jpg')" },
-        { nome: "PHARITA", url: "url('midia/babymonster_PERFIL_BG_Pharita.jpg')" },
-        { nome: "RAMI", url: "url('midia/babymonster_PERFIL_BG_Rami.jpg')" },
-        { nome: "RORA", url: "url('midia/babymonster_PERFIL_BG_Rora.jpg')" },
+    // ATEEZ
+    { nome: "HONGJOONG", url: "url('midia/ATEEZ_niver_Hongjoong07novembro.png')" },
+    { nome: "JONGHO", url: "url('midia/ATEEZ_niver_Jongho12outubro.png')" },
+    { nome: "MINGI", url: "url('midia/ATEEZ_niver_Mingi09agosto.png')" },
+    { nome: "SAN", url: "url('midia/ATEEZ_niver_San10julho.png')" },
+    { nome: "SEONGHWA", url: "url('midia/ATEEZ_niver_Seonghwa03abril.png')" },
+    { nome: "WOOYOUNG", url: "url('midia/ATEEZ_niver_Wooyoung26novembro.png')" },
+    { nome: "YEOSANG", url: "url('midia/ATEEZ_niver_Yeosang15junho.png')" },
+    { nome: "YUNHO", url: "url('midia/ATEEZ_niver_Yunho23marco.png')" },
 
-        // BLACKPINK
-        { nome: "JENNIE", url: "url('midia/blackpink_PERFIL_BG_Jennie.jpg')" },
-        { nome: "JISOO", url: "url('midia/blackpink_PERFIL_BG_Jisoo.jpg')" },
-        { nome: "LISA", url: "url('midia/blackpink_PERFIL_BG_Lisa.jpg')" },
-        { nome: "ROSE", url: "url('midia/blackpink_PERFIL_BG_Rose.jpg')" },
+    // BABYMONSTER
+    { nome: "AHYEON", url: "url('midia/BABYMONSTER_AHYEON11ABRIL.png')" },
+    { nome: "ASA", url: "url('midia/BABYMONSTER_ASA17ABRIL.png')" },
+    { nome: "CHIQUITA", url: "url('midia/BABYMONSTER_CHIQUITA17FEVEREIRO.png')" },
+    { nome: "LUKA", url: "url('midia/BABYMONSTER_LUKA20MARCO.png')" },
+    { nome: "PHARITA", url: "url('midia/BABYMONSTER_PHARITA26AGOSTO.png')" },
+    { nome: "RAMI", url: "url('midia/BABYMONSTER_RAMI17OUTUBRO.png')" },
+    { nome: "RORA", url: "url('midia/BABYMONSTER_RORA14AGOSTO.png')" },
 
-        // BTS
-        { nome: "JHOPE", url: "url('midia/bts_PERFIL_BG_Jhope.jpg')" },
-        { nome: "SUGA", url: "url('midia/bts_PERFIL_BG_Suga.jpg')" },
-        { nome: "JUNGKOOK", url: "url('midia/bts_PERFIL_BG_Jungkook.jpg')" },
-        { nome: "RM", url: "url('midia/bts_PERFIL_BG_Rm.jpg')" },
-        { nome: "JIMIN", url: "url('midia/bts_PERFIL_BG_Jimin.jpg')" },
-        { nome: "JIN", url: "url('midia/bts_PERFIL_BG_Jin.jpg')" },
-        { nome: "V", url: "url('midia/bts_PERFIL_BG_V.jpg')" },
+    // BIGBANG
+    { nome: "DAESUNG", url: "url('midia/BIGBANG_Daesung_26APR.png')" },
+    { nome: "SEUNGRI", url: "url('midia/BIGBANG_Seungri_12DEC.png')" },
+    { nome: "T.O.P", url: "url('midia/BIGBANG_T.O.P_04NOV.png')" },
+    { nome: "TAEYANG", url: "url('midia/BIGBANG_Taeyang_18MAY.png')" },
 
-        // BIGBANG
-        { nome: "DAESUNG", url: "url('midia/bigbang_PERFIL_BG_Daesung.jpg')" },
-        { nome: "TAEYANG", url: "url('midia/bigbang_PERFIL_BG_Taeyang.jpg')" },
-        { nome: "G-DRAGON", url: "url('midia/bigbang_PERFIL_BG_G-Dragon.jpg')" },
-        { nome: "T.O.P", url: "url('midia/bigbang_PERFIL_BG_Top.jpg')" },
-        { nome: "SEUNGRI", url: "url('midia/bigbang_PERFIL_BG_Seungri.jpg')" },
+    // BLACKPINK
+    { nome: "JENNIE", url: "url('midia/BLACKPINK_niver_Jennie16janjan.png')" },
+    { nome: "JISOO", url: "url('midia/BLACKPINK_niver_Jisoo3jan.png')" },
+    { nome: "LISA", url: "url('midia/BLACKPINK_niver_Lisa27Mar.png')" },
+    { nome: "ROSE", url: "url('midia/BLACKPINK_niver_Rose11fev.png')" },
 
-        // ENHYPEN
-        { nome: "JUNGWON", url: "url('midia/enhypen_PERFIL_BG_Jungwon.jpg')" },
-        { nome: "JAY", url: "url('midia/enhypen_PERFIL_BG_Jay.jpg')" },
-        { nome: "SUNOO", url: "url('midia/enhypen_PERFIL_BG_Sunoo.jpg')" },
-        { nome: "HEESEUNG", url: "url('midia/enhypen_PERFIL_BG_Heeseung.jpg')" },
-        { nome: "JAKE", url: "url('midia/enhypen_PERFIL_BG_Jake.jpg')" },
-        { nome: "SUNGHOON", url: "url('midia/enhypen_PERFIL_BG_Sunghoon.jpg')" },
-        { nome: "NI-KI", url: "url('midia/enhypen_PERFIL_BG_Niki.jpg')" },
+    // BTS
+    { nome: "JHOPE", url: "url('midia/BTS_JHOPE18FEV.png')" },
+    { nome: "JIMIN", url: "url('midia/BTS_JIMIN13OUT.png')" },
+    { nome: "JIN", url: "url('midia/BTS_JIN04DEZ.png')" },
+    { nome: "JUNGKOOK", url: "url('midia/BTS_JUNGKOOK01SET.png')" },
+    { nome: "RM", url: "url('midia/BTS_RM12SET.png')" },
+    { nome: "SUGA", url: "url('midia/BTS_SUGA09MAR.png')" },
+    { nome: "V", url: "url('midia/BTS_V30DEZ.png')" },
 
-        // EXO-K
-        { nome: "D.O.", url: "url('midia/exo-k_PERFIL_BG_Do.jpg')" },
-        { nome: "KAI", url: "url('midia/exo-k_PERFIL_BG_Kai.jpg')" },
-        { nome: "SEHUN", url: "url('midia/exo-k_PERFIL_BG_Sehun.jpg')" },
-        { nome: "SUHO", url: "url('midia/exo-k_PERFIL_BG_Suho.jpg')" },
-        { nome: "CHEN", url: "url('midia/exo-k_PERFIL_BG_Chen.jpg')" },
-        { nome: "CHANYEOL", url: "url('midia/exo-k_PERFIL_BG_Chanyeol.jpg')" },
+    // ENHYPEN
+    { nome: "HEESEUNG", url: "url('midia/ENHYPEN_Heeseung_15OCT.png')" },
+    { nome: "JAKE", url: "url('midia/ENHYPEN_Jake_15NOV.png')" },
+    { nome: "JAY", url: "url('midia/ENHYPEN_Jay_20APR.png')" },
+    { nome: "JUNGWON", url: "url('midia/ENHYPEN_Jungwon_09FEB.png')" },
+    { nome: "SUNGHOON", url: "url('midia/ENHYPEN_Sunghoon_08DEC.png')" },
+    { nome: "SUNOO", url: "url('midia/ENHYPEN_Sunoo_24JUN.png')" },
 
-        // (G)I-DLE
-        { nome: "MIYEON", url: "url('midia/gi-dle_PERFIL_BG_Miyeon.jpg')" },
-        { nome: "SOYEON", url: "url('midia/gi-dle_PERFIL_BG_Soyeon.jpg')" },
-        { nome: "YUQI", url: "url('midia/gi-dle_PERFIL_BG_Yuqi.jpg')" },
-        { nome: "MINNIE", url: "url('midia/gi-dle_PERFIL_BG_Minnie.jpg')" },
+    // FIFTY FIFTY
+    { nome: "ATHENA", url: "url('midia/FIFTYFIFTY_ATHENA15MAR.png')" },
+    { nome: "CHANELLE", url: "url('midia/FIFTYFIFTY_CHANELLE14JUN.png')" },
+    { nome: "HANA", url: "url('midia/FIFTYFIFTY_HANA05SET.png')" },
+    { nome: "KEENA", url: "url('midia/FIFTYFIFTY_KEENA09JUL.png')" },
+    { nome: "YEWON", url: "url('midia/FIFTYFIFTY_YEWON18MAR.png')" },
 
-        // GIRLS' GENERATION
-        { nome: "SOOYOUNG", url: "url('midia/girlsgeneration_PERFIL_BG_Sooyoung.jpg')" },
-        { nome: "TAEYEON", url: "url('midia/girlsgeneration_PERFIL_BG_Taeyeon.jpg')" },
-        { nome: "JESSICA", url: "url('midia/girlsgeneration_PERFIL_BG_Jessica.jpg')" },
-        { nome: "SUNNY", url: "url('midia/girlsgeneration_PERFIL_BG_Sunny.jpg')" },
-        { nome: "YOONA", url: "url('midia/girlsgeneration_PERFIL_BG_Yoona.jpg')" },
-        { nome: "SEOHYUN", url: "url('midia/girlsgeneration_PERFIL_BG_Seohyun.jpg')" },
-        { nome: "TIFFANY", url: "url('midia/girlsgeneration_PERFIL_BG_Tiffany.jpg')" },
-        { nome: "HYOYEON", url: "url('midia/girlsgeneration_PERFIL_BG_Hyoyeon.jpg')" },
-        { nome: "YURI", url: "url('midia/girlsgeneration_PERFIL_BG_Yuri.jpg')" },
+    // FROMIS_9
+    { nome: "CHAEYOUNG", url: "url('midia/fromis9_CHAEYOUNG14MAY.png')" },
+    { nome: "HAYOUNG", url: "url('midia/fromis9_HAYOUNG29SEP.png')" },
+    { nome: "JIHEON", url: "url('midia/fromis9_JIHEON17APR.png')" },
+    { nome: "JISUN", url: "url('midia/fromis9_JISUN23NOV.png')" },
+    { nome: "JIWON", url: "url('midia/fromis9_JIWON20MAR.png')" },
+    { nome: "NAGYUNG", url: "url('midia/fromis9_NAGYUNG01JUN.png')" },
+    { nome: "SAEROM", url: "url('midia/fromis9_SAEROM07JAN.png')" },
+    { nome: "SEOYEON", url: "url('midia/fromis9_SEOYEON22JAN.png')" },
 
-        // ILLIT
-        { nome: "IROHA", url: "url('midia/illit_PERFIL_BG_Iroha.jpg')" },
-        { nome: "MINJU", url: "url('midia/illit_PERFIL_BG_Minju.jpg')" },
-        { nome: "WONHEE", url: "url('midia/illit_PERFIL_BG_Wonhee.jpg')" },
-        { nome: "MOKA", url: "url('midia/illit_PERFIL_BG_Moka.jpg')" },
+    // GIRLS GENERATION
+    { nome: "HYOYEON", url: "url('midia/GIRLSGENERATION_HYOYEON22SEP.png')" },
+    { nome: "JESSICA", url: "url('midia/GIRLSGENERATION_JESSICA18APR.png')" },
+    { nome: "SEOHYUN", url: "url('midia/GIRLSGENERATION_SEOHYUN28JUN.png')" },
+    { nome: "SOOYOUNG", url: "url('midia/GIRLSGENERATION_SOOYOUNG10FEB.png')" },
+    { nome: "SUNNY", url: "url('midia/GIRLSGENERATION_SUNNY15MAY.png')" },
+    { nome: "TAEYEON", url: "url('midia/GIRLSGENERATION_TAEYEON_09MAR.png')" },
+    { nome: "TIFFANY", url: "url('midia/GIRLSGENERATION_TIFFANY01AUG.png')" },
+    { nome: "YOONA", url: "url('midia/GIRLSGENERATION_YOONA30MAY.png')" },
+    { nome: "YURI", url: "url('midia/GIRLSGENERATION_YURI05DEC.png')" },
 
-        // IVE
-        { nome: "LEESEO", url: "url('midia/ive_PERFIL_BG_Leeseo.jpg')" },
-        { nome: "WONYOUNG", url: "url('midia/ive_PERFIL_BG_Wonyoung.jpg')" },
-        { nome: "YUJIN", url: "url('midia/ive_PERFIL_BG_Yujin.jpg')" },
-        { nome: "GAEUL", url: "url('midia/ive_PERFIL_BG_Gaeul.jpg')" },
-        { nome: "LIZ", url: "url('midia/ive_PERFIL_BG_Liz.jpg')" },
+    // HEARTS 2 HEARTS
+    { nome: "ANA", url: "url('midia/hearts2hearts_ANA20DEZ.png')" },
+    { nome: "IAN", url: "url('midia/hearts2hearts_IAN09SET.png')" },
+    { nome: "JIWOO", url: "url('midia/hearts2hearts_JIWOO07SET.png')" },
+    { nome: "JUUN", url: "url('midia/hearts2hearts_JUUN03DEZ.png')" },
+    { nome: "STELLA", url: "url('midia/hearts2hearts_STELLA18JUN.png')" },
+    { nome: "YEON", url: "url('midia/hearts2hearts_YEON19ABR.png')" },
+    { nome: "YUHA", url: "url('midia/hearts2hearts_YUHA12ABR.png')" },
+    { nome: "CARMEN", url: "url('midia/hearts2hearts__CARMEN28MAR.png')" },
 
-        // KATSEYE
-        { nome: "MEGAN", url: "url('midia/katseye_PERFIL_BG_Megan.jpg')" },
-        { nome: "MANON", url: "url('midia/katseye_PERFIL_BG_Manon.jpg')" },
-        { nome: "DANIELA", url: "url('midia/katseye_PERFIL_BG_Daniela.jpg')" },
-        { nome: "LARA", url: "url('midia/katseye_PERFIL_BG_Lara.jpg')" },
-        { nome: "YOONCHAE", url: "url('midia/katseye_PERFIL_BG_Yoonchae.jpg')" },
-        { nome: "SOPHIA", url: "url('midia/katseye_PERFIL_BG_Sophia.jpg')" },
+    // IFEYE
+    { nome: "HWAYEON", url: "url('midia/IFEYE_HWAYEON24JUN.png')" },
+    { nome: "KASIA", url: "url('midia/IFEYE_KASIA15FEB.png')" },
+    { nome: "MEU", url: "url('midia/IFEYE_MEU12AUG.png')" },
+    { nome: "RAHEE", url: "url('midia/IFEYE_RAHEE09MAR.png')" },
+    { nome: "SASHA", url: "url('midia/IFEYE_SASHA25MAY.png')" },
+    { nome: "TAERIN", url: "url('midia/IFEYE_TAERIN08DEC.png')" },
 
-        // KEP1ER
-        { nome: "KIM DAYEON", url: "url('midia/kep1er_PERFIL_BG_KimDayeon.jpg')" },
-        { nome: "EZAKI HIKARU", url: "url('midia/kep1er_PERFIL_BG_EzakiHikaru.jpg')" },
-        { nome: "KIM CHAEHYUN", url: "url('midia/kep1er_PERFIL_BG_KimChaehyun.jpg')" },
-        { nome: "HUENING BAHIYYIH", url: "url('midia/kep1er_PERFIL_BG_HueningBahiyyih.jpg')" },
-        { nome: "CHOI YUJIN", url: "url('midia/kep1er_PERFIL_BG_ChoiYujin.jpg')" },
-        { nome: "SHEN XIAOTING", url: "url('midia/kep1er_PERFIL_BG_ShenXiaoting.jpg')" },
-        { nome: "SEO YOUNGEUN", url: "url('midia/kep1er_PERFIL_BG_SeoYoungeun.jpg')" },
+    // ILLIT
+    { nome: "IROHA", url: "url('midia/ILLIT_IROHA04FEB.png')" },
+    { nome: "MINJU", url: "url('midia/ILLIT_MINJU11MAY.png')" },
+    { nome: "MOKA", url: "url('midia/ILLIT_MOKA08OCT.png')" },
+    { nome: "WONHEE", url: "url('midia/ILLIT_WONHEE26JUN.png')" },
+    { nome: "YUNAH", url: "url('midia/ILLIT_YUNAH15JAN.png')" },
 
-        // KISS OF LIFE
-        { nome: "BELLE", url: "url('midia/kissoflife_PERFIL_BG_Belle.jpg')" },
-        { nome: "JULIE", url: "url('midia/kissoflife_PERFIL_BG_Julie.jpg')" },
-        { nome: "HANEUL", url: "url('midia/kissoflife_PERFIL_BG_Haneul.jpg')" },
-        { nome: "NATTY", url: "url('midia/kissoflife_PERFIL_BG_Natty.jpg')" },
+    // ITZY
+    { nome: "CHAERYEONG", url: "url('midia/ITZY_CHAERYEONG05JUN.png')" },
+    { nome: "LIA", url: "url('midia/ITZY_LIA21JUL.png')" },
+    { nome: "RYUJIN", url: "url('midia/ITZY_RYUJIN17ABR.png')" },
+    { nome: "YEJI", url: "url('midia/ITZY_YEJI26MAI.png')" },
+    { nome: "YUNA", url: "url('midia/ITZY_YUNA09DEZ.png')" },
 
-        // LE SSERAFIM
-        { nome: "CHAEWON", url: "url('midia/le_sserafim_PERFIL_BG_Chaewon.jpg')" },
-        { nome: "KAZUHA", url: "url('midia/le_sserafim_PERFIL_BG_Kazuha.jpg')" },
-        { nome: "YUNJIN", url: "url('midia/le_sserafim_PERFIL_BG_Yunjin.jpg')" },
-        { nome: "EUNCHAE", url: "url('midia/le_sserafim_PERFIL_BG_Eunchae.jpg')" },
+    // IVE
+    { nome: "GAEUL", url: "url('midia/IVE_GAEUL24SEP.png')" },
+    { nome: "LEESEO", url: "url('midia/IVE_LEESEO21FEB.png')" },
+    { nome: "LIZ", url: "url('midia/IVE_LIZ21NOV.png')" },
+    { nome: "REI", url: "url('midia/IVE_REI03FEB.png')" },
+    { nome: "WONYOUNG", url: "url('midia/IVE_WONYOUNG31AUG.png')" },
+    { nome: "YUJIN", url: "url('midia/IVE_YUJIN01SEP.png')" },
 
-        // NEWJEANS
-        { nome: "DANIELLE", url: "url('midia/newjeans_PERFIL_BG_Danielle.jpg')" },
-        { nome: "HYEIN", url: "url('midia/newjeans_PERFIL_BG_Hyein.jpg')" },
-        { nome: "MINJI", url: "url('midia/newjeans_PERFIL_BG_Minji.jpg')" },
-        { nome: "HAERIN", url: "url('midia/newjeans_PERFIL_BG_Haerin.jpg')" },
-        { nome: "HANNI", url: "url('midia/newjeans_PERFIL_BG_Hanni.jpg')" },
+    // IZNA
+    { nome: "JEEMIN", url: "url('midia/IZNA_JEEMIN08MAY.png')" },
+    { nome: "JIYOON", url: "url('midia/IZNA_JIYOON14JUL.png')" },
+    { nome: "JUNGEUN", url: "url('midia/IZNA_JUNGEUN04AUG.png')" },
+    { nome: "KOKO", url: "url('midia/IZNA_KOKO14NOV.png')" },
+    { nome: "MAI", url: "url('midia/IZNA_MAI28OCT.png')" },
+    { nome: "SAEBI", url: "url('midia/IZNA_SAEBI22JAN.png')" },
+    { nome: "SARANG", url: "url('midia/IZNA_SARANG18APR.png')" },
 
-        // NMIXX
-        { nome: "SULLYOON", url: "url('midia/nmixx_PERFIL_BG_Sullyoon.jpg')" },
-        { nome: "HAEWON", url: "url('midia/nmixx_PERFIL_BG_Haewon.jpg')" },
-        { nome: "JIWOO", url: "url('midia/nmixx_PERFIL_BG_Jiwoo.jpg')" },
-        { nome: "KYUJIN", url: "url('midia/nmixx_PERFIL_BG_Kyujin.jpg')" },
-        { nome: "LILY", url: "url('midia/nmixx_PERFIL_BG_Lily.jpg')" },
+    // KATSEYE
+    { nome: "DANIELA", url: "url('midia/KATSEYE_DANIELA01JUL.png')" },
+    { nome: "LARA", url: "url('midia/KATSEYE_LARA03NOV.png')" },
+    { nome: "MANON", url: "url('midia/KATSEYE_MANON26JUN.png')" },
+    { nome: "MEGAN", url: "url('midia/KATSEYE_MEGAN10FEB.png')" },
+    { nome: "SOPHIA", url: "url('midia/KATSEYE_SOPHIA31DEC.png')" },
+    { nome: "YOONCHAE", url: "url('midia/KATSEYE_YOONCHAE06DEC.png')" },
 
-        // NTX
-        { nome: "HYEONGJIN", url: "url('midia/ntx_PERFIL_BG_Hyeongjin.jpg')" },
-        { nome: "RAWHYUN", url: "url('midia/ntx_PERFIL_BG_Rawhyun.jpg')" },
-        { nome: "XIHA", url: "url('midia/ntx_PERFIL_BG_Xiha.jpg')" },
-        { nome: "CHANGHUN", url: "url('midia/ntx_PERFIL_BG_Changhun.jpg')" },
-        { nome: "HOJUN", url: "url('midia/ntx_PERFIL_BG_Hojun.jpg')" },
-        { nome: "YUNHYEOK", url: "url('midia/ntx_PERFIL_BG_Yunhyeok.jpg')" },
-        { nome: "SEONGWON", url: "url('midia/ntx_PERFIL_BG_Seongwon.jpg')" },
-        { nome: "EUNHO", url: "url('midia/ntx_PERFIL_BG_Eunho.jpg')" },
+    // KEP1ER
+    { nome: "CHOIYUJIN", url: "url('midia/KEP1ER_CHOIYUJIN_12AGO.png')" },
+    { nome: "EZAKIHIKARU", url: "url('midia/KEP1ER_EZAKIHIKARU_12MAR.png')" },
+    { nome: "HUENINGBAHIYYIH", url: "url('midia/KEP1ER_HUENINGBAHIYYIH_27JUL.png')" },
+    { nome: "KIMCHAEHYUN", url: "url('midia/KEP1ER_KIMCHAEHYUN_26ABR.png')" },
+    { nome: "KIMDAYEON", url: "url('midia/KEP1ER_KIMDAYEON_02MAR.png')" },
+    { nome: "SEOYOUNGEUN", url: "url('midia/KEP1ER_SEOYOUNGEUN_27DEZ.png')" },
+    { nome: "SHENXIAOTING", url: "url('midia/KEP1ER_SHENXIAOTING_12NOV.png')" },
 
-        // RIIZE
-        { nome: "WONBIN", url: "url('midia/riize_PERFIL_BG_Wonbin.jpg')" },
-        { nome: "EUNSEOK", url: "url('midia/riize_PERFIL_BG_Eunseok.jpg')" },
-        { nome: "ANTON", url: "url('midia/riize_PERFIL_BG_Anton.jpg')" },
-        { nome: "SUNGCHAN", url: "url('midia/riize_PERFIL_BG_Sungchan.jpg')" },
-        { nome: "SOHEE", url: "url('midia/riize_PERFIL_BG_Sohee.jpg')" },
-        { nome: "SHOTARO", url: "url('midia/riize_PERFIL_BG_Shotaro.jpg')" },
+    // KIIIKIII
+    { nome: "HAUM", url: "url('midia/KIIIKIII_HAUM14NOV.png')" },
+    { nome: "JIYU", url: "url('midia/KIIIKIII_JIYU14MAY.png')" },
+    { nome: "KYA", url: "url('midia/KIIIKIII_KYA18DEC.png')" },
+    { nome: "LEESOL", url: "url('midia/KIIIKIII_LEESOL18SEP.png')" },
+    { nome: "SUI", url: "url('midia/KIIIKIII_SUI10APR.png')" },
 
-        // SEVENTEEN
-        { nome: "SEUNGKWAN", url: "url('midia/seventeen_PERFIL_BG_Seungkwan.jpg')" },
-        { nome: "DINO", url: "url('midia/seventeen_PERFIL_BG_Dino.jpg')" },
-        { nome: "DK", url: "url('midia/seventeen_PERFIL_BG_Dk.jpg')" },
-        { nome: "VERNON", url: "url('midia/seventeen_PERFIL_BG_Vernon.jpg')" },
-        { nome: "MINGYU", url: "url('midia/seventeen_PERFIL_BG_Mingyu.jpg')" },
-        { nome: "WONWOO", url: "url('midia/seventeen_PERFIL_BG_Wonwoo.jpg')" },
-        { nome: "S.COUPS", url: "url('midia/seventeen_PERFIL_BG_Scoups.jpg')" },
-        { nome: "JUN", url: "url('midia/seventeen_PERFIL_BG_Jun.jpg')" },
-        { nome: "HOSHI", url: "url('midia/seventeen_PERFIL_BG_Hoshi.jpg')" },
-        { nome: "JEONGHAN", url: "url('midia/seventeen_PERFIL_BG_Jeonghan.jpg')" },
-        { nome: "THE8", url: "url('midia/seventeen_PERFIL_BG_The8.jpg')" },
-        { nome: "WOOZI", url: "url('midia/seventeen_PERFIL_BG_Woozi.jpg')" },
-        { nome: "JOSHUA", url: "url('midia/seventeen_PERFIL_BG_Joshua.jpg')" },
+    // KISS OF LIFE
+    { nome: "BELLE", url: "url('midia/KISSOFLIFE_BELLE20MAR.png')" },
+    { nome: "HANEUL", url: "url('midia/KISSOFLIFE_HANEUL25MAY.png')" },
+    { nome: "JULIE", url: "url('midia/KISSOFLIFE_JULIE29MAR.png')" },
+    { nome: "NATTY", url: "url('midia/KISSOFLIFE_NATTY30MAY.png')" },
 
-        // STRAY KIDS
-        { nome: "I.N", url: "url('midia/straykids_PERFIL_BG_In.jpg')" },
-        { nome: "HYUNJIN", url: "url('midia/straykids_PERFIL_BG_Hyunjin.jpg')" },
-        { nome: "CHANGBIN", url: "url('midia/straykids_PERFIL_BG_Changbin.jpg')" },
-        { nome: "HAN", url: "url('midia/straykids_PERFIL_BG_Han.jpg')" },
-        { nome: "FELIX", url: "url('midia/straykids_PERFIL_BG_Felix.jpg')" },
-        { nome: "SEUNGMIN", url: "url('midia/straykids_PERFIL_BG_Seungmin.jpg')" },
-        { nome: "BANG CHAN", url: "url('midia/straykids_PERFIL_BG_Bangchan.jpg')" },
-        { nome: "LEE KNOW", url: "url('midia/straykids_PERFIL_BG_Leeknow.jpg')" },
+    // LE SSERAFIM
+    { nome: "CHAEWON", url: "url('midia/LE_SSERAFIM_CHAEWON01AUG.png')" },
+    { nome: "EUNCHAE", url: "url('midia/LE_SSERAFIM_EUNCHAE10NOV.png')" },
+    { nome: "KAZUHA", url: "url('midia/LE_SSERAFIM_KAZUHA09AUG.png')" },
+    { nome: "SAKURA", url: "url('midia/LE_SSERAFIM_SAKURA19MAR.png')" },
+    { nome: "YUNJIN", url: "url('midia/LE_SSERAFIM_YUNJIN08OCT.png')" },
 
-        // TREASURE
-        { nome: "SO JUNGHWAN", url: "url('midia/treasure_PERFIL_BG_SoJunghwan.jpg')" },
-        { nome: "JIHOON", url: "url('midia/treasure_PERFIL_BG_Jihoon.jpg')" },
-        { nome: "MASHIHO", url: "url('midia/treasure_PERFIL_BG_Mashiho.jpg')" },
-        { nome: "HARUTO", url: "url('midia/treasure_PERFIL_BG_Haruto.jpg')" },
-        { nome: "CHOI HYUNSUK", url: "url('midia/treasure_PERFIL_BG_ChoiHyunsuk.jpg')" },
-        { nome: "BANG YEDAM", url: "url('midia/treasure_PERFIL_BG_BangYedam.jpg')" },
-        { nome: "YOSHI", url: "url('midia/treasure_PERFIL_BG_Yoshi.jpg')" },
-        { nome: "ASAHI", url: "url('midia/treasure_PERFIL_BG_Asahi.jpg')" },
-        { nome: "JUNKYU", url: "url('midia/treasure_PERFIL_BG_Junkyu.jpg')" },
-        { nome: "PARK JEONGWOO", url: "url('midia/treasure_PERFIL_BG_ParkJeongwoo.jpg')" },
+    // MEOVV
+    { nome: "ANNA", url: "url('midia/MEOVV_ANNA17NOV.png')" },
+    { nome: "ELLA", url: "url('midia/MEOVV_ELLA01DEC.png')" },
+    { nome: "GAWON", url: "url('midia/MEOVV_GAWON27APR.png')" },
+    { nome: "NARIN", url: "url('midia/MEOVV_NARIN15AUG.png')" },
+    { nome: "SOOIN", url: "url('midia/MEOVV_SOOIN12APR.png')" },
 
-        // TXT
-        { nome: "TAEHYUN", url: "url('midia/txt_PERFIL_BG_Taehyun.jpg')" },
-        { nome: "BEOMGYU", url: "url('midia/txt_PERFIL_BG_Beomgyu.jpg')" },
-        { nome: "HUENINGKAI", url: "url('midia/txt_PERFIL_BG_Hueningkai.jpg')" },
-        { nome: "YEONJUN", url: "url('midia/txt_PERFIL_BG_Yeonjun.jpg')" },
-        { nome: "SOOBIN", url: "url('midia/txt_PERFIL_BG_Soobin.jpg')" },
+    // NEWJEANS
+    { nome: "DANIELLE", url: "url('midia/NEWJEANS_DANIELLE11APR.png')" },
+    { nome: "HAERIN", url: "url('midia/NEWJEANS_HAERIN15MAY.png')" },
+    { nome: "HANNI", url: "url('midia/NEWJEANS_HANNI06OCT.png')" },
+    { nome: "HYEIN", url: "url('midia/NEWJEANS_HYEIN21APR.png')" },
+    { nome: "MINJI", url: "url('midia/NEWJEANS_MINJI07MAY.png')" },
 
-        // ZEROBASEONE
-        { nome: "PARK GUNWOOK", url: "url('midia/zerobaseone_PERFIL_BG_ParkGunwook.jpg')" },
-        { nome: "HAN YUJIN", url: "url('midia/zerobaseone_PERFIL_BG_HanYujin.jpg')" },
-        { nome: "RICKY", url: "url('midia/zerobaseone_PERFIL_BG_Ricky.jpg')" },
-        { nome: "SEOK MATTHEW", url: "url('midia/zerobaseone_PERFIL_BG_SeokMatthew.jpg')" },
-        { nome: "SUNG HANBIN", url: "url('midia/zerobaseone_PERFIL_BG_SungHanbin.jpg')" },
-        { nome: "KIM TAERAE", url: "url('midia/zerobaseone_PERFIL_BG_KimTaerae.jpg')" },
-        { nome: "ZHANG HAO", url: "url('midia/zerobaseone_PERFIL_BG_ZhangHao.jpg')" },
-        { nome: "KIM GYUVIN", url: "url('midia/zerobaseone_PERFIL_BG_KimGyuvin.jpg')" },
-        { nome: "KIM JIWOONG", url: "url('midia/zerobaseone_PERFIL_BG_KimJiwoong.jpg')" },
+    // NMIXX
+    { nome: "BAE", url: "url('midia/NMIXX_BAE28DEC.png')" },
+    { nome: "HAEWON", url: "url('midia/NMIXX_HAEWON25FEB.png')" },
+    { nome: "JIWOO", url: "url('midia/NMIXX_JIWOO13APR.png')" },
+    { nome: "KYUJIN", url: "url('midia/NMIXX_KYUJIN26MAY.png')" },
+    { nome: "LILY", url: "url('midia/NMIXX_LILY17OCT.png')" },
+    { nome: "SULLYOON", url: "url('midia/NMIXX_SULLYOON26JAN.png')" },
 
-        // ARTMS
-        { nome: "CHOERRY", url: "url('midia/artms_PERFIL_BG_Choerry.jpg')" },
-        { nome: "HASEUL", url: "url('midia/artms_PERFIL_BG_Haseul.jpg')" },
-        { nome: "HEEJIN", url: "url('midia/artms_PERFIL_BG_Heejin.jpg')" },
-        { nome: "JINSOUL", url: "url('midia/artms_PERFIL_BG_Jinsoul.jpg')" },
-        { nome: "KIMLIP", url: "url('midia/artms_PERFIL_BG_Kimlip.jpg')" },
+    // NTX
+    { nome: "CHANGHUN", url: "url('midia/NTX_CHANGHUN04MAI.png')" },
+    { nome: "EUNHO", url: "url('midia/NTX_EUNHO05DEZ.png')" },
+    { nome: "HOJUN", url: "url('midia/NTX_HOJUN22MAI.png')" },
+    { nome: "HYEONGJIN", url: "url('midia/NTX_HYEONGJIN25FEV.png')" },
+    { nome: "RAWHYUN", url: "url('midia/NTX_RAWHYUN06MAR.png')" },
+    { nome: "SEONGWON", url: "url('midia/NTX_SEONGWON05NOV.png')" },
+    { nome: "XIHA", url: "url('midia/NTX_XIHA07MAR.png')" },
+    { nome: "YUNHYEOK", url: "url('midia/NTX_YUNHYEOK09AGO.png')" },
 
-        // FIFTYFIFTY
-        { nome: "ATHENA", url: "url('midia/fiftyfifty_PERFIL_BG_Athena.jpg')" },
-        { nome: "CHANELLE", url: "url('midia/fiftyfifty_PERFIL_BG_Chanelle.jpg')" },
-        { nome: "HANA", url: "url('midia/fiftyfifty_PERFIL_BG_Hana.jpg')" },
-        { nome: "KEENA", url: "url('midia/fiftyfifty_PERFIL_BG_Keena.jpg')" },
-        { nome: "YEWON", url: "url('midia/fiftyfifty_PERFIL_BG_Yewon.jpg')" },
+    // RED VELVET
+    { nome: "IRENE", url: "url('midia/RedVelvet_IRENE29MAR.png')" },
+    { nome: "JOY", url: "url('midia/RedVelvet_JOY03SEP.png')" },
+    { nome: "SEULGI", url: "url('midia/RedVelvet_SEULGI10FEB.png')" },
+    { nome: "WENDY", url: "url('midia/RedVelvet_WENDY21FEB.png')" },
+    { nome: "YERI", url: "url('midia/RedVelvet_YERI05MAR.png')" },
 
-        // hearts2hearts
-        { nome: "ANA", url: "url('midia/hearts2hearts_PERFIL_BG_Ana.jpg')" },
-        { nome: "IAN", url: "url('midia/hearts2hearts_PERFIL_BG_Ian.jpg')" },
-        { nome: "JIWOO", url: "url('midia/hearts2hearts_PERFIL_BG_Jiwoo.jpg')" },
-        { nome: "JUUN", url: "url('midia/hearts2hearts_PERFIL_BG_Juun.jpg')" },
-        { nome: "STELLA", url: "url('midia/hearts2hearts_PERFIL_BG_Stella.jpg')" },
-        { nome: "YEON", url: "url('midia/hearts2hearts_PERFIL_BG_Yeon.jpg')" },
-        { nome: "YUHA", url: "url('midia/hearts2hearts_PERFIL_BG_Yuha.jpg')" },
-        { nome: "CARMEN", url: "url('midia/hearts2hearts_PERFIL_BG_Carmen.jpg')" },
+    // RESCENE
+    { nome: "LIV", url: "url('midia/RESCENE_LIV11OCT.png')" },
+    { nome: "MAY", url: "url('midia/RESCENE_MAY19AUG.png')" },
+    { nome: "MINAMI", url: "url('midia/RESCENE_MINAMI29NOV.png')" },
+    { nome: "WONI", url: "url('midia/RESCENE_WONI25MAY.png')" },
+    { nome: "ZENA", url: "url('midia/RESCENE_ZENA27NOV.png')" },
 
-        // ITZY
-        { nome: "CHAERYEONG", url: "url('midia/itzy_PERFIL_BG_Chaeryeong.jpg')" },
-        { nome: "LIA", url: "url('midia/itzy_PERFIL_BG_Lia.jpg')" },
-        { nome: "RYUJIN", url: "url('midia/itzy_PERFIL_BG_Ryujin.jpg')" },
-        { nome: "YEJI", url: "url('midia/itzy_PERFIL_BG_Yeji.jpg')" },
-        { nome: "YUNA", url: "url('midia/itzy_PERFIL_BG_Yuna.jpg')" },
+    // RIIZE
+    { nome: "ANTON", url: "url('midia/RIIZE_Anton_21MAR.png')" },
+    { nome: "EUNSEOK", url: "url('midia/RIIZE_Eunseok_19MAR.png')" },
+    { nome: "SHOTARO", url: "url('midia/RIIZE_Shotaro_25NOV.png')" },
+    { nome: "SOHEE", url: "url('midia/RIIZE_Sohee_21NOV.png')" },
+    { nome: "SUNGCHAN", url: "url('midia/RIIZE_Sungchan_13SEP.png')" },
+    { nome: "WONBIN", url: "url('midia/RIIZE_Wonbin_02MAR.png')" },
+
+    // SEVENTEEN
+    { nome: "DINO", url: "url('midia/SEVENTEEN_DINO11FEV.png')" },
+    { nome: "DK", url: "url('midia/SEVENTEEN_DK18FEV.png')" },
+    { nome: "HOSHI", url: "url('midia/SEVENTEEN_HOSHI15JUN.png')" },
+    { nome: "JEONGHAN", url: "url('midia/SEVENTEEN_JEONGHAN04OUT.png')" },
+    { nome: "JOSHUA", url: "url('midia/SEVENTEEN_JOSHUA30DEZ.png')" },
+    { nome: "JUN", url: "url('midia/SEVENTEEN_JUN10JUN.png')" },
+    { nome: "MINGYU", url: "url('midia/SEVENTEEN_MINGYU06ABR.png')" },
+    { nome: "SCOUPS", url: "url('midia/SEVENTEEN_SCOUPS08AGO.png')" },
+    { nome: "SEUNGKWAN", url: "url('midia/SEVENTEEN_SEUNGKWAN16JAN.png')" },
+    { nome: "THE8", url: "url('midia/SEVENTEEN_THE807NOV.png')" },
+    { nome: "VERNON", url: "url('midia/SEVENTEEN_VERNON18FEV.png')" },
+    { nome: "WONWOO", url: "url('midia/SEVENTEEN_WONWOO17JUL.png')" },
+    { nome: "WOOZI", url: "url('midia/SEVENTEEN_WOOZI22NOV.png')" },
+
+    // STAYC
+    { nome: "ISA", url: "url('midia/STAYC_ISA23JAN.png')" },
+    { nome: "J", url: "url('midia/STAYC_J09DEC.png')" },
+    { nome: "SEEUN", url: "url('midia/STAYC_SEEUN14JUN.png')" },
+    { nome: "SIEUN", url: "url('midia/STAYC_SIEUN01AUG.png')" },
+    { nome: "SUMIN", url: "url('midia/STAYC_SUMIN13MAR.png')" },
+    { nome: "YOON", url: "url('midia/STAYC_YOON14APR.png')" },
+
+    // STRAY KIDS
+    { nome: "BANGCHAN", url: "url('midia/STRAYKIDS_BANGCHAN03OUT.png')" },
+    { nome: "CHANGBIN", url: "url('midia/STRAYKIDS_CHANGBIN11AGO.png')" },
+    { nome: "FELIX", url: "url('midia/STRAYKIDS_FELIX15SET.png')" },
+    { nome: "HAN", url: "url('midia/STRAYKIDS_HAN14SET.png')" },
+    { nome: "HYUNJIN", url: "url('midia/STRAYKIDS_HYUNJIN20MAR.png')" },
+    { nome: "I.N", url: "url('midia/STRAYKIDS_IN08FEV.png')" },
+    { nome: "LEEKNOW", url: "url('midia/STRAYKIDS_LEEKNOW25OUT.png')" },
+    { nome: "SEUNGMIN", url: "url('midia/STRAYKIDS_SEUNGMIN22SET.png')" },
+
+    // TREASURE
+    { nome: "ASAHI", url: "url('midia/TREASURE_Asahi_20AUG.png')" },
+    { nome: "BANGYEDAM", url: "url('midia/TREASURE_BangYedam_07MAY.png')" },
+    { nome: "CHOHYUNSUK", url: "url('midia/TREASURE_ChoiHyunsuk_21APR.png')" },
+    { nome: "DOYOUNG", url: "url('midia/TREASURE_Doyoung_04DEC.png')" },
+    { nome: "HARUTO", url: "url('midia/TREASURE_Haruto_05APR.png')" },
+    { nome: "JIHOON", url: "url('midia/TREASURE_Jihoon_14MAR.png')" },
+    { nome: "JUNKYU", url: "url('midia/TREASURE_Junkyu_09SEP.png')" },
+    { nome: "MASHIHO", url: "url('midia/TREASURE_Mashiho_25MAR.png')" },
+    { nome: "PARKJEONGWOO", url: "url('midia/TREASURE_ParkJeongwoo_28SEP.png')" },
+    { nome: "SOJUNGHWAN", url: "url('midia/TREASURE_SoJunghwan_18FEB.png')" },
+    { nome: "YOSHI", url: "url('midia/TREASURE_Yoshi_15MAY.png')" },
+
+    // TRIPLES
+    { nome: "CHAEWON", url: "url('midia/tripleS_CHAEWON02MAY.png')" },
+    { nome: "CHAEYEON", url: "url('midia/tripleS_CHAEYEON04DEC.png')" },
+    { nome: "DAHYUN", url: "url('midia/tripleS_DAHYUN08JAN.png')" },
+    { nome: "HAYEON", url: "url('midia/tripleS_HAYEON01AUG.png')" },
+    { nome: "HYERIN", url: "url('midia/tripleS_HYERIN12APR.png')" },
+    { nome: "JIWOO", url: "url('midia/tripleS_JIWOO24OCT.png')" },
+    { nome: "JIYEON", url: "url('midia/tripleS_JIYEON13FEV.png')" },
+    { nome: "JOOBIN", url: "url('midia/tripleS_JOOBIN16JAN.png')" },
+    { nome: "KAEDE", url: "url('midia/tripleS_KAEDE20DEC.png')" },
+    { nome: "KOTONE", url: "url('midia/tripleS_KOTONE10MAR.png')" },
+    { nome: "LYNN", url: "url('midia/tripleS_LYNN12APR.png')" },
+    { nome: "MAYU", url: "url('midia/tripleS_MAYU12MAY.png')" },
+    { nome: "NAKYOUNG", url: "url('midia/tripleS_NAKYOUNG13OCT.png')" },
+    { nome: "NIEN", url: "url('midia/tripleS_NIEN02JUN.png')" },
+    { nome: "SEOAH", url: "url('midia/tripleS_SEOAH11JUN.png')" },
+    { nome: "SEOYEON", url: "url('midia/tripleS_SEOYEON06AUG.png')" },
+    { nome: "SHION", url: "url('midia/tripleS_SHION03APR.png')" },
+    { nome: "SHION2", url: "url('midia/tripleS_SHION29DEC.png')" },
+    { nome: "SOHYUN", url: "url('midia/tripleS_SOHYUN13OCT.png')" },
+    { nome: "SOOMIN", url: "url('midia/tripleS_SOOMIN03OCT.png')" },
+    { nome: "SULLIN", url: "url('midia/tripleS_SULLIN30NOV.png')" },
+    { nome: "XINYU", url: "url('midia/tripleS_XINYU25MAY.png')" },
+    { nome: "YEONJI", url: "url('midia/tripleS_YEONJI08JAN.png')" },
+    { nome: "YOOYEON", url: "url('midia/tripleS_YOOYEON09FEB.png')" },
+    { nome: "YUBIN", url: "url('midia/tripleS_YUBIN03FEV.png')" },
+
+    // TWICE (arquivos individuais)
+    { nome: "CHAEYOUNG", url: "url('midia/TWICE_Chaeyoung23ABR.png')" },
+    { nome: "JEONGYEON", url: "url('midia/TWICE_JEONGYEON1NOV.png')" },
+    { nome: "JIHYO", url: "url('midia/TWICE_JIHYO1FEV.png')" },
+    { nome: "MINA", url: "url('midia/TWICE_MINA24MAR.png')" },
+    { nome: "MOMO", url: "url('midia/TWICE_MOMO9NOV.png')" },
+    { nome: "NAYEON", url: "url('midia/TWICE_NAYEON22SET.png')" },
+    { nome: "SANA", url: "url('midia/TWICE_SANA29DEZ.png')" },
+    { nome: "TZUYU", url: "url('midia/TWICE_TZUYU14JUN.png')" },
+
+    // TXT
+    { nome: "BEOMGYU", url: "url('midia/TXT_BEOMGYU13MAR.png')" },
+    { nome: "HUENINGKAI", url: "url('midia/TXT_HUENINGKAI14AGO.png')" },
+    { nome: "SOOBIN", url: "url('midia/TXT_SOOBIN05DEZ.png')" },
+    { nome: "TAEHYUN", url: "url('midia/TXT_TAEHYUN05FEV.png')" },
+    { nome: "YEONJUN", url: "url('midia/TXT_YEONJUN13SET.png')" },
+
+     // UNIS
+    { nome: "ELISIA", url: "url('midia/UNIS_ELISIA18APR.png')" },
+    { nome: "GEHLEE", url: "url('midia/UNIS_GEHLEE19AUG.png')" },
+    { nome: "HYEONJU", url: "url('midia/UNIS_HYEONJU03NOV.png')" },
+    { nome: "KOTOKO", url: "url('midia/UNIS_KOTOKO28OCT.png')" },
+    { nome: "NANA", url: "url('midia/UNIS_NANA06JUN.png')" },
+    { nome: "SEOWON", url: "url('midia/UNIS_SEOWON27JAN.png')" },
+    { nome: "YOONA", url: "url('midia/UNIS_YOONA07OCT.png')" },
+    { nome: "YUNHA", url: "url('midia/UNIS_YUNHA28FEB.png')" },
+
+    // VIVIZ
+    { nome: "EUNHA", url: "url('midia/VIVIZ_EUNHA30MAY.png')" },
+    { nome: "SINB", url: "url('midia/VIVIZ_SINB03JUN.png')" },
+    { nome: "UMJI", url: "url('midia/VIVIZ_UMJI19AUG.png')" },
+
+    // ZEROBASEONE
+    { nome: "HAN YUJIN", url: "url('midia/ZEROBASEONE_HanYujin_20MAR.png')" },
+    { nome: "KIM GYUVIN", url: "url('midia/ZEROBASEONE_KimGyuvin_30AUG.png')" },
+    { nome: "KIM JIWOONG", url: "url('midia/ZEROBASEONE_KimJiwoong_14DEC.png')" },
+    { nome: "KIM TAERAE", url: "url('midia/ZEROBASEONE_KimTaerae_14JUL.png')" },
+    { nome: "PARK GUNWOOK", url: "url('midia/ZEROBASEONE_ParkGunwook_10JAN.png')" },
+    { nome: "RICKY", url: "url('midia/ZEROBASEONE_Ricky_20MAY.png')" },
+    { nome: "SEOK MATTHEW", url: "url('midia/ZEROBASEONE_SeokMatthew_28MAY.png')" },
+    { nome: "SUNG HANBIN", url: "url('midia/ZEROBASEONE_SungHanbin_13JUN.png')" },
+    { nome: "ZHANG HAO", url: "url('midia/ZEROBASEONE_ZhangHao_25JUL.png')" }
+    
 
     ];
 
     /**
      * Extrai a data e o nome de uma imagem de aniversariante.
-     * @param {HTMLElement} img - O elemento <img>.
-     * @returns {{data: string, nome: string, elemento: HTMLElement} | null}
      */
     function extrairDadosAniversario(img) {
         const alt = img.alt.trim();
         const match = alt.match(/(\d{1,2}\/\d{1,2})$/);
         if (match) {
-            const dataAniversario = match[0]; // Ex: "1/7" ou "14/7"
+            const dataAniversario = match[0];
             const nomeAniversariante = alt.substring(0, alt.length - dataAniversario.length).trim();
             const [dia, mes] = dataAniversario.split("/").map(Number);
             return {
@@ -293,14 +398,12 @@ document.addEventListener("DOMContentLoaded", function () {
         return null;
     }
 
-    // 1. Coletar todos os aniversariantes com dados válidos
+    // Coletar todos os aniversariantes com dados válidos
     const todosAniversariantes = Array.from(imagens)
         .map(extrairDadosAniversario)
         .filter(item => item !== null)
         .map(item => {
-            // Adiciona a data como objeto Date para comparação
             const dataNiver = new Date(hoje.getFullYear(), item.mes - 1, item.dia);
-            // Se a data já passou este ano, considera para o próximo ano
             if (dataNiver < hoje && item.mes !== (hoje.getMonth() + 1) && item.dia !== hoje.getDate()) {
                  dataNiver.setFullYear(hoje.getFullYear() + 1);
             }
@@ -308,138 +411,163 @@ document.addEventListener("DOMContentLoaded", function () {
             return item;
         });
 
-    // 2. Lógica para aniversariante do dia (Se tiver, ela tem prioridade)
-    todosAniversariantes.forEach(niver => {
-        if (niver.data === diamesHoje) {
-            const aniversarianteDoDia = nivernome.find(item => item.nome.toLowerCase() === niver.nome.toLowerCase());
-            if (aniversarianteDoDia && secNiver && divNiver) {
-                // ... (Sua lógica existente para o aniversariante do dia) ...
-                if (mensagemAniversarioDiv) {
-                    mensagemAniversarioDiv.querySelector('h4').textContent = `🎉 Feliz aniversário, ${niver.nome}! Hoje é o seu dia mais FELIZ!!! 🎉`;
-                    mensagemAniversarioDiv.style.display = "block";
+    // Lógica para aniversariante do dia - AGORA DETECTA MÚLTIPLOS
+    const aniversariantesDoDia = todosAniversariantes.filter(niver => niver.data === diamesHoje);
+
+    if (aniversariantesDoDia.length > 0) {
+        encontrouAniversarianteDoDia = true;
+        
+        if (secNiver && divNiver) {
+            // Configurar mensagem para múltiplos aniversariantes
+            if (mensagemAniversarioDiv) {
+                if (aniversariantesDoDia.length === 1) {
+                    mensagemAniversarioDiv.querySelector('h4').textContent = `🎉 Feliz aniversário, ${aniversariantesDoDia[0].nome}! Hoje é o seu dia mais FELIZ!!! 🎉`;
+                } else {
+                    const nomes = aniversariantesDoDia.map(a => a.nome).join(', ');
+                    mensagemAniversarioDiv.querySelector('h4').textContent = `🎉 Feliz aniversário, ${nomes}! Hoje é o dia de vocês!!! 🎉`;
                 }
-/*                 if (fogosVideo) {
-                    fogosVideo.style.display = "block";
-                } */
-                secNiver.style.display = "block"; // Exibe a seção
-                divNiver.style.maxHeight = '5000px'; // Mantém expandido para mostrar o aniversariante do dia
-                divNiver.classList.add('expandido');
-                niver.elemento.style.display = "block"; // Exibe apenas a imagem do aniversariante do dia
+                mensagemAniversarioDiv.style.display = "block";
+            }
 
-                encontrouAniversarianteDoDia = true;
+            secNiver.style.display = "block";
+            divNiver.style.maxHeight = '0px';
+            divNiver.classList.add('expandido');
 
-                // **ADICIONAL: Coloca a imagem do aniversariante do dia em #proximo_niver**
-                // Pega o <a href> pai da imagem para manter o link se desejar.
-                const linkElement = niver.elemento.closest('a');
-                if (linkElement && proximoNiverDiv) {
-                    // Cria um clone do link para não mover o original (se estiver sendo usado)
-                    const cloneLink = linkElement.cloneNode(true);
-                    // Remove o ID do clone para evitar duplicidade de ID
-                    cloneLink.querySelector('img').removeAttribute('id');
-                    proximoNiverDiv.innerHTML = ''; // Limpa antes de adicionar
-                    proximoNiverDiv.appendChild(cloneLink);
-                    proximoNiverDiv.style.display = 'flex';
-                } else if (proximoNiverDiv) {
-                    // Se não houver link, apenas a imagem com um parágrafo
-                    proximoNiverDiv.innerHTML = `
-                        <p class="niver-do-dia">Hoje é dia de ${niver.nome}!</p>
-                        ${niver.elemento.outerHTML}
-                    `;
-                    proximoNiverDiv.style.display = 'flex';
+            // Mostrar apenas os aniversariantes do dia na DIVniver
+imagens.forEach(img => {
+    const niver = extrairDadosAniversario(img);
+    if (niver && niver.mes === mesAtual) {  // ← AQUI: Mostra todos do mês, não só do dia
+        img.style.display = "inline-block";
+    } else {
+        img.style.display = "none";
+    }
+});
+
+            // COLOCAR TODOS OS ANIVERSARIANTES DO DIA NA proximoNiverDiv
+            if (proximoNiverDiv) {
+                proximoNiverDiv.innerHTML = '';
+                
+                if (aniversariantesDoDia.length === 1) {
+                    proximoNiverDiv.innerHTML = `<p class="niver-do-dia">Hoje é dia de ${aniversariantesDoDia[0].nome}!</p>`;
+                } else {
+                    proximoNiverDiv.innerHTML = `<p class="niver-do-dia">Hoje é dia de ${aniversariantesDoDia.length} aniversariantes!</p>`;
                 }
 
+                // Adicionar todas as imagens dos aniversariantes do dia
+                aniversariantesDoDia.forEach(niver => {
+                    const linkElement = niver.elemento.closest('a');
+                    if (linkElement) {
+                        const cloneLink = linkElement.cloneNode(true);
+                        cloneLink.querySelector('img').removeAttribute('id');
+                        proximoNiverDiv.appendChild(cloneLink);
+                    } else {
+                        // Se não tiver link, adiciona apenas a imagem
+                        const imgClone = niver.elemento.cloneNode(true);
+                        imgClone.removeAttribute('id');
+                        proximoNiverDiv.appendChild(imgClone);
+                    }
+                });
+                
+                proximoNiverDiv.style.display = 'flex';
             }
         }
-    });
+    }
 
-// 3. Lógica para Próximo Aniversariante (Se não houver aniversariante do dia)
+    // Lógica para Próximo Aniversariante (SÓ SE NÃO HOUVER ANIVERSARIANTES DO DIA)
     if (!encontrouAniversarianteDoDia) {
-
-        // Filtra aniversariantes futuros, incluindo os de hoje
         let proximosAniversariantes = todosAniversariantes
              .filter(niver => niver.dataNiverObjeto >= hoje)
              .sort((a, b) => a.dataNiverObjeto - b.dataNiverObjeto);
 
-        // Se a lista estiver vazia (todos já passaram), considera o próximo ano (o primeiro da lista)
         if (proximosAniversariantes.length === 0 && todosAniversariantes.length > 0) {
-             // Refiltrar sem a condição de ano (apenas para garantir que pegue o 1/1 do próximo ano)
-             // Nota: A lógica de dataNiverObjeto já deve ter tratado isso, mas reordenamos.
              proximosAniversariantes = todosAniversariantes.sort((a, b) => a.dataNiverObjeto - b.dataNiverObjeto);
         }
 
-        const proximo = proximosAniversariantes[0]; // O mais próximo
+        const proximo = proximosAniversariantes[0];
 
         if (proximo && proximoNiverDiv) {
-            // Formata a data para exibição (Completa para o alt, apenas o dia para o texto)
             const diaFormatado = proximo.dia.toString().padStart(2, '0');
             const mesFormatado = proximo.mes.toString().padStart(2, '0');
             const dataProximoNiver = `${diaFormatado}/${mesFormatado}`;
 
-            // Pega o <a> que contém a imagem
             const linkElement = proximo.elemento.closest('a');
             if (linkElement) {
                 const cloneLink = linkElement.cloneNode(true);
-                // Opcional: Altera o texto alternativo/título para o próximo
                 cloneLink.querySelector('img').alt = `Próximo: ${proximo.nome} (${dataProximoNiver})`;
 
-                // *** ALTERAÇÃO APLICADA AQUI: USANDO APENAS proximo.dia NO TEXTO ***
                 proximoNiverDiv.innerHTML = `
                     <p class="proximo-niver-texto">O Próximo Aniversário é de: ${proximo.nome}, no dia ${proximo.dia}</p>
                 `;
-                // *******************************************************************
-
                 proximoNiverDiv.appendChild(cloneLink);
                 proximoNiverDiv.style.display = 'flex';
-                secNiver.style.display = "block"; // Garante que a seção apareça
-
+                secNiver.style.display = "block";
             }
             encontrouAniversariante = true;
         }
 
-        // Continua a lógica para mostrar todos os aniversariantes do mês na DIVniver se ela não estiver expandida.
+        // Mostrar todos os aniversariantes do mês na DIVniver (se não for dia de aniversário)
         imagens.forEach(img => {
             const niver = extrairDadosAniversario(img);
             if (niver) {
                 const mesAniversario = niver.mes;
-                // Exibe as imagens do mês atual (pois não havia aniversariante do dia)
                 if (mesAniversario === mesAtual) {
                     img.style.display = "inline-block";
                     encontrouAniversariante = true;
                 } else {
-                    img.style.display = "none"; // Garante que as imagens de outros meses fiquem escondidas
+                    img.style.display = "none";
                 }
             } else {
                 img.style.display = "none";
             }
         });
-
-        // Oculta #proximo_niver se DIVniver for expandida
-        const botaoExpandir = document.getElementById('botaoExpandirDIVniver');
-        if (botaoExpandir) {
-            botaoExpandir.addEventListener('click', function() {
-                if (divNiver.classList.contains('expandido')) {
-                    // Se vai expandir, oculta a imagem de "Próximo Aniversário" (se existir)
-                    if (proximoNiverDiv) {
-                        proximoNiverDiv.style.display = 'none';
-                        // Reajusta o título para o padrão
-                         mensagemAniversarioDiv.querySelector('h4').textContent = `CONFIRA TODOS OS ANIVERSARIANTES DO MÊS!`;
-                    }
-                } else {
-                     // Se vai recolher, mostra a imagem de "Próximo Aniversário" novamente (se tiver um)
-                     if (proximoNiverDiv && proximoNiverDiv.innerHTML.trim() !== "") {
-                        proximoNiverDiv.style.display = 'flex';
-                        mensagemAniversarioDiv.querySelector('h4').textContent = `CONFIRA TODOS OS ANIVERSARIANTES DO MÊS!`;
-                    }
-                }
-            });
-        }
     }
-
 
     if (encontrouAniversariante || encontrouAniversarianteDoDia) {
         secNiver.style.display = "block";
     } else {
-        // Se não houver aniversariantes no mês atual ou no dia, esconda a seção
         secNiver.style.display = "none";
+    }
+    // ==================================================
+    // SEÇÃO 2: LÓGICA DO BOTÃO EXPANDIR/RECOLHER
+    // ==================================================
+    const botaoExpandir = document.getElementById('botaoExpandirDIVniver');
+
+if (botaoExpandir && divNiver) {
+    botaoExpandir.addEventListener('click', function() {
+        if (botaoExpandir.textContent === '▲ VER MENOS') {
+            // Recolher - botão mostra "VER MAIS"
+            divNiver.style.maxHeight = '0px';
+            divNiver.style.margin = '0'; // Remove margens para diminuir espaço
+            botaoExpandir.textContent = '▼ VER MAIS';
+            
+            // Mostrar o próximo aniversário ao recolher
+            if (proximoNiverDiv && proximoNiverDiv.innerHTML.trim() !== "") {
+                proximoNiverDiv.style.display = 'flex';
+            }
+            
+            // Rolagem suave para o topo da seção
+            setTimeout(() => {
+                secNiver.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+            }, 100);
+            
+        } else {
+            // Expandir - botão mostra "VER MENOS"
+            divNiver.style.maxHeight = '5000px';
+            divNiver.style.margin = ''; // Restaura margens padrão
+            botaoExpandir.textContent = '▲ VER MENOS';
+            
+            // Esconder o próximo aniversário ao expandir
+            if (proximoNiverDiv) {
+                proximoNiverDiv.style.display = 'none';
+            }
+        }
+
+
+        });
+
+
     }
 });
