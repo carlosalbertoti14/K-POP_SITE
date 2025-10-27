@@ -1143,6 +1143,13 @@ div#felizniver img{
 
 
 }
+div#proximo_niver {
+    
+       align-items: flex-end;         
+       flex-direction: column; /* Alinha os itens na vertical */
+
+}
+
 
 div#felizniver h4 {
     padding-top: 10px;
@@ -1154,11 +1161,12 @@ DIV#proximo_niver a {
      display: flex;
       align-items: flex-end;
       justify-content: left;
+
       
 }
 
 DIV#proximo_niver a img {
-    
+          
     width: 350PX;
 
 }
@@ -1211,12 +1219,13 @@ div#DIVniver img {
    /*  z-index: 200; */
    /*  box-shadow: 5px 5px 15px rgba(22, 22, 22, 0.5); */
 
+
    
 }
 
   @media (max-width: 600px) {
 DIV#proximo_niver a img {
-    width: 50vw;
+    width: 70vw;
 
 }
 
