@@ -48,6 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log('Aniversariantes do dia:', aniversariantesDoDia); // Para debug
 
+    // Variável para controlar o estado de expansão
+    let divExpandida = false;
+
     if (aniversariantesDoDia.length > 0) {
         encontrouAniversarianteDoDia = true;
         
@@ -67,12 +70,12 @@ document.addEventListener("DOMContentLoaded", function () {
             divNiver.style.maxHeight = '0px';
             divNiver.classList.add('expandido');
 
-            // CORREÇÃO: Mostrar TODOS os aniversariantes do DIA
+            // CORREÇÃO: Inicialmente mostrar apenas os aniversariantes do DIA
             imagens.forEach(img => {
                 const dadosImg = extrairDadosAniversario(img);
                 if (dadosImg && dadosImg.data === diamesHoje) {
                     img.style.display = "inline-block";
-                    console.log('Mostrando:', dadosImg.nome); // Para debug
+                    console.log('Mostrando aniversariante do dia:', dadosImg.nome); // Para debug
                 } else {
                     img.style.display = "none";
                 }
@@ -83,10 +86,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 proximoNiverDiv.innerHTML = '';
                 
                 if (aniversariantesDoDia.length === 1) {
-                    proximoNiverDiv.innerHTML = `<p class="niver-do-dia">Hoje é dia de ${aniversariantesDoDia[0].nome}!</p>`;
+                    proximoNiverDiv.innerHTML = `<p class="niver-do-dia">Hoje é o dia de: ${aniversariantesDoDia[0].nome}!</p>`;
                 } else {
                     const nomesLista = aniversariantesDoDia.map(a => a.nome).join(', ');
-                    proximoNiverDiv.innerHTML = `<p class="niver-do-dia">Hoje é dia de: ${nomesLista}!</p>`;
+                    proximoNiverDiv.innerHTML = `<p class="niver-do-dia">Hoje é o dia de: ${nomesLista}!</p>`;
                 }
 
                 // CORREÇÃO: Adicionar TODAS as imagens dos aniversariantes do dia
@@ -197,17 +200,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ==================================================
-    // SEÇÃO 2: LÓGICA DO BOTÃO EXPANDIR/RECOLHER
+    // SEÇÃO 2: LÓGICA DO BOTÃO EXPANDIR/RECOLHER (CORRIGIDA)
     // ==================================================
     const botaoExpandir = document.getElementById('botaoExpandirDIVniver');
 
     if (botaoExpandir && divNiver) {
         botaoExpandir.addEventListener('click', function() {
-            if (botaoExpandir.textContent === '▲ VER MENOS') {
+            if (divExpandida) {
                 // Recolher - botão mostra "VER MAIS"
                 divNiver.style.maxHeight = '0px';
                 divNiver.style.margin = '0';
                 botaoExpandir.textContent = '▼ VER MAIS';
+                divExpandida = false;
+                
+                // CORREÇÃO: Quando recolher, mostrar apenas aniversariantes do dia (se for o caso)
+                if (encontrouAniversarianteDoDia) {
+                    imagens.forEach(img => {
+                        const dadosImg = extrairDadosAniversario(img);
+                        if (dadosImg && dadosImg.data === diamesHoje) {
+                            img.style.display = "inline-block";
+                        } else {
+                            img.style.display = "none";
+                        }
+                    });
+                }
                 
                 // Mostrar o próximo aniversário ao recolher
                 if (proximoNiverDiv && proximoNiverDiv.innerHTML.trim() !== "") {
@@ -227,6 +243,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 divNiver.style.maxHeight = '5000px';
                 divNiver.style.margin = '';
                 botaoExpandir.textContent = '▲ VER MENOS';
+                divExpandida = true;
+                
+                // CORREÇÃO: Quando expandir, mostrar TODOS os aniversariantes do mês
+                imagens.forEach(img => {
+                    const niver = extrairDadosAniversario(img);
+                    if (niver && niver.mes === mesAtual) {
+                        img.style.display = "inline-block";
+                    } else {
+                        img.style.display = "none";
+                    }
+                });
                 
                 // Esconder o próximo aniversário ao expandir
                 if (proximoNiverDiv) {
