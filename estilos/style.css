@@ -2432,7 +2432,7 @@ div#ahyeon, div#asa, div#chiquita, div#pharita, div#rami, div#rora, div#ruka{
 
 /* fim do botão ir para o top */
 
-/**********************FIM CONFIG LISTA************************************/
+/**********************FIM CONFIG LISTA*********************/
 
 /* @media screen and (max-width: 580px) {
     header, header > nav {
@@ -2448,3 +2448,86 @@ div#ahyeon, div#asa, div#chiquita, div#pharita, div#rami, div#rora, div#ruka{
     }
 
 } */
+
+/******************************* Menu Dinâmico*************** */
+#menu-dinamico {
+    position: fixed;
+    top: 25%;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+    display: none;
+}
+
+#menu-dinamico.visivel {
+    display: block;
+}
+
+#icone-menu {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #d62cba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+#icone-menu:hover {
+    transform: scale(1.1);
+}
+
+#icone-menu img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+#menu-lateral {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    background-color: #4a8dc5;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 200px;
+    display: none;
+    overflow: hidden;
+}
+
+#menu-lateral.ativo {
+    display: block;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#menu-lateral a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-bottom: 1px solid #444;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+#menu-lateral a:hover {
+    background-color:  #d62cba;
+}
+
+/******************************* fim do Menu Dinâmico*************** */
