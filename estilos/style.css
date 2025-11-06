@@ -2119,7 +2119,7 @@ padding-bottom: 0;
  .box_linear {
     background-color: white;
     display: flex;
-    flex-wrap: nowrap;
+        flex-direction: column;
     margin: 5px;
    
     border: 2px solid #0b7eac; /* Cor roxa. Troque por qualquer cor que quiser */
