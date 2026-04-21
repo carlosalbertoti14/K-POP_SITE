@@ -361,13 +361,13 @@ margin-bottom: 10px;
   background-image: url(../midia/NEWS/NEWS_NTX_BOTAFOGO1.jpg);
 }
 /* ... e adicione as outras que você tiver ... */
- /*
+
 #HOTNEWS_content_5 {
-     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../midia/NEWS/NEWS_STRAYKIDS.jpg);
+     background-image: url(../midia/NEWS/NEWS_erika.jpg);
 }
 #HOTNEWS_content_6 {
      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../midia/NEWS/NEWS_STRAYKIDS.jpg);
-} */
+} 
 
 
 /* style.css */
